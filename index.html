@@ -1,463 +1,786 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-01642XG5SG"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-01642XG5SG');
-    </script>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://about-us.sangyo-tech.jp/">
 <title>私たちについて | 産業技術アカデミー</title>
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"EducationalOrganization","name":"産業技術アカデミー","url":"https://sangyo-tech.jp/","description":"製造業・技術系企業向けの教育プラットフォーム。","inLanguage":"ja"}
-    </script>
-  <meta name="description" content="産業技術アカデミーは、新人教育から管理職教育まで対応する製造業向けeラーニングです。品質管理、改善活動、現場力向上、QMS、実務知識を体系的に提供します。">
+<meta name="description" content="産業技術アカデミーは、新人教育から管理職教育まで対応する製造業向けeラーニング。化粧品・包装・自動車・医療機器・食品・石油など6業界の品質管理実務経験をもとに、役割別・レベル別の教材を提供します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap");
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:"Noto Sans JP",sans-serif; background:#0b1f3a; color:#e2e8f0; line-height:1.8; -webkit-font-smoothing:antialiased; }
-  
-  /* Navigation override */
-  .unav-bar { backdrop-filter:blur(12px); }
-  
-  /* Main wrapper */
-  .sta-wrap { overflow-x:hidden; }
-  
-  /* Hero section */
-  .sta-hero { padding:5rem 2rem 3rem; text-align:center; background:linear-gradient(180deg,#0b1f3a 0%,#16355d 50%,#0f2847 100%); position:relative; }
-  .sta-hero::after { content:""; position:absolute; bottom:-1px; left:0; right:0; height:80px; background:linear-gradient(transparent,#0b1f3a); pointer-events:none; }
-  .sta-eyebrow { display:inline-block; background:rgba(232,184,75,0.15); color:#e8b84b; padding:0.4rem 1.2rem; border-radius:20px; font-size:0.85rem; font-weight:500; letter-spacing:0.05em; margin-bottom:1.5rem; border:1px solid rgba(232,184,75,0.2); }
-  .sta-h1 { font-size:2.2rem; font-weight:700; background:linear-gradient(135deg,#fff,#e2e8f0); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; line-height:1.4; margin-bottom:1.2rem; }
-  .sta-lead { font-size:1rem; color:#94a3b8; max-width:600px; margin:0 auto; }
-  
-  /* Gold accent band */
-  .sta-gold { background:linear-gradient(135deg,#16355d,#1a3d6b); padding:3rem 2rem; text-align:center; position:relative; }
-  .sta-gold::before { content:""; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,#e8b84b,transparent); }
-  .sta-gold::after { content:""; position:absolute; bottom:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,#e8b84b,transparent); }
-  .sta-gold-text { font-size:1.15rem; color:#e8b84b; font-weight:500; max-width:700px; margin:0 auto; line-height:2; }
-  
-  /* Section containers */
-  .sta-sec { max-width:900px; margin:0 auto; padding:4rem 2rem; }
-  section { position:relative; }
-  section:nth-child(odd) { background:#0b1f3a; }
-  section:nth-child(even) { background:linear-gradient(135deg,#0f2847,#132d52); }
-  
-  /* Section titles */
-  .sta-title { font-size:1.5rem; font-weight:700; color:#e8b84b; margin-bottom:2rem; }
-  .sta-titleline { position:relative; padding-bottom:0.8rem; }
-  .sta-titleline::after { content:""; position:absolute; bottom:0; left:0; width:60px; height:3px; background:linear-gradient(90deg,#e8b84b,transparent); border-radius:2px; }
-  
-  /* Card grid */
-  .sta-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; margin-top:2rem; }
-  .sta-card { background:rgba(22,53,93,0.5); border:1px solid rgba(255,255,255,0.08); border-radius:16px; padding:2rem; transition:all 0.3s ease; backdrop-filter:blur(10px); position:relative; overflow:hidden; }
-  .sta-card::before { content:""; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#e8b84b,transparent); opacity:0; transition:opacity 0.3s; }
-  .sta-card:hover { transform:translateY(-5px); box-shadow:0 15px 40px rgba(0,0,0,0.3); border-color:rgba(232,184,75,0.2); }
-  .sta-card:hover::before { opacity:1; }
-  .sta-card h3 { color:#f1c85b; font-size:1.05rem; margin-bottom:0.5rem; }
-  .sta-card p { color:#94a3b8; font-size:0.9rem; margin:0; }
-  
-  /* Band / highlight boxes */
-  .sta-band { background:rgba(232,184,75,0.08); border-left:4px solid #e8b84b; border-radius:0 12px 12px 0; padding:1.5rem 2rem; margin:1.5rem 0; }
-  .sta-band h3 { color:#e8b84b; margin-bottom:0.3rem; }
-  .sta-band p { color:#cbd5e1; margin:0; font-size:0.92rem; }
-  
-  /* Feature list */
-  .sta-list { list-style:none; margin-top:1.5rem; }
-  .sta-list li { padding:0.8rem 1rem 0.8rem 2.5rem; position:relative; border-bottom:1px solid rgba(255,255,255,0.05); }
-  .sta-list li::before { content:"▸"; position:absolute; left:0.8rem; color:#e8b84b; font-weight:700; }
-  
-  /* Steps flow */
-  .sta-flow { display:flex; flex-direction:column; gap:1.5rem; margin-top:2rem; position:relative; padding-left:3rem; }
-  .sta-flow::before { content:""; position:absolute; left:22px; top:0; bottom:0; width:2px; background:linear-gradient(to bottom,#e8b84b,rgba(232,184,75,0.1)); }
-  .sta-step { display:flex; align-items:flex-start; gap:1.2rem; position:relative; margin-left:-3rem; }
-  .sta-num { width:46px; height:46px; min-width:46px; border-radius:50%; background:linear-gradient(135deg,#e8b84b,#d4a43a); color:#0b1f3a; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.95rem; z-index:1; box-shadow:0 4px 15px rgba(232,184,75,0.3); }
-  .sta-step > div:last-child { background:rgba(22,53,93,0.4); border-radius:12px; padding:1.5rem; flex:1; border:1px solid rgba(255,255,255,0.06); }
-  .sta-step h3 { color:#f1c85b; margin-bottom:0.3rem; }
-  .sta-step p { color:#94a3b8; margin:0; font-size:0.9rem; }
-  
-  /* FAQ */
-  .sta-qa { margin-top:2rem; }
-  .sta-q { background:rgba(22,53,93,0.4); border-radius:12px; padding:1.5rem 2rem; margin-bottom:1rem; border:1px solid rgba(255,255,255,0.06); transition:border-color 0.3s; }
-  .sta-q:hover { border-color:rgba(232,184,75,0.2); }
-  .sta-q h3 { color:#e8b84b; font-size:1rem; margin-bottom:0.5rem; }
-  .sta-q h3::before { content:"Q. "; }
-  .sta-q p { color:#cbd5e1; margin:0; font-size:0.9rem; }
-  
-  /* Value chain grid */
-  .vc-grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:1.2rem; margin:2rem 0; }
-  .vc-grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin:2rem 0; }
-  .vc-card { background:rgba(22,53,93,0.5); border-radius:14px; padding:1.8rem 1.2rem; text-align:center; border:1px solid rgba(255,255,255,0.08); transition:all 0.3s; }
-  .vc-card:hover { transform:translateY(-3px); border-color:rgba(232,184,75,0.2); }
-  .vc-icon { font-size:2.2rem; display:block; margin-bottom:0.8rem; }
-  .vc-title { font-weight:600; color:#e8b84b; font-size:0.95rem; }
-  .vc-desc { font-size:0.82rem; color:#94a3b8; margin-top:0.4rem; }
-  
-  /* General text styles */
-  section p { color:#cbd5e1; font-size:0.95rem; }
-  strong { color:#e2e8f0; }
-  
-  /* Responsive */
-  @media(max-width:768px) {
-    .sta-sec { padding:3rem 1.2rem; }
-    .sta-h1 { font-size:1.6rem; }
-    .sta-title { font-size:1.2rem; }
-    .sta-grid { grid-template-columns:1fr; }
-    .vc-grid4 { grid-template-columns:repeat(2,1fr); }
-    .vc-grid3 { grid-template-columns:1fr; }
-    .sta-hero { padding:3.5rem 1.2rem 2rem; }
-    .sta-gold-text { font-size:1rem; }
-  }
-  @media(max-width:480px) {
-    .vc-grid4 { grid-template-columns:1fr; }
-    .sta-step { flex-direction:column; }
-    .sta-flow::before { display:none; }
-    .sta-flow { padding-left:0; }
-    .sta-step { margin-left:0; }
-  }
-</style>
-<style>
-body{margin:0;padding:0}
-.sta-wrap{font-family:'Yu Gothic','Hiragino Kaku Gothic ProN',sans-serif;color:#fff;background:linear-gradient(135deg,#091a30,#102a44)}
-.sta-sec{max-width:1100px;margin:0 auto;padding:42px 24px}
-.sta-hero{background:linear-gradient(135deg,#0b1f3a,#16355d);border:1px solid #27486f}
-.sta-eyebrow{font-size:12px;letter-spacing:.18em;color:#e8b84b;font-weight:700;margin-bottom:10px}
-.sta-h1{font-size:34px;line-height:1.35;font-weight:700;margin:0 0 14px}
-.sta-lead{font-size:17px;line-height:1.9;color:#d8e6f6;max-width:900px}
-.sta-gold{background:linear-gradient(90deg,#b07a10,#c8921a,#e8b84b,#c8921a,#b07a10);color:#0b1f3a}
-.sta-gold .sta-sec{padding:18px 24px}
-.sta-gold-text{font-size:22px;font-weight:700;text-align:center;line-height:1.6}
-.sta-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.sta-card{background:#102844;border:1px solid #27486f;padding:22px}
-.sta-card h3{margin:0 0 10px;font-size:19px;color:#fff}
-.sta-card p{margin:0;color:#d8e6f6;line-height:1.8;font-size:14px}
-.sta-title{font-size:28px;font-weight:700;margin:0 0 20px}
-.sta-titleline{border-left:5px solid #e8b84b;padding-left:14px}
-.sta-list{margin:0;padding:0;list-style:none}
-.sta-list li{margin:0 0 12px;padding:14px 16px;background:#102844;border:1px solid #27486f;color:#d8e6f6;line-height:1.8}
-.sta-list b{color:#fff}
-.sta-flow{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.sta-step{background:#102844;border:1px solid #27486f;padding:20px;position:relative}
-.sta-num{display:inline-block;background:#e8b84b;color:#0b1f3a;font-weight:700;font-size:14px;padding:5px 10px;margin-bottom:12px}
-.sta-step h4{margin:0 0 8px;font-size:18px}
-.sta-step p{margin:0;color:#d8e6f6;line-height:1.8;font-size:14px}
-.sta-band{background:#0d2138;border-top:1px solid #27486f;border-bottom:1px solid #27486f}
-.sta-band .sta-sec{padding:24px}
-.sta-band p{margin:0;text-align:center;font-size:18px;line-height:1.8;color:#e8edf5}
-.sta-note{font-size:13px;color:#bfd3ea;line-height:1.8}
-.sta-qa{display:grid;gap:14px}
-.sta-q{background:#102844;border:1px solid #27486f;padding:18px}
-.sta-q h4{margin:0 0 8px;font-size:18px;color:#fff}
-.sta-q p{margin:0;color:#d8e6f6;line-height:1.8}
-/* 制作・監修 */
-.prod-sec{padding:42px 24px}
-.prod-inner{max-width:1100px;margin:0 auto}
-.prod-lead{font-size:14px;color:#bfd3ea;line-height:1.9;margin-bottom:24px}
-.profile-block{background:#102844;border:1px solid #27486f;border-radius:4px;padding:28px;margin-bottom:20px}
-.profile-block:last-child{margin-bottom:0}
-.profile-role{font-size:11px;letter-spacing:.2em;color:#0ea5c8;font-weight:700;margin-bottom:8px}
-.profile-name{font-size:18px;font-weight:700;color:#fff;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid #27486f}
-.profile-block p{font-size:14px;color:#d8e6f6;line-height:1.9;margin-bottom:10px}
-.profile-block p:last-child{margin-bottom:0}
-.career-title{font-size:11px;letter-spacing:.18em;color:#0ea5c8;font-weight:700;margin:20px 0 14px}
-.career-item{border:1px solid #27486f;border-radius:4px;padding:16px 18px;margin-bottom:10px;background:#0d2138}
-.career-item:last-child{margin-bottom:0}
-.career-head{display:flex;align-items:center;gap:12px;margin-bottom:10px}
-.career-logo{width:52px;height:52px;border-radius:6px;background:#1a3a5c;display:flex;align-items:center;justify-content:center;font-size:9px;color:#8faac8;flex-shrink:0;border:1px solid #27486f;text-align:center;line-height:1.3;padding:4px}
-.career-company{font-size:14px;font-weight:700;color:#fff}
-.career-scale{font-size:11px;color:#8faac8;margin-top:2px}
-.career-dept{display:inline-block;font-size:11px;background:#0b1f3a;color:#0ea5c8;border:1px solid #27486f;padding:3px 10px;border-radius:3px;margin-bottom:8px;font-weight:500}
-.career-desc{font-size:13px;color:#d8e6f6;line-height:1.85}
-.supervisor-head{display:flex;align-items:center;gap:14px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid #27486f}
-.supervisor-logo{width:52px;height:52px;border-radius:6px;background:#1a3a5c;display:flex;align-items:center;justify-content:center;font-size:9px;color:#8faac8;flex-shrink:0;border:1px solid #27486f;text-align:center;line-height:1.3;padding:4px}
-@media(max-width:640px){
-  .sta-h1{font-size:28px}
-  .sta-lead{font-size:15px}
-  .sta-gold-text{font-size:18px}
-  .sta-title{font-size:24px}
-  .sta-grid,.sta-flow{grid-template-columns:1fr}
+:root{
+  --navy-950:#0a1628; --navy-900:#0f1e3d; --navy-800:#1a2d52; --navy-700:#253a66;
+  --gold:#c9a961; --gold-light:#e4c987; --gold-dark:#9c7e3f;
+  --text:#2d3748; --text-muted:#64748b; --text-light:#94a3b8;
+  --bg:#ffffff; --bg-soft:#f8fafc; --bg-warm:#faf8f3;
+  --border:#e2e8f0; --border-gold:rgba(201,169,97,0.25);
+  --shadow-sm:0 2px 8px rgba(15,30,61,0.06);
+  --shadow-md:0 8px 24px rgba(15,30,61,0.1);
+  --shadow-lg:0 20px 60px rgba(15,30,61,0.15);
+  --shadow-gold:0 10px 40px rgba(201,169,97,0.25);
+
+  /* spacing tokens - reduced */
+  --sp-section:56px;
+  --sp-container:14px;
+  --sp-card:22px;
+  --sp-gap:12px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--text);line-height:1.75;background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+
+.progress-bar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-light));z-index:200;width:0%;transition:width .1s linear;box-shadow:0 0 10px rgba(201,169,97,0.5)}
+
+.header{position:fixed;top:0;left:0;right:0;background:rgba(10,22,40,0.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);z-index:100;border-bottom:1px solid rgba(201,169,97,0.15);transition:all .3s}
+.header.scrolled{background:rgba(10,22,40,0.98);box-shadow:0 4px 20px rgba(0,0,0,0.2)}
+.header-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:10px var(--sp-container);gap:12px}
+.logo{color:#fff;text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;letter-spacing:0.05em;transition:opacity .3s;line-height:1.2;min-width:0}
+.logo:hover{opacity:0.85}
+.logo span{color:var(--gold);display:block;font-size:10px;letter-spacing:0.15em;margin-top:2px}
+.nav{display:flex;gap:18px;align-items:center}
+.nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s;position:relative}
+.nav a:not(.nav-cta)::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:1px;background:var(--gold);transition:width .3s}
+.nav a:not(.nav-cta):hover{color:var(--gold-light)}
+.nav a:not(.nav-cta):hover::after{width:100%}
+.nav-cta{background:var(--gold);color:var(--navy-950)!important;padding:9px 16px;border-radius:2px;font-weight:700!important;transition:all .3s}
+.nav-cta:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:var(--shadow-gold)}
+.menu-btn{display:none;background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:6px;line-height:1;min-width:44px;min-height:44px;align-items:center;justify-content:center}
+
+.hero{position:relative;min-height:auto;background:linear-gradient(135deg,var(--navy-950) 0%,var(--navy-800) 100%);color:#fff;display:flex;align-items:center;overflow:hidden;padding:80px var(--sp-container) 70px}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 20% 30%,rgba(201,169,97,0.15) 0%,transparent 50%),radial-gradient(circle at 80% 70%,rgba(201,169,97,0.08) 0%,transparent 50%);pointer-events:none}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,169,97,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,169,97,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;animation:gridMove 30s linear infinite}
+@keyframes gridMove{from{background-position:0 0}to{background-position:60px 60px}}
+.particles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.particle{position:absolute;background:var(--gold);border-radius:50%;opacity:0;animation:particleFloat 12s linear infinite}
+@keyframes particleFloat{0%{opacity:0;transform:translateY(100vh) scale(0)}10%{opacity:0.6;transform:translateY(90vh) scale(1)}90%{opacity:0.6;transform:translateY(10vh) scale(1)}100%{opacity:0;transform:translateY(0) scale(0)}}
+
+.hero-inner{max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:2;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.hero-label{display:inline-flex;align-items:center;gap:10px;color:var(--gold);font-size:12px;letter-spacing:0.22em;margin-bottom:14px;font-family:'Cormorant Garamond',serif;font-weight:500;opacity:0;animation:slideIn .8s .2s forwards}
+.hero-label::before{content:"";width:32px;height:1px;background:var(--gold)}
+.hero h1{font-size:clamp(26px,5vw,52px);font-weight:900;line-height:1.22;margin-bottom:16px;letter-spacing:0.02em;opacity:0;animation:slideIn 1s .4s forwards}
+.hero h1 .accent{background:linear-gradient(120deg,var(--gold-light) 0%,var(--gold) 50%,var(--gold-light) 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 4s linear infinite}
+@keyframes shimmer{to{background-position:200% center}}
+@keyframes slideIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.hero-sub{font-size:15px;line-height:1.8;color:rgba(255,255,255,0.85);margin-bottom:24px;max-width:560px;opacity:0;animation:slideIn 1s .6s forwards}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:18px 0;border-top:1px solid rgba(201,169,97,0.2);border-bottom:1px solid rgba(201,169,97,0.2);max-width:560px;opacity:0;animation:slideIn 1s .8s forwards}
+.hero-stat-num{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,5vw,38px);font-weight:600;color:var(--gold);line-height:1}
+.hero-stat-label{font-size:10px;color:rgba(255,255,255,0.7);letter-spacing:0.08em;margin-top:4px}
+
+.scroll-indicator{position:absolute;bottom:14px;left:var(--sp-container);color:rgba(255,255,255,0.4);font-size:10px;letter-spacing:0.3em;font-family:'Cormorant Garamond',serif;display:flex;align-items:center;gap:10px;opacity:0;animation:slideIn 1s 1.2s forwards}
+.scroll-indicator::after{content:"";width:22px;height:1px;background:var(--gold);animation:scrollBounceH 2s infinite}
+@keyframes scrollBounceH{0%,100%{transform:scaleX(0.3);transform-origin:left}50%{transform:scaleX(1);transform-origin:left}}
+
+.hero-visual{position:relative;aspect-ratio:1/1;max-width:500px;margin:0 auto;width:100%;opacity:0;animation:fadeInScale 1.2s .8s forwards;padding:44px}
+@keyframes fadeInScale{from{opacity:0;transform:scale(0.8)}to{opacity:1;transform:scale(1)}}
+.hero-ring-wrap{position:absolute;inset:44px;pointer-events:none}
+.hero-ring{position:absolute;inset:0;border:1px solid rgba(201,169,97,0.28);border-radius:50%;animation:rotate 80s linear infinite}
+.hero-ring:nth-child(2){inset:14%;border-color:rgba(201,169,97,0.18);animation-duration:60s;animation-direction:reverse}
+.hero-ring:nth-child(3){inset:28%;border-color:rgba(201,169,97,0.38);animation-duration:40s}
+@keyframes rotate{to{transform:rotate(360deg)}}
+.hero-center-glow{position:absolute;inset:30%;border-radius:50%;background:radial-gradient(circle,rgba(201,169,97,0.18) 0%,rgba(10,22,40,0.4) 60%,transparent 100%);pointer-events:none;animation:glowPulse 4s ease-in-out infinite;z-index:2}
+@keyframes glowPulse{0%,100%{opacity:0.7}50%{opacity:1}}
+.hero-center{position:absolute;inset:44px;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;animation:pulse 4s ease-in-out infinite;z-index:3}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
+.hero-center-label{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:0.28em;color:var(--gold);margin-bottom:10px}
+.hero-center-num{font-family:'Cormorant Garamond',serif;font-size:clamp(68px,14vw,92px);font-weight:600;color:#fff;line-height:1;text-shadow:0 0 40px rgba(201,169,97,0.5),0 0 20px rgba(201,169,97,0.3)}
+.hero-center-text{font-size:14px;color:rgba(255,255,255,0.9);margin-top:8px;letter-spacing:0.08em}
+
+/* Badge placement: direct top/right/bottom/left — reliable, no CSS var transforms */
+.hero-industry{
+  position:absolute;
+  background:rgba(10,22,40,0.95);
+  border:1.5px solid var(--gold);
+  padding:11px 16px;
+  color:#fff;font-size:14px;font-weight:600;
+  white-space:nowrap;
+  backdrop-filter:blur(8px);
+  transition:transform .3s,box-shadow .3s;
+  z-index:4;
+  letter-spacing:0.02em;
+  box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+.hero-industry:hover{box-shadow:var(--shadow-gold);z-index:10}
+.hero-industry .emoji{font-size:18px;margin-right:6px}
+/* 12時 (top center) */
+.hero-industry.b1{top:0;left:50%;transform:translateX(-50%);animation:floatY1 6s ease-in-out infinite 0s}
+.hero-industry.b1:hover{transform:translateX(-50%) scale(1.1)}
+/* 2時 (top right) */
+.hero-industry.b2{top:18%;right:0;animation:floatY2 6s ease-in-out infinite 1s}
+/* 4時 (bottom right) */
+.hero-industry.b3{bottom:18%;right:0;animation:floatY2 6s ease-in-out infinite 2s}
+/* 6時 (bottom center) */
+.hero-industry.b4{bottom:0;left:50%;transform:translateX(-50%);animation:floatY1 6s ease-in-out infinite 3s}
+.hero-industry.b4:hover{transform:translateX(-50%) scale(1.1)}
+/* 8時 (bottom left) */
+.hero-industry.b5{bottom:18%;left:0;animation:floatY2 6s ease-in-out infinite 4s}
+/* 10時 (top left) */
+.hero-industry.b6{top:18%;left:0;animation:floatY2 6s ease-in-out infinite 5s}
+@keyframes floatY1{0%,100%{translate:0 0}50%{translate:0 -7px}}
+@keyframes floatY2{0%,100%{translate:0 0}50%{translate:0 -7px}}
+
+section{padding:var(--sp-section) var(--sp-container);position:relative}
+.container{max-width:1200px;margin:0 auto}
+.section-label{font-family:'Cormorant Garamond',serif;color:var(--gold-dark);font-size:12px;letter-spacing:0.28em;margin-bottom:10px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.section-label::before{content:"";width:24px;height:1px;background:var(--gold-dark)}
+.section-title{font-size:clamp(22px,4vw,36px);font-weight:900;line-height:1.3;color:var(--navy-950);margin-bottom:14px;letter-spacing:0.02em}
+.section-lead{font-size:14px;line-height:1.85;color:var(--text);max-width:760px;margin-bottom:28px}
+
+.mission{background:var(--bg-warm);position:relative}
+.mission::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.mission-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,3.2vw,28px);font-style:italic;color:var(--navy-900);line-height:1.55;padding:20px 0 20px 20px;border-left:3px solid var(--gold);margin:20px 0;position:relative}
+
+.target{background:var(--bg)}
+.target-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--sp-gap)}
+.target-card{background:var(--bg);border:1px solid var(--border);padding:var(--sp-card) 20px;transition:all .4s cubic-bezier(.2,.8,.2,1);position:relative;overflow:hidden}
+.target-card::before{content:"";position:absolute;top:0;left:0;width:0;height:3px;background:var(--gold);transition:width .4s}
+.target-card::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 0%,rgba(201,169,97,0.03) 100%);opacity:0;transition:opacity .4s;pointer-events:none}
+.target-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--gold)}
+.target-card:hover::before{width:100%}
+.target-card:hover::after{opacity:1}
+.target-num{font-family:'Cormorant Garamond',serif;font-size:12px;color:var(--gold-dark);letter-spacing:0.18em;margin-bottom:8px;transition:transform .3s}
+.target-card:hover .target-num{transform:translateX(4px)}
+.target-card h3{font-size:16px;font-weight:700;color:var(--navy-950);margin-bottom:8px;line-height:1.4}
+.target-card p{font-size:13px;line-height:1.75;color:var(--text-muted)}
+
+.content{background:var(--navy-950);color:#fff;position:relative;overflow:hidden}
+.content::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 10% 20%,rgba(201,169,97,0.1) 0%,transparent 40%),radial-gradient(circle at 90% 80%,rgba(201,169,97,0.08) 0%,transparent 40%)}
+.content .container{position:relative;z-index:1}
+.content .section-title{color:#fff}
+.content .section-lead{color:rgba(255,255,255,0.8)}
+.content .section-label{color:var(--gold-light)}
+.content .section-label::before{background:var(--gold-light)}
+.content-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:minmax(140px,auto);gap:10px}
+.content-item{background:rgba(255,255,255,0.04);border:1px solid rgba(201,169,97,0.2);padding:20px;transition:all .4s cubic-bezier(.2,.8,.2,1);position:relative;backdrop-filter:blur(10px);overflow:hidden}
+.content-item::before{content:"";position:absolute;top:-100%;left:-100%;width:200%;height:200%;background:radial-gradient(circle,rgba(201,169,97,0.15) 0%,transparent 50%);transition:transform .6s}
+.content-item:hover::before{transform:translate(50%,50%)}
+.content-item:hover{background:rgba(201,169,97,0.08);border-color:var(--gold);transform:translateY(-4px);box-shadow:var(--shadow-gold)}
+.content-item.span-2{grid-column:span 2}
+.content-item > *{position:relative;z-index:1}
+.content-item-icon{width:38px;height:38px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:15px;margin-bottom:12px;font-family:'Cormorant Garamond',serif;font-weight:600;transition:all .3s}
+.content-item:hover .content-item-icon{background:var(--gold);color:var(--navy-950);transform:rotate(5deg)}
+.content-item h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:6px;letter-spacing:0.02em}
+.content-item p{font-size:12.5px;line-height:1.7;color:rgba(255,255,255,0.75)}
+
+.features{background:var(--bg-soft)}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--sp-gap);margin-top:20px}
+.feature{background:var(--bg);padding:var(--sp-card) 22px;position:relative;border:1px solid var(--border);transition:all .4s cubic-bezier(.2,.8,.2,1);overflow:hidden}
+.feature::before{content:"";position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height .4s}
+.feature:hover{border-color:var(--gold);box-shadow:var(--shadow-md);transform:translateY(-4px)}
+.feature:hover::before{height:100%}
+.feature-num{position:absolute;top:14px;right:20px;font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:500;color:var(--gold);opacity:0.4;line-height:1;transition:all .4s}
+.feature:hover .feature-num{opacity:1;transform:scale(1.1)}
+.feature h3{font-size:16px;font-weight:700;color:var(--navy-950);margin-bottom:8px;padding-right:36px}
+.feature p{font-size:13px;line-height:1.75;color:var(--text-muted)}
+
+.howto{background:var(--bg)}
+.timeline{position:relative;max-width:900px;margin:28px auto 0}
+.timeline::before{content:"";position:absolute;top:0;bottom:0;left:28px;width:2px;background:linear-gradient(to bottom,var(--gold),var(--gold-light),var(--border))}
+.timeline-item{position:relative;padding-left:74px;margin-bottom:20px;opacity:0;transform:translateX(-20px);transition:opacity .8s,transform .8s}
+.timeline-item.visible{opacity:1;transform:translateX(0)}
+.timeline-item:last-child{margin-bottom:0}
+.timeline-step{position:absolute;left:0;top:0;width:58px;height:58px;background:var(--bg);border:2px solid var(--gold);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:var(--shadow-md);transition:all .3s}
+.timeline-item:hover .timeline-step{background:var(--gold);transform:scale(1.05);box-shadow:var(--shadow-gold)}
+.timeline-item:hover .timeline-step-label,.timeline-item:hover .timeline-step-num{color:var(--navy-950)}
+.timeline-step-label{font-family:'Cormorant Garamond',serif;font-size:9px;letter-spacing:0.18em;color:var(--gold-dark);transition:color .3s}
+.timeline-step-num{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--navy-950);line-height:1;transition:color .3s}
+.timeline-content{background:var(--bg-warm);padding:16px 18px;border-left:3px solid var(--gold);position:relative;transition:all .3s}
+.timeline-item:hover .timeline-content{background:#fff;box-shadow:var(--shadow-md);transform:translateX(4px)}
+.timeline-content h3{font-size:15px;font-weight:700;color:var(--navy-950);margin-bottom:4px}
+.timeline-content p{font-size:12.5px;line-height:1.75;color:var(--text-muted)}
+
+.industries{background:linear-gradient(135deg,var(--navy-950) 0%,var(--navy-800) 100%);color:#fff;position:relative;overflow:hidden}
+.industries::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(201,169,97,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,169,97,0.04) 1px,transparent 1px);background-size:80px 80px;animation:gridMove 40s linear infinite}
+.industries .container{position:relative;z-index:1}
+.industries .section-title{color:#fff}
+.industries .section-label{color:var(--gold-light)}
+.industries .section-label::before{background:var(--gold-light)}
+.industries .section-lead{color:rgba(255,255,255,0.85)}
+.industry-count-display{display:flex;align-items:baseline;gap:14px;margin-bottom:18px;flex-wrap:wrap}
+.industry-count-num{font-family:'Cormorant Garamond',serif;font-size:clamp(60px,12vw,110px);font-weight:600;color:var(--gold);line-height:1;text-shadow:0 0 40px rgba(201,169,97,0.3)}
+.industry-count-label{font-size:12px;color:rgba(255,255,255,0.7);letter-spacing:0.25em;text-transform:uppercase}
+.industry-count-label strong{display:block;color:#fff;font-size:15px;letter-spacing:0.04em;margin-top:4px;font-weight:500}
+.industry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-gap);margin-top:14px}
+.industry{background:rgba(255,255,255,0.03);border:1px solid rgba(201,169,97,0.25);padding:20px 14px;text-align:center;transition:all .4s cubic-bezier(.2,.8,.2,1);position:relative;overflow:hidden;cursor:default}
+.industry::before{content:"";position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.industry::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(201,169,97,0.1) 0%,transparent 70%);opacity:0;transition:opacity .4s}
+.industry:hover{background:rgba(201,169,97,0.08);border-color:var(--gold);transform:translateY(-5px);box-shadow:var(--shadow-gold)}
+.industry:hover::before{transform:scaleX(1)}
+.industry:hover::after{opacity:1}
+.industry > *{position:relative;z-index:1}
+.industry-emoji{font-size:32px;margin-bottom:10px;display:block;transition:transform .4s}
+.industry:hover .industry-emoji{transform:scale(1.2) rotate(-5deg)}
+.industry h3{font-size:14px;font-weight:700;color:#fff;margin-bottom:8px;letter-spacing:0.02em}
+.industry-tags{display:flex;flex-wrap:wrap;gap:4px;justify-content:center}
+.industry-tag{font-size:10px;color:var(--gold-light);border:1px solid rgba(201,169,97,0.4);padding:2px 8px;letter-spacing:0.04em;transition:all .3s}
+.industry:hover .industry-tag{background:rgba(201,169,97,0.15);border-color:var(--gold)}
+.industry-points{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px;padding-top:32px;border-top:1px solid rgba(201,169,97,0.2)}
+.industry-point{padding:0;transition:transform .3s}
+.industry-point:hover{transform:translateY(-4px)}
+.industry-point-num{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--gold);font-weight:600;line-height:1;margin-bottom:8px}
+.industry-point h4{font-size:15px;color:#fff;font-weight:700;margin-bottom:6px}
+.industry-point p{font-size:12.5px;color:rgba(255,255,255,0.75);line-height:1.75}
+
+.creator{background:var(--bg-warm)}
+.creator-hero{background:var(--bg);padding:28px 22px;border:1px solid var(--border-gold);box-shadow:var(--shadow-md);position:relative;margin-bottom:18px;overflow:hidden}
+.creator-hero::before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light),var(--gold));background-size:200% auto;animation:shimmerBar 3s linear infinite}
+@keyframes shimmerBar{to{background-position:200% center}}
+.creator-label{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:0.28em;color:var(--gold-dark);margin-bottom:8px}
+.creator-name{font-size:24px;font-weight:900;color:var(--navy-950);margin-bottom:4px;letter-spacing:0.02em}
+.creator-title{font-size:13px;color:var(--text-muted);margin-bottom:14px}
+.creator-title a{color:var(--gold-dark);text-decoration:none;border-bottom:1px solid var(--gold-dark);transition:opacity .3s}
+.creator-title a:hover{opacity:0.7}
+.creator-bio{font-size:13.5px;line-height:1.85;color:var(--text)}
+.career-list{display:grid;gap:10px;margin-top:16px}
+.career{background:var(--bg);border:1px solid var(--border);padding:16px 20px;display:grid;grid-template-columns:1fr 2fr;gap:20px;transition:all .3s;position:relative;overflow:hidden}
+.career::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);transform:scaleY(0);transform-origin:top;transition:transform .4s}
+.career:hover{border-color:var(--gold);box-shadow:var(--shadow-md);transform:translateX(3px)}
+.career:hover::before{transform:scaleY(1)}
+.career-company{font-size:14.5px;font-weight:700;color:var(--navy-950);margin-bottom:4px}
+.career-scale{font-size:11px;color:var(--text-light);padding-top:6px;border-top:1px solid var(--border);margin-top:6px}
+.career-role{font-size:12px;color:var(--gold-dark);font-weight:600;letter-spacing:0.04em;margin-bottom:6px}
+.career-desc{font-size:12.5px;line-height:1.8;color:var(--text-muted)}
+.supervisor{background:var(--bg);padding:22px;border:1px solid var(--border);margin-top:18px;transition:all .3s}
+.supervisor:hover{border-color:var(--gold);box-shadow:var(--shadow-md)}
+.supervisor-header{display:flex;align-items:center;gap:14px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.supervisor-label{font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:0.28em;color:var(--gold-dark)}
+.supervisor-name{font-size:18px;font-weight:700;color:var(--navy-950)}
+.supervisor p{font-size:12.5px;line-height:1.8;color:var(--text-muted);margin-bottom:4px}
+
+.qulio{background:var(--bg);position:relative;overflow:hidden}
+.qulio::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.qulio-intro{background:linear-gradient(135deg,var(--bg-warm) 0%,#fff 100%);border:1px solid var(--border-gold);padding:20px 24px;margin-bottom:22px;position:relative}
+.qulio-intro-label{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:0.28em;color:var(--gold-dark);margin-bottom:4px}
+.qulio-intro-title{font-size:17px;font-weight:700;color:var(--navy-950);margin-bottom:6px}
+.qulio-intro p{font-size:13px;line-height:1.8;color:var(--text-muted)}
+.qulio-tabs{display:flex;gap:0;margin-bottom:18px;border-bottom:1px solid var(--border)}
+.qulio-tab{background:none;border:none;padding:12px 20px;font-family:'Noto Sans JP',sans-serif;font-size:13px;font-weight:700;color:var(--text-muted);cursor:pointer;position:relative;transition:color .3s;letter-spacing:0.04em;min-height:44px}
+.qulio-tab::after{content:"";position:absolute;bottom:-1px;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:center;transition:transform .3s}
+.qulio-tab.active{color:var(--navy-950)}
+.qulio-tab.active::after{transform:scaleX(1)}
+.qulio-tab:hover{color:var(--navy-900)}
+.qulio-tab-count{display:inline-block;font-family:'Cormorant Garamond',serif;color:var(--gold);font-weight:600;margin-left:4px}
+.qulio-panel{display:none;animation:fadeInUp .5s ease}
+.qulio-panel.active{display:block}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.qulio-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.qulio-item{background:var(--bg);border:1px solid var(--border);padding:16px;transition:all .3s cubic-bezier(.2,.8,.2,1);position:relative;overflow:hidden;display:flex;gap:12px;align-items:flex-start}
+.qulio-item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);transform:scaleY(0);transform-origin:top;transition:transform .4s}
+.qulio-item:hover{border-color:var(--gold);box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.qulio-item:hover::before{transform:scaleY(1)}
+.qulio-item-icon{flex-shrink:0;width:38px;height:38px;background:var(--bg-warm);border:1px solid var(--border-gold);display:flex;align-items:center;justify-content:center;font-size:19px;transition:all .3s}
+.qulio-item:hover .qulio-item-icon{background:var(--gold);transform:rotate(-5deg) scale(1.05)}
+.qulio-item-text{flex:1;min-width:0}
+.qulio-item-category{font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:0.18em;color:var(--gold-dark);margin-bottom:3px;text-transform:uppercase}
+.qulio-item h4{font-size:13px;font-weight:700;color:var(--navy-950);line-height:1.5;margin-bottom:3px}
+.qulio-item p{font-size:11.5px;line-height:1.65;color:var(--text-muted)}
+.qulio-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px;padding:20px 16px;background:linear-gradient(135deg,var(--navy-950) 0%,var(--navy-800) 100%);color:#fff;position:relative;overflow:hidden}
+.qulio-summary::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-light),var(--gold))}
+.qulio-summary-item{text-align:center;padding:4px}
+.qulio-summary-num{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,6vw,38px);font-weight:600;color:var(--gold);line-height:1;margin-bottom:4px}
+.qulio-summary-label{font-size:11px;color:rgba(255,255,255,0.8);letter-spacing:0.06em;line-height:1.55}
+
+.faq{background:var(--bg-soft)}
+.faq-list{max-width:820px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border);padding:14px 0;transition:all .3s}
+.faq-item:hover{border-bottom-color:var(--gold)}
+.faq-q{display:flex;align-items:flex-start;gap:12px;font-size:14.5px;font-weight:700;color:var(--navy-950);cursor:pointer;user-select:none;padding-right:36px;position:relative;transition:color .3s;min-height:28px}
+.faq-item:hover .faq-q{color:var(--gold-dark)}
+.faq-q::before{content:"Q";font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:20px;font-weight:600;line-height:1;flex-shrink:0;transition:transform .3s}
+.faq-item:hover .faq-q::before{transform:rotate(-5deg) scale(1.1)}
+.faq-q::after{content:"+";position:absolute;right:0;top:-2px;color:var(--gold);font-size:24px;font-weight:300;transition:transform .3s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .4s ease;padding-left:32px}
+.faq-item.open .faq-a{max-height:400px;padding-top:10px}
+.faq-a p{font-size:13px;line-height:1.8;color:var(--text-muted)}
+
+.cta{background:linear-gradient(135deg,var(--navy-950) 0%,var(--navy-900) 50%,var(--navy-800) 100%);color:#fff;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 50% 50%,rgba(201,169,97,0.15) 0%,transparent 60%);animation:pulseCta 6s ease-in-out infinite}
+@keyframes pulseCta{0%,100%{opacity:0.6;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
+.cta .container{position:relative;z-index:1}
+.cta-label{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:0.28em;color:var(--gold);margin-bottom:12px}
+.cta h2{font-size:clamp(22px,4vw,36px);font-weight:900;margin-bottom:12px;line-height:1.4;color:#fff}
+.cta p{font-size:14px;line-height:1.85;color:rgba(255,255,255,0.85);max-width:640px;margin:0 auto 24px}
+.cta-buttons{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;font-size:14px;font-weight:700;text-decoration:none;transition:all .3s cubic-bezier(.2,.8,.2,1);letter-spacing:0.04em;position:relative;overflow:hidden;min-height:48px}
+.btn::before{content:"";position:absolute;top:50%;left:50%;width:0;height:0;border-radius:50%;background:rgba(255,255,255,0.2);transform:translate(-50%,-50%);transition:width .6s,height .6s}
+.btn:hover::before{width:300px;height:300px}
+.btn-primary{background:var(--gold);color:var(--navy-950);border:1px solid var(--gold)}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,0.4)}
+.btn-secondary{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.4)}
+.btn-secondary:hover{background:rgba(255,255,255,0.08);border-color:#fff;transform:translateY(-3px)}
+.btn-arrow{font-size:16px;transition:transform .3s;position:relative;z-index:1}
+.btn:hover .btn-arrow{transform:translateX(4px)}
+.btn span:first-child{position:relative;z-index:1}
+
+.footer{background:var(--navy-950);color:rgba(255,255,255,0.6);padding:22px var(--sp-container);text-align:center;border-top:1px solid rgba(201,169,97,0.2)}
+.footer-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:10px}
+.footer-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:12px;transition:color .2s;padding:4px}
+.footer-links a:hover{color:var(--gold-light)}
+.footer-copyright{font-size:11px;color:rgba(255,255,255,0.4);font-family:'Cormorant Garamond',serif;letter-spacing:0.08em}
+
+.back-to-top{position:fixed;bottom:16px;right:16px;width:44px;height:44px;background:var(--navy-950);color:var(--gold);border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:90;opacity:0;visibility:hidden;transition:all .3s;font-size:16px}
+.back-to-top.visible{opacity:1;visibility:visible}
+.back-to-top:hover{background:var(--gold);color:var(--navy-950);transform:translateY(-3px);box-shadow:var(--shadow-gold)}
+
+.fade-in{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+.stagger-item{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.stagger-item.visible{opacity:1;transform:translateY(0)}
+.count-up{display:inline-block}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* ===== Responsive: 4 breakpoints ===== */
+
+/* Tablet & small desktop: 968px */
+@media (max-width:968px){
+  :root{--sp-section:48px;--sp-container:14px}
+  .hero-inner{grid-template-columns:1fr;gap:28px}
+  .hero-visual{max-width:420px;padding:36px}
+  .hero-ring-wrap{inset:36px}
+  .hero-center{inset:36px}
+  .content-grid{grid-template-columns:repeat(2,1fr)}
+  .content-item.span-2{grid-column:span 2}
+  .industry-grid{grid-template-columns:repeat(2,1fr)}
+  .industry-points{grid-template-columns:1fr;gap:18px;margin-top:24px;padding-top:24px}
+  .career{grid-template-columns:1fr;gap:10px;padding:14px 18px}
+  .career-scale{margin-top:4px;padding-top:4px}
+  .qulio-summary{grid-template-columns:1fr;gap:14px;padding:18px}
+  .qulio-tabs{overflow-x:auto;white-space:nowrap;flex-wrap:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .qulio-tabs::-webkit-scrollbar{display:none}
+  .qulio-tab{flex-shrink:0}
+  .nav{gap:14px}
+  .nav a{font-size:12px}
+  .nav-cta{padding:8px 14px}
 }
 
-.vc-grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px}
-.vc-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-@media(max-width:640px){.vc-grid4{grid-template-columns:repeat(2,1fr)}.vc-grid3{grid-template-columns:1fr}}
-</style>
+/* Mobile: 640px */
+@media (max-width:640px){
+  :root{--sp-section:40px;--sp-container:12px;--sp-card:18px;--sp-gap:10px}
+  .header-inner{padding:8px 12px}
+  .logo{font-size:14px}
+  .logo span{font-size:9px;letter-spacing:0.1em}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--navy-950);flex-direction:column;padding:14px;gap:10px;border-top:1px solid rgba(201,169,97,0.15)}
+  .nav.open{display:flex}
+  .nav a{font-size:14px;width:100%;padding:8px 0;min-height:44px;display:flex;align-items:center}
+  .nav-cta{text-align:center;justify-content:center}
+  .menu-btn{display:flex}
+  .hero{padding:70px 12px 40px;min-height:auto}
+  .hero-inner{gap:24px}
+  .hero-sub{font-size:13.5px;margin-bottom:18px}
+  .hero-stats{padding:14px 0;gap:10px}
+  .hero-stat-label{font-size:9px}
+  .hero-visual{max-width:360px;padding:30px}
+  .hero-ring-wrap{inset:30px}
+  .hero-center{inset:30px}
+  .hero-industry{font-size:12px;padding:9px 12px}
+  .hero-industry .emoji{font-size:15px;margin-right:4px}
+  .hero-center-label{font-size:11px;margin-bottom:6px}
+  .hero-center-text{font-size:12px;margin-top:6px}
+  .scroll-indicator{font-size:9px;bottom:10px}
+  .content-grid{grid-template-columns:1fr}
+  .content-item.span-2{grid-column:span 1}
+  .industry-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .industry{padding:16px 10px}
+  .industry-emoji{font-size:26px;margin-bottom:6px}
+  .industry h3{font-size:12.5px;margin-bottom:6px}
+  .industry-tag{font-size:9.5px;padding:2px 6px}
+  .industry-count-display{gap:10px;margin-bottom:14px}
+  .timeline::before{left:20px}
+  .timeline-item{padding-left:56px;margin-bottom:14px}
+  .timeline-step{width:42px;height:42px}
+  .timeline-step-num{font-size:16px}
+  .timeline-step-label{font-size:7.5px;letter-spacing:0.1em}
+  .timeline-content{padding:12px 14px}
+  .creator-hero{padding:20px 18px}
+  .creator-name{font-size:20px}
+  .career{padding:14px}
+  .supervisor{padding:18px}
+  .cta-buttons{flex-direction:column;align-items:stretch;gap:8px}
+  .btn{justify-content:center;padding:13px 20px;font-size:13.5px}
+  .mission-quote{font-size:15px;padding:14px 0 14px 14px;margin:14px 0}
+  .back-to-top{bottom:12px;right:12px;width:40px;height:40px;font-size:14px}
+  .qulio-grid{grid-template-columns:1fr}
+  .qulio-tab{padding:10px 14px;font-size:12px;letter-spacing:0}
+  .qulio-intro{padding:16px}
+  .qulio-summary-num{font-size:30px}
+  .footer-links{gap:10px}
+  .footer-links a{font-size:11px}
+  .feature{padding:18px}
+  .feature-num{font-size:32px;top:12px;right:14px}
+  .feature h3{padding-right:30px}
+  .target-card{padding:18px 16px}
+  .content-item{padding:16px}
+}
 
-  <meta property="og:title" content="私たちについて | 産業技術アカデミー">
-  <meta property="og:description" content="製造業向けeラーニング「産業技術アカデミー」の紹介。品質・改善・マネジメントを体系的に学べます。">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://about-us.sangyo-tech.jp/">
-  <meta property="og:image" content="https://sangyo-tech.jp/ogp.png">
-  <meta property="og:site_name" content="産業技術アカデミー">
-  <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  
-<style id="unav-styles">
-.unav{background-color:#060d1a;border-bottom:1px solid #1a2a4a;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:9000;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic Medium","Meiryo",sans-serif;box-sizing:border-box}
-.unav *{box-sizing:border-box}
-.unav-brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
-.unav-brand-en{font-size:.6rem;color:#808a9a;letter-spacing:1.5px;text-transform:uppercase;line-height:1;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-weight:400}
-.unav-brand-ja{font-size:.95rem;color:#c8a84e;font-weight:700;line-height:1;font-family:"Hiragino Kaku Gothic ProN","Yu Gothic Medium","Meiryo",sans-serif;letter-spacing:.05em;margin-top:4px}
-.unav-links{display:flex;align-items:center;gap:4px}
-.unav-links a{color:#b0b8c8;text-decoration:none;font-size:.85rem;padding:8px 14px;border-radius:6px;transition:all .25s ease;white-space:nowrap;font-weight:500;background:none;border:none}
-.unav-links a:nth-child(1){color:#7dd3fc}.unav-links a:nth-child(2){color:#fda4af}.unav-links a:nth-child(3){color:#fcd34d}.unav-links a:nth-child(4){color:#86efac}.unav-links a:nth-child(5){color:#c4b5fd}.unav-links a:hover{color:#fff;background-color:rgba(200,168,78,.12)}
-.unav-links a.unav-active{color:#c8a84e;background-color:rgba(200,168,78,.15);font-weight:600}
-.unav-links a.unav-cta{color:#0a1628;background-color:#c8a84e;font-weight:600;border-radius:20px;padding:8px 18px;margin-left:4px}
-.unav-links a.unav-cta:hover{background-color:#d4b862;color:#0a1628}
-.unav-toggle{display:none;background:none;border:none;color:#c8a84e;font-size:1.5rem;cursor:pointer;padding:4px}
-@media (max-width:768px){.unav-links{display:none;position:absolute;top:60px;left:0;right:0;background-color:#060d1a;border-bottom:1px solid #1a2a4a;flex-direction:column;align-items:stretch;padding:12px 16px;gap:4px}.unav-links.unav-open{display:flex}.unav-links a{text-align:left}.unav-links a.unav-cta{margin-left:0;text-align:center}.unav-toggle{display:block}}
+/* Small mobile: 480px */
+@media (max-width:480px){
+  :root{--sp-section:32px}
+  .hero h1{font-size:24px;line-height:1.25}
+  .hero-label{font-size:11px;margin-bottom:10px}
+  .section-title{font-size:20px}
+  .section-lead{font-size:13px;margin-bottom:20px}
+  .hero-visual{max-width:300px;padding:24px}
+  .hero-ring-wrap{inset:24px}
+  .hero-center{inset:24px}
+  .hero-industry{font-size:10.5px;padding:7px 10px}
+  .hero-industry .emoji{font-size:13px;margin-right:3px}
+  .hero-center-num{font-size:52px}
+  .hero-stats{grid-template-columns:1fr 1fr;gap:8px}
+  .hero-stats > div:last-child{grid-column:1/-1}
+  .industry-count-num{font-size:56px}
+  .industry-grid{grid-template-columns:1fr}
+  .qulio-summary{padding:14px}
+  .career{padding:12px}
+  .career-company{font-size:13.5px}
+  .mission-quote{font-size:13.5px}
+  .creator-hero{padding:16px 14px}
+  .creator-name{font-size:18px}
+  .timeline-item{padding-left:50px}
+  .timeline-step{width:38px;height:38px}
+  .timeline-step-num{font-size:14px}
+  .cta h2{font-size:20px}
+  .logo{font-size:13px}
+  .logo span{font-size:8.5px}
+}
 </style>
 </head>
 <body>
-<nav class="unav" role="navigation" aria-label="メインナビゲーション">
-    <a href="https://sangyo-tech.jp/" class="unav-brand" aria-label="産業技術アカデミー">
-      <div>
-        <div class="unav-brand-en">Industrial Technology Academy</div>
-        <div class="unav-brand-ja">産業技術アカデミー</div>
-      </div>
-    </a>
-    <button class="unav-toggle" onclick="document.getElementById('unavLinks').classList.toggle('unav-open')" aria-label="メニュー">☰</button>
-    <div class="unav-links" id="unavLinks">
+
+<div class="progress-bar" id="progressBar"></div>
+
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="https://sangyo-tech.jp/" class="logo">Industrial Technology Academy<span>産業技術アカデミー</span></a>
+    <button class="menu-btn" aria-label="メニュー" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
+    <nav class="nav">
       <a href="https://sangyo-tech.jp/">TOP</a>
       <a href="https://course.sangyo-tech.jp/">コース</a>
       <a href="https://pricing.sangyo-tech.jp/">料金</a>
       <a href="https://service.sangyo-tech.jp/">支援サービス</a>
-      <a href="https://about-us.sangyo-tech.jp/" class="unav-active">私たちについて</a>
+      <a href="https://about-us.sangyo-tech.jp/">私たちについて</a>
       <a href="https://audio.sangyo-tech.jp/">品質ラジオ</a>
-      <a href="https://apply.sangyo-tech.jp/" class="unav-cta">お申込み</a>
+      <a href="https://apply.sangyo-tech.jp/" class="nav-cta">お申込み</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="particles" id="particles"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-label">ABOUT SANGYO-TECH ACADEMY</div>
+      <h1>製造業の教育を、<br><span class="accent">体系的に積み上げる</span><br>学習基盤として。</h1>
+      <p class="hero-sub">新人教育から管理職教育まで、品質管理・改善活動・現場力・QMSを役割別・レベル別に学べるオンライン研修ポータル。ひとつの業界だけでなく、6つの製造業での実務経験を掛け合わせた教材設計が、私たちの強みです。</p>
+      <div class="hero-stats">
+        <div><div class="hero-stat-num"><span class="count-up" data-target="6">0</span></div><div class="hero-stat-label">INDUSTRIES</div></div>
+        <div><div class="hero-stat-num">ALL</div><div class="hero-stat-label">LEVELS</div></div>
+        <div><div class="hero-stat-num"><span class="count-up" data-target="6">0</span>+</div><div class="hero-stat-label">CATEGORIES</div></div>
+      </div>
     </div>
-  </nav>
-
-
-<div class="sta-wrap">
-
-<section class="sta-hero">
-<div class="sta-sec">
-<div class="sta-eyebrow">ABOUT SANGYO TECH ACADEMY</div>
-<h1 class="sta-h1">産業技術アカデミーとは</h1>
-<p class="sta-lead">産業技術アカデミーは、<b>新人教育から管理職教育まで対応する製造業向けeラーニング</b>です。品質管理、改善活動、現場力向上、QMS、考え方の基礎から、実務で活かせる知識まで、製造業の人材育成に必要な学習をオンラインで体系的に提供します。</p>
-</div>
-</section>
-
-<section class="sta-gold">
-<div class="sta-sec">
-<div class="sta-gold-text">製造業の現場・品質・改善・マネジメントを、役割とレベルに応じて学べる</br>オンライン研修ポータル</div>
-</div>
-</section>
-
-<section>
-<div class="sta-sec">
-<h2 class="sta-title sta-titleline">このような方におすすめです</h2>
-<div class="sta-grid">
-<div class="sta-card"><h3>新人・若手社員</h3><p>製造業の基本、品質の考え方、現場で必要な基礎知識を体系的に学びたい方に適しています。</p></div>
-<div class="sta-card"><h3>現場担当者・品質担当者</h3><p>品質管理、トラブル防止、改善活動、再発防止、標準化など、実務に直結する内容を学べます。</p></div>
-<div class="sta-card"><h3>リーダー・管理職</h3><p>部下育成、教育体系づくり、現場改善、品質文化の醸成など、管理視点の学習にも対応しています。</p></div>
-<div class="sta-card"><h3>教育担当者・企業担当者</h3><p>社内教育の土台づくり、教育内容の標準化、研修コンテンツの充実を図りたい企業に適しています。</p></div>
-</div>
-</div>
-</section>
-
-<section class="sta-band">
-<div class="sta-sec">
-<p>「何から学べばよいか分からない」という状態から、<b>役割別・目的別・レベル別</b>に学習を進められる構成を目指しています。</p>
-</div>
-</section>
-
-<section>
-<div class="sta-sec">
-<h2 class="sta-title sta-titleline">学べる主な内容</h2>
-<ul class="sta-list">
-<li><b>品質管理の基礎</b>：品質とは何か、QCD、ばらつき、異常、標準化、再発防止など</li>
-<li><b>改善活動・現場力向上</b>：三現主義、問題発見、原因分析、改善の考え方、現場での実践</li>
-<li><b>製造業の基本教育</b>：新人向け基礎知識、現場で必要な考え方、仕事の進め方、製造業の責任と役割</li>
-<li><b>品質保証・QMS</b>：品質保証の考え方、仕組みづくり、記録、文書、管理の基本</li>
-<li><b>管理職・リーダー教育</b>：育成、マネジメント、教育体制、部門運営、品質文化の醸成</li>
-<li><b>確認テストによる理解度確認</b>：学習後に理解度を確認し、定着につなげます</li>
-</ul>
-</div>
-</section>
-
-<section>
-<div class="sta-sec">
-<h2 class="sta-title sta-titleline">産業技術アカデミーの特長</h2>
-<div class="sta-grid">
-<div class="sta-card"><h3>製造業に特化</h3><p>一般的なビジネス研修ではなく、製造業の現場・品質・改善・教育に焦点を当てた内容です。</p></div>
-<div class="sta-card"><h3>新人から管理職まで対応</h3><p>レベル別・役割別に学べるため、単発学習ではなく教育体系づくりにも活用しやすい構成です。</p></div>
-<div class="sta-card"><h3>オンラインで学習しやすい</h3><p>必要な内容を必要なタイミングで視聴でき、社内教育の効率化と標準化に役立ちます。</p></div>
-<div class="sta-card"><h3>理解度確認ができる</h3><p>確認テストを通じて、視聴だけで終わらせず、学習内容の定着を支援します。</p></div>
-</div>
-</div>
-</section>
-
-<section>
-<div class="sta-sec">
-<h2 class="sta-title sta-titleline">おすすめの使い方</h2>
-<div class="sta-flow">
-<div class="sta-step"><div class="sta-num">STEP 1</div><h4>はじめての方はこちら</h4><p>まずは教養編や品質管理基礎コースなど、基礎を学べるコースからご覧ください。</p></div>
-<div class="sta-step"><div class="sta-num">STEP 2</div><h4>目的別コースを選ぶ</h4><p>新人教育、品質教育、リーダー教育など、目的や立場に応じてコースを選択できます。</p></div>
-<div class="sta-step"><div class="sta-num">STEP 3</div><h4>確認テストで理解度確認</h4><p>視聴後に確認テストで学習内容を整理し、理解の定着と振り返りにつなげます。</p></div>
-<div class="sta-step"><div class="sta-num">STEP 4</div><h4>必要に応じてリクエスト</h4><p>学びたいテーマや追加してほしい研修内容がある場合は、リクエストフォームから送信できます。</p></div>
-</div>
-</div>
-</section>
-
-<section class="sta-band">
-<div class="sta-sec">
-<p>産業技術アカデミーは、単なる動画一覧ではなく、<b>製造業の教育を積み上げるための学習基盤</b>として活用いただくことを想定しています。</p>
-</div>
-</section>
-
-<section>
-<div class="sta-sec">
-<h2 class="sta-title sta-titleline">よくあるイメージ</h2>
-<div class="sta-qa">
-<div class="sta-q"><h4>Q. どのような人が学ぶサイトですか？</h4><p>製造業に関わる新人、若手、現場担当者、品質担当者、リーダー、管理職、教育担当者など、幅広い立場の方を想定しています。</p></div>
-<div class="sta-q"><h4>Q. どこから見ればよいですか？</h4><p>はじめての方は、教養編や品質管理基礎コースなど、基礎を体系的に学べるコースからの受講がおすすめです。</p></div>
-<div class="sta-q"><h4>Q. 学習後の理解度確認はできますか？</h4><p>確認テスト（解説付き）を通じて、視聴内容の整理と理解度確認ができます。</p></div>
-</div>
-</div>
-</section>
-
-
-    <!-- ===== バリューチェーン ===== -->
-    <section>
-        <div class="sta-sec">
-            <h2 class="sta-title sta-titleline">異業種の経験が、教材の厚みになる</h2>
-            <p style="color:#d8e6f6;line-height:1.9;margin-bottom:24px;font-size:15px">産業技術アカデミーの教材は、ひとつの業界だけでなく<b>化粧品・包装資材・自動車部品・医療機器</b>という異なる業界の品質管理実務を経験した制作者がつくっています。業界ごとの規格対応や品質課題に触れてきたからこそ、共通する本質と業界固有のポイントの両方を教材に反映できます。</p>
-
-            <div class="vc-grid4">
-                <div style="background:#102844;border:1px solid #27486f;padding:18px;text-align:center">
-                    <div style="font-size:28px;margin-bottom:8px">💄</div>
-                    <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:6px">化粧品・医薬部外品</div>
-                    <div style="font-size:12px;color:#8faac8">GMP / 品質検査 / 工程管理</div>
-                </div>
-                <div style="background:#102844;border:1px solid #27486f;padding:18px;text-align:center">
-                    <div style="font-size:28px;margin-bottom:8px">📦</div>
-                    <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:6px">包装資材</div>
-                    <div style="font-size:12px;color:#8faac8">ISO9001 / 体制構築 / 標準化</div>
-                </div>
-                <div style="background:#102844;border:1px solid #27486f;padding:18px;text-align:center">
-                    <div style="font-size:28px;margin-bottom:8px">🚗</div>
-                    <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:6px">自動車部品</div>
-                    <div style="font-size:12px;color:#8faac8">顧客品質 / 監査 / サプライヤー管理</div>
-                </div>
-                <div style="background:#102844;border:1px solid #27486f;padding:18px;text-align:center">
-                    <div style="font-size:28px;margin-bottom:8px">🏥</div>
-                    <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:6px">医療機器</div>
-                    <div style="font-size:12px;color:#8faac8">QMS / GMP / SCM / 薬機法</div>
-                </div>
-            </div>
-
-            <div class="vc-grid3">
-                <div class="sta-card">
-                    <h3>業界を横断する視点</h3>
-                    <p>異なる業界の品質管理を経験したことで、どの業界にも通じる品質の本質と、業界固有の注意点を区別して伝えることができます。</p>
-                </div>
-                <div class="sta-card">
-                    <h3>規格対応の実務経験</h3>
-                    <p>ISO9001、GMP、QMS、IATF16949など、業界ごとに求められる規格やシステムの実務対応経験をもとに教材を設計しています。</p>
-                </div>
-                <div class="sta-card">
-                    <h3>現場と管理の両方を理解</h3>
-                    <p>品質検査の現場から品質保証本部、サプライチェーン管理まで幅広い職務を経験し、現場視点と管理視点の両方を教材に反映しています。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="sta-band">
-        <div class="sta-sec">
-            <p>ひとつの業界の知見だけでなく、<b>複数業界の実務経験を掛け合わせた教材設計</b>が、産業技術アカデミーの強みです。</p>
-        </div>
-    </section>
-
-    <!-- 制作・監修 -->
-<section>
-<div class="prod-sec">
-<div class="prod-inner">
-<h2 class="sta-title sta-titleline">制作・監修について</h2>
-<p class="prod-lead">本教材は、製造業における品質管理・品質保証・業務改善に長年携わってきた実務経験者が制作し、品質管理教育に長年携わってきた技術者が監修しています。</p>
-
-<!-- 制作者 -->
-<div class="profile-block">
-<div class="profile-role">PRODUCER — 制作者</div>
-<div class="profile-name">古澤 和俊　<a href="https://sangyo-tech.github.io/Qulio/" target="_blank" style="font-size:13px;color:#0ea5c8;font-weight:400;text-decoration:none">Qulio合同会社　CEO</a></div>
-<p>医薬品・化粧品・食品・医療機器・自動車部品など複数の製造業で品質管理・品質保証業務に従事。品質管理体制構築、ISO9001導入、GMP対応、業務改善、マニュアル作成、教育体系構築などを経験。現在は製造業向けに品質管理体制構築・業務改善・教育体系構築のコンサルティングを実施。</p>
-<div class="career-title">CAREER — 職歴</div>
-
-<div class="career-item">
-  <div class="career-head">
-<div>
-      <div class="career-company">東洋エアゾール工業株式会社</div>
-      <div class="career-scale">従業員数：約500〜1,000名規模</div>
+    <div class="hero-visual">
+      <div class="hero-ring-wrap">
+        <div class="hero-ring"></div>
+        <div class="hero-ring"></div>
+        <div class="hero-ring"></div>
+      </div>
+      <div class="hero-center-glow"></div>
+      <div class="hero-industry b1"><span class="emoji">💄</span>化粧品</div>
+      <div class="hero-industry b2"><span class="emoji">🏥</span>医療機器</div>
+      <div class="hero-industry b3"><span class="emoji">🚗</span>自動車部品</div>
+      <div class="hero-industry b4"><span class="emoji">🍱</span>食品</div>
+      <div class="hero-industry b5"><span class="emoji">📦</span>包装資材</div>
+      <div class="hero-industry b6"><span class="emoji">⛽</span>石油</div>
+      <div class="hero-center">
+        <div class="hero-center-label">CROSS-INDUSTRY</div>
+        <div class="hero-center-num"><span class="count-up" data-target="6">0</span></div>
+        <div class="hero-center-text">業界横断の実務知見</div>
+      </div>
     </div>
   </div>
-  <span class="career-dept">品質課</span>
-  <div class="career-desc">化粧品・医薬部外品・エアゾール製品の品質検査、工程品質管理、不良解析、品質データ分析、品質改善活動、標準書・手順書作成、品質記録管理など品質管理業務全般に従事。</div>
-</div>
-
-<div class="career-item">
-  <div class="career-head">
-<div>
-      <div class="career-company">押尾産業株式会社</div>
-      <div class="career-scale">従業員数：中小企業規模</div>
-    </div>
-  </div>
-  <span class="career-dept">品質管理部（立ち上げ）</span>
-  <div class="career-desc">品質管理部門の立ち上げ、ISO9001導入、品質管理体制構築、検査体制構築、不良対応・是正処置、サプライヤー管理、品質文書作成、工程管理、教育資料作成など品質管理部門責任者として品質管理体制構築を担当。</div>
-</div>
-
-<div class="career-item">
-  <div class="career-head">
-<div>
-      <div class="career-company">ADIENT合同会社</div>
-      <div class="career-scale">自動車部品世界大手 ／ 従業員数：約70,000名</div>
-    </div>
-  </div>
-  <span class="career-dept">品質保証本部</span>
-  <div class="career-desc">自動車部品の顧客品質対応、サプライヤー品質管理、品質監査、不具合解析、品質改善活動、工程監査、品質報告書作成、海外拠点との品質対応など量産品質およびサプライヤー品質管理業務に従事。</div>
-</div>
-
-<div class="career-item">
-  <div class="career-head">
-<div>
-      <div class="career-company">日本ベクトン・ディッキンソン株式会社</div>
-      <div class="career-scale">医療機器世界大手 ／ 従業員数：約70,000名</div>
-    </div>
-  </div>
-  <span class="career-dept">SCM（サプライチェーンマネジメント）</span>
-  <div class="career-desc">サプライヤー管理、購買、在庫管理、輸入管理、供給計画、物流管理、医療機器品質関連業務、GMP・QMS関連業務などサプライチェーンおよび品質システム関連業務に従事。</div>
-</div>
-
-</div>
-
-<!-- 監修者 -->
-<div class="profile-block">
-<div class="profile-role">SUPERVISOR — 監修者</div>
-<div class="supervisor-head">
-<div class="career-company" style="font-size:18px;">古澤 俊宏</div>
-</div>
-<p>出光興産株式会社にて研究所を対象に品質管理手法教育を実施。</p>
-<p>日科技連QCセミナーベーシックコース修了。保安力向上センターの保安力評価推進員として製造部門の自己評価・改善活動を推進。</p>
-<p>品質管理教育などの経験をもとに本教材の監修を担当。</p>
-</div>
-
-</div>
-</div>
+  <div class="scroll-indicator">SCROLL</div>
 </section>
 
-</div>>
+<section class="mission fade-in">
+  <div class="container">
+    <div class="section-label">Our Mission</div>
+    <h2 class="section-title">「何から学べばよいか分からない」<br>という状態から、次の一歩へ。</h2>
+    <blockquote class="mission-quote">産業技術アカデミーは、単なる動画一覧ではなく、<br>製造業の教育を積み上げるための「学習基盤」として<br>活用いただくことを想定しています。</blockquote>
+    <p class="section-lead">品質管理、改善活動、現場力向上、QMS、考え方の基礎から、実務で活かせる知識まで。役割別・目的別・レベル別に学習を進められる構成で、社内教育の標準化と効率化を支援します。</p>
+  </div>
+</section>
 
+<section class="target fade-in">
+  <div class="container">
+    <div class="section-label">Who is it for</div>
+    <h2 class="section-title">このような方に<br>おすすめです</h2>
+    <div class="target-grid">
+      <div class="target-card stagger-item"><div class="target-num">— 01</div><h3>新人・若手社員</h3><p>製造業の基本、品質の考え方、現場で必要な基礎知識を体系的に学びたい方に適しています。</p></div>
+      <div class="target-card stagger-item"><div class="target-num">— 02</div><h3>現場担当者・品質担当者</h3><p>品質管理、トラブル防止、改善活動、再発防止、標準化など、実務に直結する内容を学べます。</p></div>
+      <div class="target-card stagger-item"><div class="target-num">— 03</div><h3>リーダー・管理職</h3><p>部下育成、教育体系づくり、現場改善、品質文化の醸成など、管理視点の学習にも対応しています。</p></div>
+      <div class="target-card stagger-item"><div class="target-num">— 04</div><h3>教育担当者・企業担当者</h3><p>社内教育の土台づくり、教育内容の標準化、研修コンテンツの充実を図りたい企業に適しています。</p></div>
+    </div>
+  </div>
+</section>
 
-<footer style="margin-top:60px;text-align:center;color:#5a7a9a;font-size:13px;padding:24px 0;border-top:1px solid rgba(255,255,255,.08);background:rgba(4,9,15,.94)">
-  <a href="https://sangyo-tech.jp/" style="color:#6aacdd;text-decoration:none">産業技術アカデミー</a> &nbsp;|&nbsp;
-  <a href="https://sangyo-tech.jp/tokushoho/" style="color:#6aacdd;text-decoration:none">特定商取引法に基づく表記</a> &nbsp;|&nbsp;
-  <a href="https://sangyo-tech.jp/privacy/" style="color:#6aacdd;text-decoration:none">プライバシーポリシー</a>
+<section class="content fade-in">
+  <div class="container">
+    <div class="section-label">Curriculum</div>
+    <h2 class="section-title">学べる主な内容</h2>
+    <p class="section-lead">基礎から実務、マネジメントまで。製造業の現場で求められる知識を網羅的にカバーしています。</p>
+    <div class="content-grid">
+      <div class="content-item span-2 stagger-item"><div class="content-item-icon">01</div><h3>品質管理の基礎</h3><p>品質とは何か、QCD、ばらつき、異常、標準化、再発防止など、現場で必ず求められる品質の「考え方」を体系的に学べます。</p></div>
+      <div class="content-item stagger-item"><div class="content-item-icon">02</div><h3>改善活動・現場力向上</h3><p>三現主義、問題発見、原因分析、改善の考え方、現場での実践。</p></div>
+      <div class="content-item stagger-item"><div class="content-item-icon">03</div><h3>製造業の基本教育</h3><p>新人向け基礎知識、仕事の進め方、製造業の責任と役割。</p></div>
+      <div class="content-item stagger-item"><div class="content-item-icon">04</div><h3>品質保証・QMS</h3><p>品質保証の考え方、仕組みづくり、記録、文書、管理の基本。</p></div>
+      <div class="content-item span-2 stagger-item"><div class="content-item-icon">05</div><h3>管理職・リーダー教育 & 確認テスト</h3><p>部下育成、マネジメント、教育体制、部門運営、品質文化の醸成。学習後は確認テストで理解度を可視化し、視聴だけで終わらせず定着につなげます。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="features fade-in">
+  <div class="container">
+    <div class="section-label">Features</div>
+    <h2 class="section-title">産業技術アカデミーの特長</h2>
+    <div class="features-grid">
+      <div class="feature stagger-item"><div class="feature-num">01</div><h3>製造業に特化</h3><p>一般的なビジネス研修ではなく、製造業の現場・品質・改善・教育に焦点を当てた内容です。</p></div>
+      <div class="feature stagger-item"><div class="feature-num">02</div><h3>新人から管理職まで</h3><p>レベル別・役割別に学べるため、単発学習ではなく教育体系づくりにも活用しやすい構成です。</p></div>
+      <div class="feature stagger-item"><div class="feature-num">03</div><h3>オンラインで柔軟に</h3><p>必要な内容を必要なタイミングで視聴でき、社内教育の効率化と標準化に役立ちます。</p></div>
+      <div class="feature stagger-item"><div class="feature-num">04</div><h3>理解度確認ができる</h3><p>確認テストを通じて、視聴だけで終わらせず、学習内容の定着を支援します。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="howto fade-in">
+  <div class="container">
+    <div class="section-label">How to use</div>
+    <h2 class="section-title">おすすめの使い方</h2>
+    <p class="section-lead">4つのステップで、受講者の学習体験を最大化します。</p>
+    <div class="timeline">
+      <div class="timeline-item"><div class="timeline-step"><div class="timeline-step-label">STEP</div><div class="timeline-step-num">01</div></div><div class="timeline-content"><h3>はじめての方はこちら</h3><p>まずは教養編や品質管理基礎コースなど、基礎を学べるコースからご覧ください。</p></div></div>
+      <div class="timeline-item"><div class="timeline-step"><div class="timeline-step-label">STEP</div><div class="timeline-step-num">02</div></div><div class="timeline-content"><h3>目的別コースを選ぶ</h3><p>新人教育、品質教育、リーダー教育など、目的や立場に応じてコースを選択できます。</p></div></div>
+      <div class="timeline-item"><div class="timeline-step"><div class="timeline-step-label">STEP</div><div class="timeline-step-num">03</div></div><div class="timeline-content"><h3>確認テストで理解度確認</h3><p>視聴後に確認テストで学習内容を整理し、理解の定着と振り返りにつなげます。</p></div></div>
+      <div class="timeline-item"><div class="timeline-step"><div class="timeline-step-label">STEP</div><div class="timeline-step-num">04</div></div><div class="timeline-content"><h3>必要に応じてリクエスト</h3><p>学びたいテーマや追加してほしい研修内容がある場合は、リクエストフォームから送信できます。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="industries fade-in">
+  <div class="container">
+    <div class="section-label">Cross-Industry Experience</div>
+    <h2 class="section-title">異業種の経験が、<br>教材の厚みになる</h2>
+    <div class="industry-count-display">
+      <div class="industry-count-num"><span class="count-up" data-target="6">0</span></div>
+      <div class="industry-count-label">INDUSTRIES<strong>6つの製造業における実務経験</strong></div>
+    </div>
+    <p class="section-lead">化粧品・包装資材・自動車部品・医療機器・食品・石油という6つの異なる製造業における品質管理実務の経験が教材に反映されています。業界ごとの規格対応や品質課題に触れてきたからこそ、共通する本質と業界固有のポイントの両方を伝えられます。</p>
+    <div class="industry-grid">
+      <div class="industry stagger-item"><span class="industry-emoji">💄</span><h3>化粧品・医薬部外品</h3><div class="industry-tags"><span class="industry-tag">GMP</span><span class="industry-tag">品質検査</span><span class="industry-tag">工程管理</span></div></div>
+      <div class="industry stagger-item"><span class="industry-emoji">📦</span><h3>包装資材</h3><div class="industry-tags"><span class="industry-tag">ISO9001</span><span class="industry-tag">体制構築</span><span class="industry-tag">標準化</span></div></div>
+      <div class="industry stagger-item"><span class="industry-emoji">🚗</span><h3>自動車部品</h3><div class="industry-tags"><span class="industry-tag">IATF16949</span><span class="industry-tag">顧客品質</span><span class="industry-tag">監査</span></div></div>
+      <div class="industry stagger-item"><span class="industry-emoji">🏥</span><h3>医療機器</h3><div class="industry-tags"><span class="industry-tag">QMS</span><span class="industry-tag">GMP</span><span class="industry-tag">薬機法</span></div></div>
+      <div class="industry stagger-item"><span class="industry-emoji">🍱</span><h3>食品</h3><div class="industry-tags"><span class="industry-tag">HACCP</span><span class="industry-tag">ISO22000</span><span class="industry-tag">衛生管理</span></div></div>
+      <div class="industry stagger-item"><span class="industry-emoji">⛽</span><h3>石油</h3><div class="industry-tags"><span class="industry-tag">保安</span><span class="industry-tag">QC教育</span><span class="industry-tag">リスク管理</span></div></div>
+    </div>
+    <div class="industry-points">
+      <div class="industry-point"><div class="industry-point-num">01</div><h4>業界を横断する視点</h4><p>異なる業界の品質管理を経験したことで、どの業界にも通じる品質の本質と、業界固有の注意点を区別して伝えることができます。</p></div>
+      <div class="industry-point"><div class="industry-point-num">02</div><h4>規格対応の実務経験</h4><p>ISO9001、GMP、QMS、IATF16949、HACCP、ISO22000など、業界ごとに求められる規格やシステムの実務対応経験をもとに教材を設計しています。</p></div>
+      <div class="industry-point"><div class="industry-point-num">03</div><h4>現場と管理の両方を理解</h4><p>品質検査の現場から品質保証本部、サプライチェーン管理まで幅広い職務を経験し、現場視点と管理視点の両方を教材に反映しています。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="creator fade-in">
+  <div class="container">
+    <div class="section-label">Producer & Supervisor</div>
+    <h2 class="section-title">制作・監修について</h2>
+    <p class="section-lead">本教材は、製造業における品質管理・品質保証・業務改善に長年携わってきた実務経験者が制作し、品質管理教育に携わってきた技術者が監修しています。</p>
+    <div class="creator-hero">
+      <div class="creator-label">PRODUCER — 制作者</div>
+      <div class="creator-name">古澤 和俊</div>
+      <div class="creator-title"><a href="https://sangyo-tech.github.io/Qulio/">Qulio合同会社 CEO</a></div>
+      <p class="creator-bio">医薬品・化粧品・食品・医療機器・自動車部品など複数の製造業で品質管理・品質保証業務に従事。品質管理体制構築、ISO9001導入、GMP対応、業務改善、マニュアル作成、教育体系構築などを経験。現在は製造業向けに品質管理体制構築・業務改善・教育体系構築のコンサルティングを実施。</p>
+    </div>
+    <div class="career-list">
+      <div class="career"><div><div class="career-company">東洋エアゾール工業株式会社</div><div class="career-scale">従業員数:約500〜1,000名規模</div></div><div><div class="career-role">品質課</div><div class="career-desc">化粧品・医薬部外品・エアゾール製品の品質検査、工程品質管理、不良解析、品質データ分析、品質改善活動、標準書・手順書作成、品質記録管理など品質管理業務全般に従事。</div></div></div>
+      <div class="career"><div><div class="career-company">押尾産業株式会社</div><div class="career-scale">従業員数:中小企業規模</div></div><div><div class="career-role">品質管理部(立ち上げ)</div><div class="career-desc">品質管理部門の立ち上げ、ISO9001導入、品質管理体制構築、検査体制構築、不良対応・是正処置、サプライヤー管理、品質文書作成、工程管理、教育資料作成など品質管理部門責任者として体制構築を担当。</div></div></div>
+      <div class="career"><div><div class="career-company">ADIENT合同会社</div><div class="career-scale">自動車部品世界大手 ／ 約70,000名</div></div><div><div class="career-role">品質保証本部</div><div class="career-desc">自動車部品の顧客品質対応、サプライヤー品質管理、品質監査、不具合解析、品質改善活動、工程監査、品質報告書作成、海外拠点との品質対応など量産品質およびサプライヤー品質管理業務に従事。</div></div></div>
+      <div class="career"><div><div class="career-company">日本ベクトン・ディッキンソン株式会社</div><div class="career-scale">医療機器世界大手 ／ 約70,000名</div></div><div><div class="career-role">SCM(サプライチェーンマネジメント)</div><div class="career-desc">サプライヤー管理、購買、在庫管理、輸入管理、供給計画、物流管理、医療機器品質関連業務、GMP・QMS関連業務などサプライチェーンおよび品質システム関連業務に従事。</div></div></div>
+    </div>
+    <div class="supervisor">
+      <div class="supervisor-header"><div><div class="supervisor-label">SUPERVISOR — 監修者</div><div class="supervisor-name">古澤 俊宏</div></div></div>
+      <p>出光興産株式会社にて研究所を対象に品質管理手法教育を実施。</p>
+      <p>日科技連QCセミナーベーシックコース修了。保安力向上センターの保安力評価推進員として製造部門の自己評価・改善活動を推進。</p>
+      <p>品質管理教育などの経験をもとに本教材の監修を担当。</p>
+    </div>
+  </div>
+</section>
+
+<section class="qulio fade-in">
+  <div class="container">
+    <div class="section-label">Qulio Track Record</div>
+    <h2 class="section-title">Qulio合同会社の<br>支援実績</h2>
+    <p class="section-lead">産業技術アカデミーの運営元であるQulio合同会社は、製造業だけでなく幅広い業種の業務改善・マニュアル整備・仕組み化を支援してきました。これらの現場で積み上げた実務知見が、eラーニング教材の厚みと実践性を支えています。</p>
+
+    <div class="qulio-intro">
+      <div class="qulio-intro-label">ABOUT OUR CONSULTING</div>
+      <h3 class="qulio-intro-title">現場に入り込んで、仕組みを残す</h3>
+      <p>業務マニュアル化、品質管理体制構築、教育体系設計、業務効率化ツール構築まで。単なる助言ではなく、その会社に残る「仕組み」と「型」をつくる伴走支援を行ってきました。</p>
+    </div>
+
+    <div class="qulio-tabs" role="tablist">
+      <button class="qulio-tab active" data-panel="panel-mfg">製造業支援<span class="qulio-tab-count">3</span></button>
+      <button class="qulio-tab" data-panel="panel-other">異業種支援<span class="qulio-tab-count">5</span></button>
+      <button class="qulio-tab" data-panel="panel-all">すべて<span class="qulio-tab-count">8</span></button>
+    </div>
+
+    <div class="qulio-panel active" id="panel-mfg">
+      <div class="qulio-grid">
+        <div class="qulio-item"><div class="qulio-item-icon">💄</div><div class="qulio-item-text"><div class="qulio-item-category">COSMETICS</div><h4>化粧品の充填業の立ち上げ支援</h4><p>事業立ち上げ段階からの品質管理体制設計と実装を伴走支援。</p></div></div>
+        <div class="qulio-item"><div class="qulio-item-icon">🌿</div><div class="qulio-item-text"><div class="qulio-item-category">HEALTH FOOD</div><h4>健康食品GMP構築</h4><p>健康食品製造におけるGMP準拠体制の構築を支援。</p></div></div>
+        <div class="qulio-item"><div class="qulio-item-icon">♻️</div><div class="qulio-item-text"><div class="qulio-item-category">WASTE & MANUFACTURING</div><h4>産業廃棄物業/製造業様 全業務動画マニュアル化内製支援</h4><p>業種横断で全業務の動画マニュアルを自社で作り続けられる体制を設計・伴走。</p></div></div>
+      </div>
+    </div>
+
+    <div class="qulio-panel" id="panel-other">
+      <div class="qulio-grid">
+        <div class="qulio-item"><div class="qulio-item-icon">🦷</div><div class="qulio-item-text"><div class="qulio-item-category">DENTAL CLINIC</div><h4>歯科医院様 事務業務デジタル化支援</h4><p>紙・属人化していた事務業務のデジタル化と標準化を支援。</p></div></div>
+        <div class="qulio-item"><div class="qulio-item-icon">🚙</div><div class="qulio-item-text"><div class="qulio-item-category">CAR RENTAL</div><h4>レンタカー事業 業務効率化支援</h4><p>運用フローの可視化と効率化により、現場負荷を軽減。</p></div></div>
+        <div class="qulio-item"><div class="qulio-item-icon">🔩</div><div class="qulio-item-text"><div class="qulio-item-category">SEMICONDUCTOR</div><h4>半導体治具設計業者様 仕入れ〜納品までの一元管理ツール構築支援</h4><p>仕入から納品までを通しで管理できるツールを設計・導入支援。</p></div></div>
+        <div class="qulio-item"><div class="qulio-item-icon">🅿️</div><div class="qulio-item-text"><div class="qulio-item-category">PARKING MAINTENANCE</div><h4>立体駐車場メンテナンス業者様 品質情報の集積と分析支援</h4><p>現場から収集する品質情報を集積・分析する仕組みを構築。</p></div></div>
+        <div class="qulio-item"><div class="qulio-item-icon">📘</div><div class="qulio-item-text"><div class="qulio-item-category">MANUAL DEVELOPMENT</div><h4>製造業以外の業務マニュアル作成 20社以上</h4><p>業種を問わず、属人化した業務を誰でも再現できるマニュアルへ整備。</p></div></div>
+      </div>
+    </div>
+
+    <div class="qulio-panel" id="panel-all">
+      <div class="qulio-grid">
+        <div class="qulio-item"><div class="qulio-item-icon">📘</div><div class="qulio-item-text"><div class="qulio-item-category">MANUAL DEVELOPMENT</div><h4>製造業以外の業務マニュアル作成 20社以上</h4><p>業種を問わず、属人化した業務を誰でも再現できるマニュアルへ整備。</p></div></div>
+        <div class="qulio-item"><div class="qulio-item-icon">💄</div><div class="qulio-item-text"><div class="qulio-item-category">COSMETICS</div><h4>化粧品の充填業の立ち上げ支援</h4><p>事業立ち上げ段階からの品質管理体制設計と実装を伴走支援。</p></div></div>
+        <div class="qulio-item"><div class="qulio-item-icon">🌿</div><div class="qulio-item-text"><div class="qulio-item-category">HEALTH FOOD</div><h4>健康食品GMP構築</h4><p>健康食品製造におけるGMP準拠体制の構築を支援。</p></div></div>
+        <div class="qulio-item"><div class="qulio-item-icon">♻️</div><div class="qulio-item-text"><div class="qulio-item-category">WASTE & MANUFACTURING</div><h4>産業廃棄物業/製造業様 全業務動画マニュアル化内製支援</h4><p>業種横断で全業務の動画マニュアルを自社で作り続けられる体制を設計・伴走。</p></div></div>
+        <div class="qulio-item"><div class="qulio-item-icon">🦷</div><div class="qulio-item-text"><div class="qulio-item-category">DENTAL CLINIC</div><h4>歯科医院様 事務業務デジタル化支援</h4><p>紙・属人化していた事務業務のデジタル化と標準化を支援。</p></div></div>
+        <div class="qulio-item"><div class="qulio-item-icon">🚙</div><div class="qulio-item-text"><div class="qulio-item-category">CAR RENTAL</div><h4>レンタカー事業 業務効率化支援</h4><p>運用フローの可視化と効率化により、現場負荷を軽減。</p></div></div>
+        <div class="qulio-item"><div class="qulio-item-icon">🔩</div><div class="qulio-item-text"><div class="qulio-item-category">SEMICONDUCTOR</div><h4>半導体治具設計業者様 仕入れ〜納品までの一元管理ツール構築支援</h4><p>仕入から納品までを通しで管理できるツールを設計・導入支援。</p></div></div>
+        <div class="qulio-item"><div class="qulio-item-icon">🅿️</div><div class="qulio-item-text"><div class="qulio-item-category">PARKING MAINTENANCE</div><h4>立体駐車場メンテナンス業者様 品質情報の集積と分析支援</h4><p>現場から収集する品質情報を集積・分析する仕組みを構築。</p></div></div>
+      </div>
+    </div>
+
+    <div class="qulio-summary">
+      <div class="qulio-summary-item"><div class="qulio-summary-num"><span class="count-up" data-target="20">0</span>+</div><div class="qulio-summary-label">業務マニュアル作成<br>支援企業数</div></div>
+      <div class="qulio-summary-item"><div class="qulio-summary-num"><span class="count-up" data-target="8">0</span></div><div class="qulio-summary-label">多様な支援領域<br>(製造・医療・サービス等)</div></div>
+      <div class="qulio-summary-item"><div class="qulio-summary-num">ALL</div><div class="qulio-summary-label">立ち上げから改善、<br>内製化まで伴走</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq fade-in">
+  <div class="container">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">よくあるイメージ</h2>
+    <div class="faq-list">
+      <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">どのような人が学ぶサイトですか？</div><div class="faq-a"><p>製造業に関わる新人、若手、現場担当者、品質担当者、リーダー、管理職、教育担当者など、幅広い立場の方を想定しています。</p></div></div>
+      <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">どこから見ればよいですか？</div><div class="faq-a"><p>はじめての方は、教養編や品質管理基礎コースなど、基礎を体系的に学べるコースからの受講がおすすめです。</p></div></div>
+      <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">学習後の理解度確認はできますか？</div><div class="faq-a"><p>確認テスト(解説付き)を通じて、視聴内容の整理と理解度確認ができます。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <div class="cta-label">TAKE THE NEXT STEP</div>
+    <h2>製造業の教育体系を、<br>次のステージへ。</h2>
+    <p>まずはコース一覧をご覧いただくか、料金プランをご確認ください。<br>ご質問・お申し込みも、オンラインで受け付けています。</p>
+    <div class="cta-buttons">
+      <a href="https://course.sangyo-tech.jp/" class="btn btn-secondary"><span>コース一覧を見る</span><span class="btn-arrow">→</span></a>
+      <a href="https://pricing.sangyo-tech.jp/" class="btn btn-secondary"><span>料金を見る</span><span class="btn-arrow">→</span></a>
+      <a href="https://apply.sangyo-tech.jp/" class="btn btn-primary"><span>お申し込みはこちら</span><span class="btn-arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="https://sangyo-tech.jp/">産業技術アカデミー</a>
+    <a href="https://sangyo-tech.jp/tokushoho/">特定商取引法に基づく表記</a>
+    <a href="https://sangyo-tech.jp/privacy/">プライバシーポリシー</a>
+  </div>
+  <div class="footer-copyright">© Qulio LLC. All rights reserved.</div>
 </footer>
-  <script src="https://sangyo-tech.jp/unav.js?v=3" defer></script>
+
+<button class="back-to-top" id="backToTop" aria-label="トップへ戻る" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+const progressBar=document.getElementById('progressBar');
+const header=document.getElementById('header');
+const backToTop=document.getElementById('backToTop');
+window.addEventListener('scroll',()=>{
+  const scrolled=window.scrollY;
+  const max=document.documentElement.scrollHeight-window.innerHeight;
+  progressBar.style.width=(scrolled/max*100)+'%';
+  if(scrolled>50)header.classList.add('scrolled');else header.classList.remove('scrolled');
+  if(scrolled>400)backToTop.classList.add('visible');else backToTop.classList.remove('visible');
+});
+const fadeObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');fadeObserver.unobserve(entry.target)}});
+},{threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>fadeObserver.observe(el));
+const staggerObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{if(entry.isIntersecting){
+    entry.target.querySelectorAll('.stagger-item').forEach((item,i)=>{setTimeout(()=>item.classList.add('visible'),i*100)});
+    staggerObserver.unobserve(entry.target);
+  }});
+},{threshold:0.1});
+document.querySelectorAll('.target-grid,.content-grid,.features-grid,.industry-grid').forEach(el=>staggerObserver.observe(el));
+const timelineObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{if(entry.isIntersecting){
+    entry.target.querySelectorAll('.timeline-item').forEach((item,i)=>{setTimeout(()=>item.classList.add('visible'),i*150)});
+    timelineObserver.unobserve(entry.target);
+  }});
+},{threshold:0.2});
+document.querySelectorAll('.timeline').forEach(el=>timelineObserver.observe(el));
+const countObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{if(entry.isIntersecting){
+    const el=entry.target;const target=parseInt(el.dataset.target);const duration=1400;const start=performance.now();
+    function tick(now){
+      const progress=Math.min((now-start)/duration,1);
+      const eased=1-Math.pow(1-progress,3);
+      el.textContent=Math.floor(eased*target);
+      if(progress<1)requestAnimationFrame(tick);else el.textContent=target;
+    }
+    requestAnimationFrame(tick);countObserver.unobserve(el);
+  }});
+},{threshold:0.3});
+document.querySelectorAll('.count-up').forEach(el=>countObserver.observe(el));
+
+document.querySelectorAll('.qulio-tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    const targetId=tab.dataset.panel;
+    document.querySelectorAll('.qulio-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.qulio-panel').forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(targetId).classList.add('active');
+  });
+});
+
+const particlesContainer=document.getElementById('particles');
+const isMobile=window.innerWidth<640;
+const particleCount=isMobile?6:18;
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  for(let i=0;i<particleCount;i++){
+    const p=document.createElement('div');
+    p.className='particle';
+    p.style.left=Math.random()*100+'%';
+    p.style.animationDelay=Math.random()*12+'s';
+    p.style.animationDuration=(8+Math.random()*8)+'s';
+    const size=2+Math.random()*4;
+    p.style.width=size+'px';p.style.height=size+'px';
+    particlesContainer.appendChild(p);
+  }
+}
+document.querySelectorAll('.nav a').forEach(a=>{a.addEventListener('click',()=>{document.querySelector('.nav').classList.remove('open')})});
+</script>
 </body>
 </html>
