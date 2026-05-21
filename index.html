@@ -421,48 +421,56 @@ section{padding:var(--sp-section) var(--sp-container);position:relative}
   .cta h2{font-size:20px}
     }
 
-    /* === Light-card text contrast fix === */
-    .career, .supervisor, .timeline-content, .qulio-card {
-      color: #0a1628 !important;
+    
+  
+  
+    /* === Card text contrast fix (white-bg only) === */
+    .supervisor, .career {
+      color: #0a1628;
     }
-    .career-desc, .career-scale, .timeline-content p, .timeline-content li,
-    .qulio-card p, .supervisor p {
-      color: #1e293b !important;
+    .career-desc, .career-scale {
+      color: #1e293b;
     }
     .career-role {
-      color: #4ecdc4 !important;
+      color: #1e293b;
+      font-weight: 500;
     }
     .career-company {
-      color: #0a1628 !important;
-      font-weight: 600 !important;
+      color: #0a1628;
+      font-weight: 600;
     }
     .supervisor-label {
-      color: #4ecdc4 !important;
+      color: #4ecdc4;
     }
     .supervisor-name {
-      color: #0a1628 !important;
+      color: #0a1628;
+    }
+    /* Timeline cards (light bg) */
+    .timeline-content {
+      color: #0a1628;
     }
     .timeline-content h3, .timeline-content h4 {
-      color: #0a1628 !important;
+      color: #0a1628;
     }
-    .faq-question {
-      color: #f4f7ff !important;
+    .timeline-content p, .timeline-content li {
+      color: #1e293b;
     }
+    /* Buttons */
     .btn-primary {
-      background: #4ecdc4 !important;
-      color: #0a1628 !important;
-      font-weight: 700 !important;
+      background: #4ecdc4;
+      color: #0a1628;
+      font-weight: 700;
     }
     .btn-primary:hover {
-      background: #3dbdb5 !important;
+      background: #3dbdb5;
     }
     .btn-secondary {
-      border-color: #4ecdc4 !important;
-      color: #4ecdc4 !important;
+      border-color: #4ecdc4;
+      color: #4ecdc4;
     }
     .btn-secondary:hover {
-      background: #4ecdc4 !important;
-      color: #0a1628 !important;
+      background: #4ecdc4;
+      color: #0a1628;
     }
   
   </style>
@@ -628,7 +636,7 @@ html,body{margin:0}.unav{background-color:#060d1a!important;border-bottom:1px so
       <div class="supervisor-header"><div><div class="supervisor-label">SUPERVISOR — 監修者</div><div class="supervisor-name">安藤 隆</div></div></div>
       <div class="career">
         <div class="career-company">ミネベアミツミ（東証P）</div>
-        <div class="career-desc">過去ADIENT（NY証券）・ファルテックに在籍し、自動車部品に関する品質部門の立ち上げ、SCM、品質保証本部にて長年携わる。趣味はロードスターで全国の仲間とツーリングやソフ活。</div>
+        <div class="career-desc">過去ADIENT（NY証券）・ファルテック（東証）に在籍し、自動車部品に関する品質部門の立ち上げ、SCM、品質保証本部にて長年携わる。趣味はロードスターで全国の仲間とツーリングやソフ活。</div>
       </div>
     </div>
     <div class="supervisor">
