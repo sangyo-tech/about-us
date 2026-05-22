@@ -530,7 +530,382 @@ h3.qulio-intro-title{color:#f1f5f9 !important}
 .mission,.target,.features,.howto,.creator,.qulio,.faq{background:rgba(7,17,31,0.95) !important}
 .btn-primary,.btn-primary span,.btn-primary .btn-arrow{color:#0a1628 !important}
 
-</style>  <script type="application/ld+json" data-codex-geo-jsonld="v2">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://sangyo-tech.jp/#organization","name":"?????????","url":"https://sangyo-tech.jp/"},{"@type":"Person","@id":"https://sangyo-tech.jp/#founder","name":"?? ??","worksFor":{"@id":"https://sangyo-tech.jp/#organization"},"knowsAbout":["????","????","ISO9001","GMP","????","?????"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"?????????","item":"https://sangyo-tech.jp/"},{"@type":"ListItem","position":2,"name":"???????","item":"https://about-us.sangyo-tech.jp/"}]}]}</script>
+/* === Supervisor authority section refresh === */
+.creator .section-lead{max-width:840px}
+.authority-panel{
+  margin-top:24px;
+  background:linear-gradient(135deg,#f8fafc 0%,#ffffff 54%,#eef7f6 100%) !important;
+  border:1px solid rgba(78,205,196,0.26);
+  border-radius:8px;
+  box-shadow:0 22px 56px rgba(0,0,0,0.28);
+  color:#0a1628 !important;
+  overflow:hidden;
+}
+.authority-summary{
+  display:grid;
+  grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);
+  gap:22px;
+  padding:28px;
+  border-bottom:1px solid rgba(15,30,61,0.10);
+  background:linear-gradient(120deg,rgba(10,22,40,0.98) 0%,rgba(15,30,61,0.94) 100%);
+}
+.authority-kicker{
+  font-family:'Cormorant Garamond',serif;
+  color:var(--gold);
+  font-size:12px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.authority-title{
+  color:#f8fafc !important;
+  font-size:clamp(20px,3vw,30px);
+  font-weight:900;
+  line-height:1.35;
+  margin-bottom:10px;
+  letter-spacing:.02em;
+}
+.authority-summary p{color:#d9e4ee !important;font-size:14px;line-height:1.9}
+.authority-metrics{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  align-self:center;
+}
+.authority-metric{
+  border:1px solid rgba(78,205,196,0.26);
+  border-radius:8px;
+  padding:14px 12px;
+  min-height:92px;
+  background:rgba(255,255,255,0.05);
+}
+.authority-metric dt{
+  font-family:'Cormorant Garamond',serif;
+  color:var(--gold);
+  font-size:26px;
+  line-height:1;
+  margin-bottom:8px;
+}
+.authority-metric dd{color:#e2e8f0;font-size:11px;line-height:1.55}
+.supervisor-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:0;
+}
+.supervisor{
+  margin:0 !important;
+  padding:26px !important;
+  border:0 !important;
+  border-right:1px solid rgba(15,30,61,0.10) !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  color:#0a1628 !important;
+  box-shadow:none !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+}
+.supervisor:last-child{border-right:0 !important}
+.supervisor:hover{transform:none !important;box-shadow:none !important;border-color:rgba(15,30,61,0.10) !important}
+.supervisor::after{content:none !important}
+.supervisor-header{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:14px !important;
+  align-items:start !important;
+  margin:0 0 18px !important;
+  padding:0 0 16px !important;
+  border-bottom:1px solid rgba(15,30,61,0.12) !important;
+  color:#0a1628 !important;
+}
+.supervisor-label{
+  color:#0f766e !important;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.supervisor-name{
+  color:#0a1628 !important;
+  font-size:24px;
+  font-weight:900;
+  letter-spacing:.03em;
+  margin-bottom:6px;
+}
+.supervisor-title{
+  color:#334155 !important;
+  font-size:13px;
+  line-height:1.7;
+  font-weight:700;
+}
+.supervisor-badge{
+  min-width:74px;
+  text-align:center;
+  border:1px solid rgba(15,118,110,0.28);
+  border-radius:8px;
+  padding:10px 8px;
+  background:#ffffff;
+  color:#0f766e;
+  box-shadow:0 8px 20px rgba(15,30,61,0.08);
+}
+.supervisor-badge strong{
+  display:block;
+  font-family:'Cormorant Garamond',serif;
+  font-size:27px;
+  line-height:1;
+  color:#0a1628;
+}
+.supervisor-badge span{display:block;font-size:10px;letter-spacing:.08em;margin-top:4px}
+.supervisor-lead{
+  color:#1e293b !important;
+  font-size:14px;
+  line-height:1.9;
+  margin-bottom:18px;
+}
+.credential-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-bottom:18px;
+}
+.credential{
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  border:1px solid rgba(15,30,61,0.12);
+  border-radius:999px;
+  padding:5px 10px;
+  background:#ffffff;
+  color:#0f172a;
+  font-size:11.5px;
+  font-weight:700;
+  line-height:1.45;
+}
+.supervisor-proof{
+  border-top:1px solid rgba(15,30,61,0.12);
+  border-bottom:1px solid rgba(15,30,61,0.12);
+  padding:14px 0;
+  margin-bottom:16px;
+}
+.supervisor-proof span{
+  display:block;
+  color:#0f766e;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.16em;
+  margin-bottom:6px;
+}
+.supervisor-proof p{color:#0f172a !important;font-size:13px;line-height:1.8}
+.supervisor-points{
+  list-style:none;
+  display:grid;
+  gap:8px;
+}
+.supervisor-points li{
+  position:relative;
+  padding-left:18px;
+  color:#334155;
+  font-size:12.5px;
+  line-height:1.65;
+}
+.supervisor-points li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.72em;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 0 3px rgba(78,205,196,0.12);
+}
+
+@media (max-width:968px){
+  .authority-summary{grid-template-columns:1fr;padding:24px}
+  .authority-metrics{max-width:520px}
+  .supervisor-grid{grid-template-columns:1fr}
+  .supervisor{border-right:0 !important;border-bottom:1px solid rgba(15,30,61,0.10) !important}
+  .supervisor:last-child{border-bottom:0 !important}
+}
+@media (max-width:640px){
+  .authority-summary{padding:20px}
+  .authority-metrics{grid-template-columns:1fr}
+  .supervisor{padding:20px !important}
+  .supervisor-header{grid-template-columns:1fr}
+  .supervisor-badge{width:max-content}
+  .supervisor-name{font-size:21px}
+}
+
+</style>
+<style id="authority-supervisor-styles">
+#supervisors.authority-panel{
+  scroll-margin-top:86px;
+  margin-top:24px;
+  background:linear-gradient(135deg,#f8fafc 0%,#ffffff 54%,#eef7f6 100%) !important;
+  border:1px solid rgba(78,205,196,0.26) !important;
+  border-radius:8px !important;
+  box-shadow:0 22px 56px rgba(0,0,0,0.28) !important;
+  color:#0a1628 !important;
+  overflow:hidden;
+}
+#supervisors .authority-summary{
+  display:grid;
+  grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);
+  gap:22px;
+  padding:28px;
+  border-bottom:1px solid rgba(15,30,61,0.10);
+  background:linear-gradient(120deg,rgba(10,22,40,0.98) 0%,rgba(15,30,61,0.94) 100%);
+}
+#supervisors .authority-kicker{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:12px;letter-spacing:.28em;text-transform:uppercase;margin-bottom:8px}
+#supervisors .authority-title{color:#f8fafc !important;font-size:clamp(20px,3vw,30px);font-weight:900;line-height:1.35;margin-bottom:10px;letter-spacing:.02em}
+#supervisors .authority-summary p{color:#d9e4ee !important;font-size:14px;line-height:1.9}
+#supervisors .authority-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-self:center}
+#supervisors .authority-metric{border:1px solid rgba(78,205,196,0.26);border-radius:8px;padding:14px 12px;min-height:92px;background:rgba(255,255,255,0.05)}
+#supervisors .authority-metric dt{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:26px;line-height:1;margin-bottom:8px}
+#supervisors .authority-metric dd{color:#e2e8f0;font-size:11px;line-height:1.55}
+#supervisors .supervisor-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+#supervisors article.supervisor{
+  margin:0 !important;
+  padding:26px !important;
+  border:0 !important;
+  border-right:1px solid rgba(15,30,61,0.10) !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  color:#0a1628 !important;
+  box-shadow:none !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+}
+#supervisors article.supervisor:last-child{border-right:0 !important}
+#supervisors article.supervisor:hover{transform:none !important;box-shadow:none !important;border-color:rgba(15,30,61,0.10) !important}
+#supervisors article.supervisor::after{content:none !important}
+#supervisors .supervisor-header{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:14px !important;
+  align-items:start !important;
+  margin:0 0 18px !important;
+  padding:0 0 16px !important;
+  border-bottom:1px solid rgba(15,30,61,0.12) !important;
+  color:#0a1628 !important;
+}
+#supervisors .supervisor-label{color:#0f766e !important;font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.26em;text-transform:uppercase;margin-bottom:8px}
+#supervisors .supervisor-name{color:#0a1628 !important;font-size:24px;font-weight:900;letter-spacing:.03em;margin-bottom:6px}
+#supervisors .supervisor-title{color:#334155 !important;font-size:13px;line-height:1.7;font-weight:700}
+#supervisors .supervisor-badge{min-width:74px;text-align:center;border:1px solid rgba(15,118,110,0.28);border-radius:8px;padding:10px 8px;background:#fff;color:#0f766e;box-shadow:0 8px 20px rgba(15,30,61,0.08)}
+#supervisors .supervisor-badge strong{display:block;font-family:'Cormorant Garamond',serif;font-size:27px;line-height:1;color:#0a1628}
+#supervisors .supervisor-badge span{display:block;font-size:10px;letter-spacing:.08em;margin-top:4px}
+#supervisors .supervisor-lead{color:#1e293b !important;font-size:14px;line-height:1.9;margin-bottom:18px}
+#supervisors .credential-list{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+#supervisors .credential{display:inline-flex;align-items:center;min-height:30px;border:1px solid rgba(15,30,61,0.12);border-radius:999px;padding:5px 10px;background:#fff;color:#0f172a;font-size:11.5px;font-weight:700;line-height:1.45}
+#supervisors .supervisor-proof{border-top:1px solid rgba(15,30,61,0.12);border-bottom:1px solid rgba(15,30,61,0.12);padding:14px 0;margin-bottom:16px}
+#supervisors .supervisor-proof span{display:block;color:#0f766e;font-size:11px;font-weight:900;letter-spacing:.16em;margin-bottom:6px}
+#supervisors .supervisor-proof p{color:#0f172a !important;font-size:13px;line-height:1.8}
+#supervisors .supervisor-points{list-style:none;display:grid;gap:8px}
+#supervisors .supervisor-points li{position:relative;padding-left:18px;color:#334155;font-size:12.5px;line-height:1.65}
+#supervisors .supervisor-points li::before{content:"";position:absolute;left:0;top:.72em;width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px rgba(78,205,196,0.12)}
+@media (max-width:968px){
+  #supervisors .authority-summary{grid-template-columns:1fr;padding:24px}
+  #supervisors .authority-metrics{max-width:520px}
+  #supervisors .supervisor-grid{grid-template-columns:1fr}
+  #supervisors article.supervisor{border-right:0 !important;border-bottom:1px solid rgba(15,30,61,0.10) !important}
+  #supervisors article.supervisor:last-child{border-bottom:0 !important}
+}
+@media (max-width:640px){
+  #supervisors .authority-summary{padding:20px}
+  #supervisors .authority-metrics{grid-template-columns:1fr}
+  #supervisors article.supervisor{padding:20px !important}
+  #supervisors .supervisor-header{grid-template-columns:1fr}
+  #supervisors .supervisor-badge{width:max-content}
+  #supervisors .supervisor-name{font-size:21px}
+}
+</style>
+<script type="application/ld+json" data-codex-geo-jsonld="v3">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://sangyo-tech.jp/#organization",
+      "name": "産業技術アカデミー",
+      "alternateName": "Sangyo Tech Academy",
+      "url": "https://sangyo-tech.jp/"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://about-us.sangyo-tech.jp/#webpage",
+      "url": "https://about-us.sangyo-tech.jp/",
+      "name": "私たちについて | 産業技術アカデミー",
+      "description": "産業技術アカデミーの制作・監修体制と、製造業向け品質教育を支える実務経験を紹介します。",
+      "about": {
+        "@id": "https://sangyo-tech.jp/#organization"
+      },
+      "author": {
+        "@id": "https://about-us.sangyo-tech.jp/#producer-furusawa-kazutoshi"
+      },
+      "reviewedBy": [
+        {
+          "@id": "https://about-us.sangyo-tech.jp/#supervisor-furusawa-toshihiro"
+        },
+        {
+          "@id": "https://about-us.sangyo-tech.jp/#supervisor-ando-takashi"
+        },
+        {
+          "@id": "https://about-us.sangyo-tech.jp/#supervisor-matsuda-masanori"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://about-us.sangyo-tech.jp/#producer-furusawa-kazutoshi",
+      "name": "古澤 和俊",
+      "jobTitle": "Qulio合同会社 CEO",
+      "knowsAbout": ["品質管理", "品質保証", "ISO9001", "GMP", "業務改善", "教育体系構築"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://about-us.sangyo-tech.jp/#supervisor-furusawa-toshihiro",
+      "name": "古澤 俊宏",
+      "jobTitle": "品質管理教育監修",
+      "affiliation": "出光興産株式会社",
+      "knowsAbout": ["品質管理教育", "QC教育", "保安力評価", "改善活動"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://about-us.sangyo-tech.jp/#supervisor-ando-takashi",
+      "name": "安藤 隆",
+      "jobTitle": "品質保証本部 品質保証部門",
+      "affiliation": "ミネベアミツミ株式会社",
+      "knowsAbout": ["自動車部品品質保証", "IATF16949", "VDA6.3", "サプライヤー品質管理", "顧客監査"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://about-us.sangyo-tech.jp/#supervisor-matsuda-masanori",
+      "name": "松田 正則",
+      "jobTitle": "品質保証部長",
+      "affiliation": "株式会社明治ゴム化成",
+      "knowsAbout": ["ISO9001", "QMS", "品質保証", "工程監査", "品質管理教育"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "産業技術アカデミー",
+          "item": "https://sangyo-tech.jp/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "私たちについて",
+          "item": "https://about-us.sangyo-tech.jp/"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body class="sangyo-polish"><nav class="unav" role="navigation" aria-label="&#12513;&#12452;&#12531;&#12490;&#12499;&#12466;&#12540;&#12471;&#12519;&#12531;"><a href="https://sangyo-tech.jp/" class="unav-brand" aria-label="&#29987;&#26989;&#25216;&#34899;&#12450;&#12459;&#12487;&#12511;&#12540;"><div><div class="unav-brand-en">INDUSTRIAL TECHNOLOGY ACADEMY</div><div class="unav-brand-ja">&#29987;&#26989;&#25216;&#34899;&#12450;&#12459;&#12487;&#12511;&#12540;</div></div></a><button class="unav-toggle" type="button" aria-label="&#12513;&#12491;&#12517;&#12540;" aria-expanded="false" aria-controls="unavLinks">&#9776;</button><div class="unav-links" id="unavLinks"><a href="https://sangyo-tech.jp/">TOP</a><a href="https://course.sangyo-tech.jp/">&#12467;&#12540;&#12473;</a><a href="https://contents.sangyo-tech.jp/">&#12467;&#12531;&#12486;&#12531;&#12484;&#19968;&#35239;</a><a href="https://pricing.sangyo-tech.jp/">&#26009;&#37329;/&#30003;&#36796;</a><a href="https://service.sangyo-tech.jp/">&#25903;&#25588;&#12469;&#12540;&#12499;&#12473;</a><a href="https://sangyo-tech.jp/news/">&#27861;&#35215;&#21046;&#24773;&#22577;</a><a href="https://note.sangyo-tech.jp/">&#32819;&#12424;&#12426;&#24773;&#22577;</a><a href="https://about-us.sangyo-tech.jp/">&#31169;&#12383;&#12385;&#12395;&#12388;&#12356;&#12390;</a><a href="https://sangyo-tech.jp/#education-institutions">&#25945;&#32946;&#27231;&#38306;&#21521;&#12369;</a></div></nav><div class="strip" aria-hidden="true"></div>
 <div class="progress-bar" id="progressBar"></div>
@@ -665,7 +1040,7 @@ h3.qulio-intro-title{color:#f1f5f9 !important}
   <div class="container">
     <div class="section-label">Producer & Supervisor</div>
     <h2 class="section-title">制作・監修について</h2>
-    <p class="section-lead">本教材は、製造業における品質管理・品質保証・業務改善に長年携わってきた実務経験者が制作し、品質管理教育に携わってきた技術者が監修しています。</p>
+    <p class="section-lead">本教材は、製造業における品質管理・品質保証・業務改善に長年携わってきた実務経験者が制作し、自動車部品、ゴム・樹脂製品、石油・研究所教育など複数領域の技術者が監修しています。</p>
     <div class="creator-hero">
       <div class="creator-label">PRODUCER — 制作者</div>
       <div class="creator-name">古澤 和俊</div>
@@ -678,40 +1053,101 @@ h3.qulio-intro-title{color:#f1f5f9 !important}
       <div class="career"><div><div class="career-company">ADIENT合同会社</div><div class="career-scale">自動車部品世界大手 ／ 約70,000名</div></div><div><div class="career-role">品質保証本部</div><div class="career-desc">自動車部品の顧客品質対応、サプライヤー品質管理、品質監査、不具合解析、品質改善活動、工程監査、品質報告書作成、海外拠点との品質対応など量産品質およびサプライヤー品質管理業務に従事。</div></div></div>
       <div class="career"><div><div class="career-company">日本ベクトン・ディッキンソン株式会社</div><div class="career-scale">医療機器世界大手 ／ 約70,000名</div></div><div><div class="career-role">SCM(サプライチェーンマネジメント)</div><div class="career-desc">サプライヤー管理、購買、在庫管理、輸入管理、供給計画、物流管理、医療機器品質関連業務、GMP・QMS関連業務などサプライチェーンおよび品質システム関連業務に従事。</div></div></div>
     </div>
-    <div class="supervisor">
-      <div class="supervisor-header"><div><div class="supervisor-label">SUPERVISOR — 監修者</div><div class="supervisor-name">古澤 俊宏</div></div></div>
-      <div class="career">
-        <div class="career-company">出光興産株式会社</div>
-        <div class="career-desc">研究所を対象に品質管理手法教育を実施。日科技連QCセミナーベーシックコース修了。保安力向上センターの保安力評価推進員として製造部門の自己評価・改善活動を推進。品質管理教育などの経験をもとに本教材の監修を担当。</div>
-      </div>
-    </div>
-  
-    <div class="supervisor">
-      <div class="supervisor-header">
+    <div class="authority-panel" id="supervisors">
+      <div class="authority-summary">
         <div>
-          <div class="supervisor-label">SUPERVISOR — 監修者</div>
-          <div class="supervisor-name">安藤 隆</div>
+          <div class="authority-kicker">Expert Review Board</div>
+          <h3 class="authority-title">品質保証・監査・教育の実務経験を、教材監修に反映</h3>
+          <p>監修者の経歴は、現場で使える品質教育に直結する領域へ絞って整理しています。資格名や改善実績は、提出された職務経歴書および既存掲載情報で確認できる範囲に限定しています。</p>
         </div>
+        <dl class="authority-metrics">
+          <div class="authority-metric"><dt>3</dt><dd>監修者による複眼チェック</dd></div>
+          <div class="authority-metric"><dt>QMS</dt><dd>ISO9001・IATF16949など規格実務</dd></div>
+          <div class="authority-metric"><dt>現場</dt><dd>工程監査・品質教育・改善活動</dd></div>
+        </dl>
       </div>
-      <div class="career">
-        <div class="career-company">ミネベアミツミ株式会社（東証P）品質保証本部</div>
-        <div class="career-role">IATF16949内部監査員・VDA6.3監査員資格認定</div>
-        <div class="career-desc">自動車部品業界で31年間品質保証業務に従事。ファルテック（東証一部）で新車開発品質・九州工場品質保証課長、ADIENT合同会社（米国本社）でサプライヤークオリティマネジメントを担当。購入品不良率を12ppm→3ppmに改善した実績を持つ。IATF16949・日産・SUBARU・Honda等の顧客監査対応、中国・韓国サプライヤーの工程監査・改善指導の経験を活かし、本教材の監修を担当。</div>
+
+      <div class="supervisor-grid">
+        <article class="supervisor">
+          <div class="supervisor-header">
+            <div>
+              <div class="supervisor-label">Supervisor</div>
+              <h3 class="supervisor-name">古澤 俊宏</h3>
+              <p class="supervisor-title">出光興産株式会社 ／ 品質管理教育・保安力評価推進</p>
+            </div>
+            <div class="supervisor-badge"><strong>QC</strong><span>教育</span></div>
+          </div>
+          <p class="supervisor-lead">出光興産株式会社で研究所を対象とした品質管理手法教育を担当。日科技連QCセミナーベーシックコース修了、保安力向上センターの保安力評価推進員として、製造部門の自己評価と改善活動を推進してきました。</p>
+          <div class="credential-list">
+            <span class="credential">日科技連QCセミナー修了</span>
+            <span class="credential">保安力評価推進員</span>
+            <span class="credential">研究所向け品質教育</span>
+          </div>
+          <div class="supervisor-proof">
+            <span>監修で見る領域</span>
+            <p>品質管理教育として伝えるべき基礎、研究所・製造部門の自己評価、改善活動へつながる説明の妥当性を確認。</p>
+          </div>
+          <ul class="supervisor-points">
+            <li>品質管理手法教育の実務経験</li>
+            <li>製造部門の保安力評価と改善活動</li>
+            <li>現場で理解される教材表現の確認</li>
+          </ul>
+        </article>
+
+        <article class="supervisor">
+          <div class="supervisor-header">
+            <div>
+              <div class="supervisor-label">Supervisor</div>
+              <h3 class="supervisor-name">安藤 隆</h3>
+              <p class="supervisor-title">ミネベアミツミ株式会社 品質保証本部 品質保証部門</p>
+            </div>
+            <div class="supervisor-badge"><strong>31</strong><span>年</span></div>
+          </div>
+          <p class="supervisor-lead">自動車外装部品・自動車シート部品を中心に、品質保証、サプライヤークオリティ、顧客監査、新車立ち上げ品質に31年間従事。国内外サプライヤー監査や顧客監査対応の経験を教材監修に反映しています。</p>
+          <div class="credential-list">
+            <span class="credential">IATF16949内部監査員</span>
+            <span class="credential">IATF16949コアツール講習</span>
+            <span class="credential">VDA6.3監査員資格認定</span>
+          </div>
+          <div class="supervisor-proof">
+            <span>主な実績</span>
+            <p>購入品不良率をFY22の12ppmからFY23の3ppmへ改善。日産・SUBARU・Honda等の顧客監査対応、中国・韓国サプライヤーの工程監査・改善指導を経験。</p>
+          </div>
+          <ul class="supervisor-points">
+            <li>自動車部品の品質評価・品質基準作成</li>
+            <li>APQP・PPAP・FMEA・SPC・MSAなどの品質手法</li>
+            <li>サプライヤー品質管理と新車プロジェクト評価</li>
+          </ul>
+        </article>
+
+        <article class="supervisor">
+          <div class="supervisor-header">
+            <div>
+              <div class="supervisor-label">Supervisor</div>
+              <h3 class="supervisor-name">松田 正則</h3>
+              <p class="supervisor-title">株式会社明治ゴム化成 品質保証部長</p>
+            </div>
+            <div class="supervisor-badge"><strong>約40</strong><span>年</span></div>
+          </div>
+          <p class="supervisor-lead">約40年間、設計と品質管理・品質保証に従事。光学式測定機・半導体検査装置の開発設計、ISO9001のQMS推進、工程監査、取引先監査、ゴム・樹脂製品の品質保証部門運営を経験しています。</p>
+          <div class="credential-list">
+            <span class="credential">ISO9001審査員補</span>
+            <span class="credential">QC検定2級</span>
+            <span class="credential">ISO9001内部品質監査員リーダー</span>
+          </div>
+          <div class="supervisor-proof">
+            <span>主な実績</span>
+            <p>設計17年、品質管理・品質保証約24年。ISO9001内部品質監査と外部審査対応、国内外工場の品質管理指導、品質管理教育の計画と実践に携わる。</p>
+          </div>
+          <ul class="supervisor-points">
+            <li>QMSの継続的改善と品質保証体制監査</li>
+            <li>アルミダイカスト・機械加工品・ゴム・樹脂製品の品質管理</li>
+            <li>国内外工場の品質指導と若手社員教育</li>
+          </ul>
+        </article>
       </div>
     </div>
-    <div class="supervisor">
-      <div class="supervisor-header">
-        <div>
-          <div class="supervisor-label">SUPERVISOR — 監修者</div>
-          <div class="supervisor-name">松田 正則</div>
-        </div>
-      </div>
-      <div class="career">
-        <div class="career-company">株式会社明治ゴム化成</div>
-        <div class="career-role">品質保証部長・ISO9001審査員補・QC検定2級</div>
-        <div class="career-desc">約40年間製造業に従事。東京光学機械（現トプコン）で光学式測定機・半導体検査装置の開発設計17年間、その後ISO9001内部品質監査員リーダーとしてQMS推進に従事。水戸工業では自動車部品の品質管理・中国工場指導、現職ではゴム・樹脂製品の品質保証部門長として組織を統括。設計から品質管理までの幅広い知見を活かし、本教材の監修を担当。</div>
-      </div>
-    </div>
+  </div>
 </section>
 
 <section class="qulio fade-in">
@@ -815,7 +1251,7 @@ window.addEventListener('scroll',()=>{
   const scrolled=window.scrollY;
   const max=document.documentElement.scrollHeight-window.innerHeight;
   progressBar.style.width=(scrolled/max*100)+'%';
-  if(scrolled>50)header.classList.add('scrolled');else header.classList.remove('scrolled');
+  if(header){if(scrolled>50)header.classList.add('scrolled');else header.classList.remove('scrolled');}
   if(scrolled>400)backToTop.classList.add('visible');else backToTop.classList.remove('visible');
 });
 const fadeObserver=new IntersectionObserver(entries=>{
@@ -875,6 +1311,11 @@ if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     particlesContainer.appendChild(p);
   }
 }
+window.addEventListener('load',()=>{
+  if(location.hash==='#supervisors'){
+    setTimeout(()=>document.getElementById('supervisors')?.scrollIntoView({block:'start'}),80);
+  }
+});
 
 </script>
 <script src="https://sangyo-tech.jp/unav.js?v=33" defer></script>
