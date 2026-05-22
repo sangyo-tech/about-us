@@ -221,20 +221,21 @@ section{padding:var(--sp-section) var(--sp-container);position:relative}
 .creator-title a:hover{opacity:0.7}
 .creator-bio{font-size:13.5px;line-height:1.85;color:var(--text)}
 .career-list{display:grid;gap:10px;margin-top:16px}
-.career{background:var(--bg);border:1px solid var(--border);padding:16px 20px;display:grid;grid-template-columns:1fr 2fr;gap:20px;transition:all .3s;position:relative;overflow:hidden}
-.career::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);transform:scaleY(0);transform-origin:top;transition:transform .4s}
-.career:hover{border-color:var(--gold);box-shadow:var(--shadow-md);transform:translateX(3px)}
-.career:hover::before{transform:scaleY(1)}
-.career-company{font-size:14.5px;font-weight:700;color:var(--navy-950);margin-bottom:4px}
-.career-scale{font-size:11px;color:var(--text-light);padding-top:6px;border-top:1px solid var(--border);margin-top:6px}
-.career-role{font-size:12px;color:var(--gold-dark);font-weight:600;letter-spacing:0.04em;margin-bottom:6px}
-.career-desc{font-size:12.5px;line-height:1.8;color:var(--text-muted)}
-.supervisor{background:var(--bg);padding:22px;border:1px solid var(--border);margin-top:18px;transition:all .3s}
-.supervisor:hover{border-color:var(--gold);box-shadow:var(--shadow-md)}
-.supervisor-header{display:flex;align-items:center;gap:14px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--border)}
-.supervisor-label{font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:0.28em;color:var(--gold-dark)}
-.supervisor-name{font-size:18px;font-weight:700;color:var(--navy-950)}
-.supervisor p{font-size:12.5px;line-height:1.8;color:var(--text-muted);margin-bottom:4px}
+.career{background:rgba(15,30,61,0.4);border:1px solid rgba(78,205,196,0.12);border-left:3px solid var(--gold);padding:20px 24px;border-radius:10px;transition:all .4s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden}
+.career::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(78,205,196,0.04) 0%,transparent 60%);opacity:0;transition:opacity .4s}
+.career:hover{border-color:rgba(78,205,196,0.3);box-shadow:0 8px 32px rgba(0,0,0,0.3),inset 0 1px 0 rgba(78,205,196,0.1);transform:translateY(-2px)}
+.career:hover::before{opacity:1}
+.career-company{font-size:16px;font-weight:700;color:#e2e8f0;margin-bottom:6px;letter-spacing:0.02em}
+.career-scale{font-size:12px;color:#94a3b8;padding-top:8px;border-top:1px solid rgba(78,205,196,0.1);margin-top:8px}
+.career-role{font-size:13px;color:var(--gold);font-weight:600;letter-spacing:0.05em;margin-bottom:8px;display:inline-block;padding:2px 10px;background:rgba(78,205,196,0.08);border-radius:4px}
+.career-desc{font-size:14px;line-height:1.85;color:#cbd5e1}
+.supervisor{background:linear-gradient(145deg,rgba(15,30,61,0.6) 0%,rgba(10,22,40,0.8) 100%);padding:28px;border:1px solid rgba(78,205,196,0.12);border-radius:16px;margin-top:24px;transition:all .4s cubic-bezier(.4,0,.2,1);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);position:relative;overflow:hidden}
+.supervisor::after{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(78,205,196,0.3),transparent)}
+.supervisor:hover{border-color:rgba(78,205,196,0.25);box-shadow:0 12px 40px rgba(0,0,0,0.3),0 0 60px rgba(78,205,196,0.05);transform:translateY(-3px)}
+.supervisor-header{display:flex;align-items:center;gap:16px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(78,205,196,0.1)}
+.supervisor-label{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:0.3em;color:var(--gold);text-transform:uppercase}
+.supervisor-name{font-size:22px;font-weight:700;color:#f1f5f9;letter-spacing:0.03em}
+.supervisor p{font-size:14px;line-height:1.85;color:#cbd5e1;margin-bottom:4px}
 
 .qulio{background:var(--bg);position:relative;overflow:hidden}
 .qulio::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
