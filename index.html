@@ -762,70 +762,81 @@ h3.qulio-intro-title{color:#f1f5f9 !important}
 }
 #supervisors .authority-summary{
   display:grid;
-  grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);
-  gap:22px;
-  padding:28px;
+  grid-template-columns:minmax(0,1fr) minmax(360px,.42fr);
+  gap:28px;
+  padding:34px 36px;
   border-bottom:1px solid rgba(15,30,61,0.10);
   background:linear-gradient(120deg,rgba(10,22,40,0.98) 0%,rgba(15,30,61,0.94) 100%);
 }
-#supervisors .authority-kicker{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:12px;letter-spacing:.28em;text-transform:uppercase;margin-bottom:8px}
-#supervisors .authority-title{color:#f8fafc !important;font-size:clamp(20px,3vw,30px);font-weight:900;line-height:1.35;margin-bottom:10px;letter-spacing:.02em}
-#supervisors .authority-summary p{color:#d9e4ee !important;font-size:14px;line-height:1.9}
+#supervisors .authority-kicker{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:12px;letter-spacing:.3em;text-transform:uppercase;margin-bottom:10px}
+#supervisors .authority-title{color:#f8fafc !important;font-size:clamp(24px,2.4vw,36px);font-weight:900;line-height:1.34;margin-bottom:16px;letter-spacing:.02em;max-width:900px}
+#supervisors .authority-summary p{color:#d9e4ee !important;font-size:15px;line-height:2;max-width:940px}
 #supervisors .authority-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-self:center}
-#supervisors .authority-metric{border:1px solid rgba(78,205,196,0.26);border-radius:8px;padding:14px 12px;min-height:92px;background:rgba(255,255,255,0.05)}
-#supervisors .authority-metric dt{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:26px;line-height:1;margin-bottom:8px}
-#supervisors .authority-metric dd{color:#e2e8f0;font-size:11px;line-height:1.55}
-#supervisors .supervisor-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+#supervisors .authority-metric{border:1px solid rgba(78,205,196,0.24);border-radius:8px;padding:16px 14px;min-height:104px;background:rgba(255,255,255,0.06)}
+#supervisors .authority-metric dt{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:28px;line-height:1;margin-bottom:10px}
+#supervisors .authority-metric dd{color:#e2e8f0;font-size:12px;line-height:1.65}
+#supervisors .supervisor-grid{display:grid;grid-template-columns:1fr;gap:18px;padding:24px;background:linear-gradient(180deg,#f8fafc 0%,#f3f8f7 100%)}
 #supervisors article.supervisor{
+  display:grid;
+  grid-template-columns:minmax(230px,.42fr) minmax(0,1fr);
+  grid-template-areas:
+    "head lead"
+    "head creds"
+    "head proof"
+    "head points";
+  column-gap:34px;
+  row-gap:0;
+  align-items:start;
   margin:0 !important;
-  padding:26px !important;
-  border:0 !important;
-  border-right:1px solid rgba(15,30,61,0.10) !important;
-  border-radius:0 !important;
-  background:transparent !important;
+  padding:28px 30px !important;
+  border:1px solid rgba(15,30,61,0.10) !important;
+  border-radius:8px !important;
+  background:#ffffff !important;
   color:#0a1628 !important;
-  box-shadow:none !important;
+  box-shadow:0 10px 28px rgba(15,30,61,0.08) !important;
   backdrop-filter:none !important;
   -webkit-backdrop-filter:none !important;
 }
-#supervisors article.supervisor:last-child{border-right:0 !important}
-#supervisors article.supervisor:hover{transform:none !important;box-shadow:none !important;border-color:rgba(15,30,61,0.10) !important}
+#supervisors article.supervisor:last-child{border-right:1px solid rgba(15,30,61,0.10) !important}
+#supervisors article.supervisor:hover{transform:none !important;box-shadow:0 12px 30px rgba(15,30,61,0.10) !important;border-color:rgba(15,118,110,0.24) !important}
 #supervisors article.supervisor::after{content:none !important}
 #supervisors .supervisor-header{
-  display:grid !important;
-  grid-template-columns:minmax(0,1fr) auto;
-  gap:14px !important;
-  align-items:start !important;
-  margin:0 0 18px !important;
-  padding:0 0 16px !important;
-  border-bottom:1px solid rgba(15,30,61,0.12) !important;
+  grid-area:head;
+  display:block !important;
+  margin:0 !important;
+  padding:0 22px 0 0 !important;
+  border-right:1px solid rgba(15,30,61,0.10) !important;
+  border-bottom:0 !important;
   color:#0a1628 !important;
 }
-#supervisors .supervisor-label{color:#0f766e !important;font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.26em;text-transform:uppercase;margin-bottom:8px}
-#supervisors .supervisor-name{color:#0a1628 !important;font-size:24px;font-weight:900;letter-spacing:.03em;margin-bottom:6px}
-#supervisors .supervisor-title{color:#334155 !important;font-size:13px;line-height:1.7;font-weight:700}
-#supervisors .supervisor-badge{min-width:74px;text-align:center;border:1px solid rgba(15,118,110,0.28);border-radius:8px;padding:10px 8px;background:#fff;color:#0f766e;box-shadow:0 8px 20px rgba(15,30,61,0.08)}
-#supervisors .supervisor-badge strong{display:block;font-family:'Cormorant Garamond',serif;font-size:27px;line-height:1;color:#0a1628}
-#supervisors .supervisor-badge span{display:block;font-size:10px;letter-spacing:.08em;margin-top:4px}
-#supervisors .supervisor-lead{color:#1e293b !important;font-size:14px;line-height:1.9;margin-bottom:18px}
-#supervisors .credential-list{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
-#supervisors .credential{display:inline-flex;align-items:center;min-height:30px;border:1px solid rgba(15,30,61,0.12);border-radius:999px;padding:5px 10px;background:#fff;color:#0f172a;font-size:11.5px;font-weight:700;line-height:1.45}
-#supervisors .supervisor-proof{border-top:1px solid rgba(15,30,61,0.12);border-bottom:1px solid rgba(15,30,61,0.12);padding:14px 0;margin-bottom:16px}
-#supervisors .supervisor-proof span{display:block;color:#0f766e;font-size:11px;font-weight:900;letter-spacing:.16em;margin-bottom:6px}
-#supervisors .supervisor-proof p{color:#0f172a !important;font-size:13px;line-height:1.8}
-#supervisors .supervisor-points{list-style:none;display:grid;gap:8px}
-#supervisors .supervisor-points li{position:relative;padding-left:18px;color:#334155;font-size:12.5px;line-height:1.65}
+#supervisors .supervisor-label{color:#0f766e !important;font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;margin-bottom:10px}
+#supervisors .supervisor-name{color:#0a1628 !important;font-size:clamp(25px,2.2vw,34px);font-weight:900;letter-spacing:.03em;margin-bottom:10px;line-height:1.2}
+#supervisors .supervisor-title{color:#334155 !important;font-size:14px;line-height:1.75;font-weight:800}
+#supervisors .supervisor-badge{display:inline-flex;flex-direction:column;justify-content:center;min-width:88px;min-height:88px;text-align:center;border:1px solid rgba(15,118,110,0.28);border-radius:8px;padding:12px 10px;margin-top:18px;background:#f8fdfc;color:#0f766e;box-shadow:0 8px 20px rgba(15,30,61,0.08)}
+#supervisors .supervisor-badge strong{display:block;font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1;color:#0a1628}
+#supervisors .supervisor-badge span{display:block;font-size:11px;letter-spacing:.08em;margin-top:6px}
+#supervisors .supervisor-lead{grid-area:lead;color:#1e293b !important;font-size:15.5px;line-height:2;margin:0 0 18px;padding-bottom:16px;border-bottom:1px solid rgba(15,30,61,0.10)}
+#supervisors .credential-list{grid-area:creds;display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+#supervisors .credential{display:inline-flex;align-items:center;min-height:32px;border:1px solid rgba(15,30,61,0.12);border-radius:999px;padding:6px 12px;background:#f8fafc;color:#0f172a;font-size:12.5px;font-weight:800;line-height:1.45}
+#supervisors .supervisor-proof{grid-area:proof;border-top:0;border-bottom:1px solid rgba(15,30,61,0.10);padding:0 0 16px;margin:0 0 16px}
+#supervisors .supervisor-proof span{display:block;color:#0f766e;font-size:12px;font-weight:900;letter-spacing:.16em;margin-bottom:8px}
+#supervisors .supervisor-proof p{color:#0f172a !important;font-size:14px;line-height:1.9}
+#supervisors .supervisor-points{grid-area:points;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+#supervisors .supervisor-points li{position:relative;padding:12px 12px 12px 28px;border:1px solid rgba(15,30,61,0.08);border-radius:8px;background:#fbfdfd;color:#334155;font-size:12.5px;line-height:1.65;font-weight:700}
 #supervisors .supervisor-points li::before{content:"";position:absolute;left:0;top:.72em;width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px rgba(78,205,196,0.12)}
+#supervisors .supervisor-points li::before{left:12px;top:1.35em}
 @media (max-width:968px){
-  #supervisors .authority-summary{grid-template-columns:1fr;padding:24px}
+  #supervisors .authority-summary{grid-template-columns:1fr;padding:28px}
   #supervisors .authority-metrics{max-width:520px}
-  #supervisors .supervisor-grid{grid-template-columns:1fr}
-  #supervisors article.supervisor{border-right:0 !important;border-bottom:1px solid rgba(15,30,61,0.10) !important}
-  #supervisors article.supervisor:last-child{border-bottom:0 !important}
+  #supervisors article.supervisor{grid-template-columns:1fr;grid-template-areas:"head" "lead" "creds" "proof" "points";row-gap:0}
+  #supervisors .supervisor-header{display:grid !important;grid-template-columns:minmax(0,1fr) auto;gap:18px !important;padding:0 0 18px !important;margin:0 0 18px !important;border-right:0 !important;border-bottom:1px solid rgba(15,30,61,0.10) !important}
+  #supervisors .supervisor-badge{margin-top:0}
+  #supervisors .supervisor-points{grid-template-columns:1fr}
 }
 @media (max-width:640px){
   #supervisors .authority-summary{padding:20px}
   #supervisors .authority-metrics{grid-template-columns:1fr}
+  #supervisors .supervisor-grid{padding:14px}
   #supervisors article.supervisor{padding:20px !important}
   #supervisors .supervisor-header{grid-template-columns:1fr}
   #supervisors .supervisor-badge{width:max-content}
@@ -842,6 +853,13 @@ body.sangyo-polish{
     #07111f !important;
   background-size:auto,auto,72px 72px,72px 72px,auto !important;
   color:#e8eef6 !important;
+}
+body.sangyo-polish .unav,
+body.sangyo-polish .strip{
+  width:100% !important;
+  max-width:100% !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
 }
 body.sangyo-polish .fade-in,
 body.sangyo-polish .fade-in.visible,
@@ -1276,7 +1294,7 @@ body.sangyo-polish .career-role{
       <div class="authority-summary">
         <div>
           <div class="authority-kicker">Expert Review Board</div>
-          <h3 class="authority-title">品質保証・監査・教育の実務経験を、教材監修に反映</h3>
+          <h3 class="authority-title">品質保証・監査・教育の経験を教材監修へ</h3>
           <p>監修者の経歴は、現場で使える品質教育に直結する領域へ絞って整理しています。資格名や改善実績は、提出された職務経歴書および既存掲載情報で確認できる範囲に限定しています。</p>
         </div>
         <dl class="authority-metrics">
