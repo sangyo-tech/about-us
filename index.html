@@ -762,8 +762,8 @@ h3.qulio-intro-title{color:#f1f5f9 !important}
 }
 #supervisors .authority-summary{
   display:grid;
-  grid-template-columns:minmax(0,1fr) minmax(360px,.42fr);
-  gap:28px;
+  grid-template-columns:1fr;
+  gap:20px;
   padding:34px 36px;
   border-bottom:1px solid rgba(15,30,61,0.10);
   background:linear-gradient(120deg,rgba(10,22,40,0.98) 0%,rgba(15,30,61,0.94) 100%);
@@ -771,10 +771,10 @@ h3.qulio-intro-title{color:#f1f5f9 !important}
 #supervisors .authority-kicker{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:12px;letter-spacing:.3em;text-transform:uppercase;margin-bottom:10px}
 #supervisors .authority-title{color:#f8fafc !important;font-size:clamp(24px,2.4vw,36px);font-weight:900;line-height:1.34;margin-bottom:16px;letter-spacing:.02em;max-width:900px}
 #supervisors .authority-summary p{color:#d9e4ee !important;font-size:15px;line-height:2;max-width:940px}
-#supervisors .authority-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-self:center}
-#supervisors .authority-metric{border:1px solid rgba(78,205,196,0.24);border-radius:8px;padding:16px 14px;min-height:104px;background:rgba(255,255,255,0.06)}
-#supervisors .authority-metric dt{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:28px;line-height:1;margin-bottom:10px}
-#supervisors .authority-metric dd{color:#e2e8f0;font-size:12px;line-height:1.65}
+#supervisors .authority-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:940px}
+#supervisors .authority-metric{display:flex;align-items:center;gap:10px;border:1px solid rgba(78,205,196,0.22);border-radius:8px;padding:10px 14px;min-height:46px;background:rgba(255,255,255,0.045)}
+#supervisors .authority-metric dt{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:22px;line-height:1;white-space:nowrap}
+#supervisors .authority-metric dd{color:#e2e8f0;font-size:12.5px;line-height:1.55;font-weight:800}
 #supervisors .supervisor-grid{display:grid;grid-template-columns:1fr;gap:18px;padding:24px;background:linear-gradient(180deg,#f8fafc 0%,#f3f8f7 100%)}
 #supervisors article.supervisor{
   display:grid;
