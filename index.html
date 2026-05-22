@@ -812,6 +812,8 @@ h3.qulio-intro-title{color:#f1f5f9 !important}
 #supervisors .supervisor-label{color:#0f766e !important;font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;margin-bottom:10px}
 #supervisors .supervisor-name{color:#0a1628 !important;font-size:clamp(25px,2.2vw,34px);font-weight:900;letter-spacing:.03em;margin-bottom:10px;line-height:1.2}
 #supervisors .supervisor-title{color:#334155 !important;font-size:14px;line-height:1.75;font-weight:800}
+#supervisors .supervisor-industry-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+#supervisors .supervisor-industry{display:inline-flex;align-items:center;min-height:30px;border:1px solid rgba(15,118,110,0.22);border-radius:999px;padding:6px 11px;background:#e9fbf8;color:#0f766e;font-size:12px;font-weight:900;line-height:1.35}
 #supervisors .supervisor-badge{display:inline-flex;flex-direction:column;justify-content:center;min-width:88px;min-height:88px;text-align:center;border:1px solid rgba(15,118,110,0.28);border-radius:8px;padding:12px 10px;margin-top:18px;background:#f8fdfc;color:#0f766e;box-shadow:0 8px 20px rgba(15,30,61,0.08)}
 #supervisors .supervisor-badge strong{display:block;font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1;color:#0a1628}
 #supervisors .supervisor-badge span{display:block;font-size:11px;letter-spacing:.08em;margin-top:6px}
@@ -1040,6 +1042,79 @@ body.sangyo-polish .career-role{
   background:rgba(78,205,196,.10) !important;
   border:1px solid rgba(78,205,196,.18);
 }
+body.sangyo-polish .creator-hero .career-list{display:block;margin-top:22px;padding-top:22px;border-top:1px solid rgba(78,205,196,.18)}
+body.sangyo-polish .career-unified{
+  padding:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+}
+body.sangyo-polish .creator-hero .career-unified,
+body.sangyo-polish .creator-hero .career-unified:hover{
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  transform:none !important;
+}
+body.sangyo-polish .creator-hero .career-unified::before{content:none !important}
+body.sangyo-polish .creator-career-head{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:18px;
+  align-items:start;
+  padding-bottom:18px;
+  margin-bottom:18px;
+  border-bottom:1px solid rgba(78,205,196,.16);
+}
+body.sangyo-polish .creator-career-kicker{
+  color:#4ecdc4;
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+body.sangyo-polish .creator-career-title{
+  color:#f8fafc;
+  font-size:20px;
+  font-weight:900;
+  line-height:1.45;
+  margin-bottom:8px;
+}
+body.sangyo-polish .creator-career-summary{color:#d7e1eb;font-size:14px;line-height:1.9}
+body.sangyo-polish .creator-industry-tags{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px;max-width:420px}
+body.sangyo-polish .creator-industry-tag{
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  border:1px solid rgba(78,205,196,.24);
+  border-radius:999px;
+  padding:6px 12px;
+  background:rgba(78,205,196,.10);
+  color:#e8fdfb;
+  font-size:12px;
+  font-weight:800;
+  line-height:1.35;
+}
+body.sangyo-polish .creator-career-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border:1px solid rgba(78,205,196,.14);border-radius:8px;overflow:hidden}
+body.sangyo-polish .creator-career-item{padding:18px;border-right:1px solid rgba(78,205,196,.12);border-bottom:1px solid rgba(78,205,196,.12);background:rgba(7,17,31,.22)}
+body.sangyo-polish .creator-career-item:nth-child(2n){border-right:0}
+body.sangyo-polish .creator-career-item:nth-last-child(-n+2){border-bottom:0}
+body.sangyo-polish .creator-career-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0 10px}
+body.sangyo-polish .career-industry{
+  display:inline-flex;
+  align-items:center;
+  min-height:28px;
+  border:1px solid rgba(228,201,135,.28);
+  border-radius:999px;
+  padding:5px 10px;
+  background:rgba(228,201,135,.10);
+  color:#f3df9f;
+  font-size:12px;
+  font-weight:900;
+  line-height:1.35;
+}
 @media (max-width:640px){
   body.sangyo-polish section{padding-left:12px !important;padding-right:12px !important}
   body.sangyo-polish .section-title{font-size:24px !important}
@@ -1049,6 +1124,11 @@ body.sangyo-polish .career-role{
   body.sangyo-polish .content-grid,
   body.sangyo-polish .industry-grid,
   body.sangyo-polish .qulio-grid{grid-template-columns:1fr !important}
+  body.sangyo-polish .creator-career-head{grid-template-columns:1fr}
+  body.sangyo-polish .creator-industry-tags{justify-content:flex-start;max-width:none}
+  body.sangyo-polish .creator-career-grid{grid-template-columns:1fr}
+  body.sangyo-polish .creator-career-item{border-right:0 !important}
+  body.sangyo-polish .creator-career-item:nth-last-child(2){border-bottom:1px solid rgba(78,205,196,.12)}
   body.sangyo-polish .content-item,
   body.sangyo-polish .content-item.span-2,
   body.sangyo-polish .content-item:nth-child(4),
@@ -1273,7 +1353,7 @@ body.sangyo-polish .career-role{
   </div>
 </section>
 
-<section class="creator fade-in">
+<section class="creator fade-in" id="creator">
   <div class="container">
     <div class="section-label">Producer & Supervisor</div>
     <h2 class="section-title">制作・監修について</h2>
@@ -1283,12 +1363,49 @@ body.sangyo-polish .career-role{
       <div class="creator-name">古澤 和俊</div>
       <div class="creator-title"><a href="https://sangyo-tech.github.io/Qulio/">Qulio合同会社 CEO</a></div>
       <p class="creator-bio">医薬品・化粧品・食品・医療機器・自動車部品など複数の製造業で品質管理・品質保証業務に従事。品質管理体制構築、ISO9001導入、GMP対応、業務改善、マニュアル作成、教育体系構築などを経験。現在は製造業向けに品質管理体制構築・業務改善・教育体系構築のコンサルティングを実施。</p>
-    </div>
-    <div class="career-list">
-      <div class="career"><div><div class="career-company">東洋エアゾール工業株式会社</div><div class="career-scale">従業員数:約500〜1,000名規模</div></div><div><div class="career-role">品質課</div><div class="career-desc">化粧品・医薬部外品・エアゾール製品の品質検査、工程品質管理、不良解析、品質データ分析、品質改善活動、標準書・手順書作成、品質記録管理など品質管理業務全般に従事。</div></div></div>
-      <div class="career"><div><div class="career-company">押尾産業株式会社</div><div class="career-scale">従業員数:中小企業規模</div></div><div><div class="career-role">品質管理部(立ち上げ)</div><div class="career-desc">品質管理部門の立ち上げ、ISO9001導入、品質管理体制構築、検査体制構築、不良対応・是正処置、サプライヤー管理、品質文書作成、工程管理、教育資料作成など品質管理部門責任者として体制構築を担当。</div></div></div>
-      <div class="career"><div><div class="career-company">ADIENT合同会社</div><div class="career-scale">自動車部品世界大手 ／ 約70,000名</div></div><div><div class="career-role">品質保証本部</div><div class="career-desc">自動車部品の顧客品質対応、サプライヤー品質管理、品質監査、不具合解析、品質改善活動、工程監査、品質報告書作成、海外拠点との品質対応など量産品質およびサプライヤー品質管理業務に従事。</div></div></div>
-      <div class="career"><div><div class="career-company">日本ベクトン・ディッキンソン株式会社</div><div class="career-scale">医療機器世界大手 ／ 約70,000名</div></div><div><div class="career-role">SCM(サプライチェーンマネジメント)</div><div class="career-desc">サプライヤー管理、購買、在庫管理、輸入管理、供給計画、物流管理、医療機器品質関連業務、GMP・QMS関連業務などサプライチェーンおよび品質システム関連業務に従事。</div></div></div>
+      <div class="career-list">
+        <div class="career career-unified">
+          <div class="creator-career-head">
+            <div>
+              <div class="creator-career-kicker">Career Background</div>
+              <h3 class="creator-career-title">複数業界の品質管理・品質保証経験を、教材設計へ集約</h3>
+              <p class="creator-career-summary">品質検査、品質管理体制構築、ISO9001導入、顧客品質、サプライチェーン管理まで、業界をまたいだ実務経験を1つの教育設計にまとめています。</p>
+            </div>
+            <div class="creator-industry-tags" aria-label="経験業界">
+              <span class="creator-industry-tag">化粧品・医薬部外品</span>
+              <span class="creator-industry-tag">包装資材</span>
+              <span class="creator-industry-tag">自動車部品</span>
+              <span class="creator-industry-tag">医療機器</span>
+            </div>
+          </div>
+          <div class="creator-career-grid">
+            <div class="creator-career-item">
+              <div class="career-company">東洋エアゾール工業株式会社</div>
+              <div class="creator-career-meta"><span class="career-industry">化粧品・医薬部外品・エアゾール</span><span class="career-role">品質課</span></div>
+              <div class="career-scale">従業員数:約500〜1,000名規模</div>
+              <div class="career-desc">品質検査、工程品質管理、不良解析、品質データ分析、品質改善活動、標準書・手順書作成、品質記録管理など品質管理業務全般に従事。</div>
+            </div>
+            <div class="creator-career-item">
+              <div class="career-company">押尾産業株式会社</div>
+              <div class="creator-career-meta"><span class="career-industry">包装資材・品質体制構築</span><span class="career-role">品質管理部(立ち上げ)</span></div>
+              <div class="career-scale">従業員数:中小企業規模</div>
+              <div class="career-desc">品質管理部門の立ち上げ、ISO9001導入、検査体制構築、不良対応・是正処置、サプライヤー管理、品質文書作成、工程管理、教育資料作成を担当。</div>
+            </div>
+            <div class="creator-career-item">
+              <div class="career-company">ADIENT合同会社</div>
+              <div class="creator-career-meta"><span class="career-industry">自動車部品</span><span class="career-role">品質保証本部</span></div>
+              <div class="career-scale">自動車部品世界大手 ／ 約70,000名</div>
+              <div class="career-desc">顧客品質対応、サプライヤー品質管理、品質監査、不具合解析、品質改善活動、工程監査、品質報告書作成、海外拠点との品質対応に従事。</div>
+            </div>
+            <div class="creator-career-item">
+              <div class="career-company">日本ベクトン・ディッキンソン株式会社</div>
+              <div class="creator-career-meta"><span class="career-industry">医療機器・QMS/GMP</span><span class="career-role">SCM</span></div>
+              <div class="career-scale">医療機器世界大手 ／ 約70,000名</div>
+              <div class="career-desc">サプライヤー管理、購買、在庫管理、輸入管理、供給計画、物流管理、医療機器品質関連業務、GMP・QMS関連業務に従事。</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="authority-panel" id="supervisors">
       <div class="authority-summary">
@@ -1311,6 +1428,10 @@ body.sangyo-polish .career-role{
               <div class="supervisor-label">Supervisor</div>
               <h3 class="supervisor-name">古澤 俊宏</h3>
               <p class="supervisor-title">出光興産株式会社 ／ 品質管理教育・保安力評価推進</p>
+              <div class="supervisor-industry-tags" aria-label="経験業界">
+                <span class="supervisor-industry">石油・エネルギー</span>
+                <span class="supervisor-industry">研究所・製造部門</span>
+              </div>
             </div>
             <div class="supervisor-badge"><strong>QC</strong><span>教育</span></div>
           </div>
@@ -1337,6 +1458,10 @@ body.sangyo-polish .career-role{
               <div class="supervisor-label">Supervisor</div>
               <h3 class="supervisor-name">安藤 隆</h3>
               <p class="supervisor-title">ミネベアミツミ株式会社 品質保証本部 品質保証部門</p>
+              <div class="supervisor-industry-tags" aria-label="経験業界">
+                <span class="supervisor-industry">自動車外装部品</span>
+                <span class="supervisor-industry">自動車シート部品</span>
+              </div>
             </div>
             <div class="supervisor-badge"><strong>31</strong><span>年</span></div>
           </div>
@@ -1363,6 +1488,10 @@ body.sangyo-polish .career-role{
               <div class="supervisor-label">Supervisor</div>
               <h3 class="supervisor-name">松田 正則</h3>
               <p class="supervisor-title">株式会社明治ゴム化成 品質保証部長</p>
+              <div class="supervisor-industry-tags" aria-label="経験業界">
+                <span class="supervisor-industry">ゴム・樹脂製品</span>
+                <span class="supervisor-industry">光学・半導体検査装置</span>
+              </div>
             </div>
             <div class="supervisor-badge"><strong>約40</strong><span>年</span></div>
           </div>
