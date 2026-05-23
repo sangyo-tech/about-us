@@ -453,19 +453,35 @@ h1,h2,h3,p,dl,dd{margin:0}
 }
 .profile{
   display:grid;
-  grid-template-columns:minmax(240px,.34fr) minmax(0,1fr);
-  gap:28px;
+  grid-template-columns:1fr;
+  gap:18px;
   padding:28px 0 0;
 }
 .profile-main{
+  display:grid;
+  grid-template-columns:minmax(240px,.3fr) minmax(0,1fr);
+  gap:8px 34px;
+  align-items:start;
   border-top:4px solid var(--teal);
   background:#fff;
   border-radius:var(--radius);
   border-left:1px solid var(--line);
   border-right:1px solid var(--line);
   border-bottom:1px solid var(--line);
-  padding:28px;
+  padding:32px;
+  box-shadow:var(--shadow);
 }
+.profile-main .role-label,
+.profile-main .person-name,
+.profile-main .person-title{grid-column:1}
+.profile-main p,
+.profile-main > .chips{grid-column:2}
+.profile-main p{
+  margin-top:0;
+  font-size:16px;
+  line-height:2;
+}
+.profile-main > .chips{margin-top:4px}
 .role-label{
   color:var(--teal);
   font-family:"Cormorant Garamond",serif;
@@ -485,14 +501,59 @@ h1,h2,h3,p,dl,dd{margin:0}
   color:var(--gold);
   font-weight:700;
 }
-.profile-main p{margin-top:22px;color:var(--muted)}
+.profile-main p{color:var(--muted)}
+.career-summary{
+  padding:28px 32px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:linear-gradient(135deg,#ffffff 0%,#f7fbfa 100%);
+}
+.career-summary .title-lg{
+  max-width:980px;
+  font-size:clamp(30px,3vw,42px);
+}
+.career-summary .lead{
+  max-width:1020px;
+  margin-top:14px;
+}
+.producer-proof-strip{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+.producer-proof-strip div{
+  padding:20px 22px;
+  border:1px solid var(--line);
+  border-left:4px solid var(--teal);
+  border-radius:var(--radius);
+  background:#fff;
+}
+.producer-proof-strip strong{
+  display:block;
+  color:var(--teal);
+  font-family:"Cormorant Garamond",serif;
+  font-size:34px;
+  line-height:1;
+}
+.producer-proof-strip span{
+  display:block;
+  margin-top:8px;
+  color:#334155;
+  font-size:13px;
+  font-weight:900;
+}
 .career-grid{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:12px;
+  margin-top:18px;
 }
 .career-card{
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
   border:1px solid var(--line);
+  border-top:4px solid var(--teal);
   border-radius:var(--radius);
   background:#fff;
   padding:22px;
@@ -552,22 +613,33 @@ h1,h2,h3,p,dl,dd{margin:0}
 .supervisor-grid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  padding:16px;
+  background:#f8fafc;
 }
 .supervisor{
   display:flex;
   flex-direction:column;
   min-height:100%;
   padding:28px;
-  border-right:1px solid var(--line);
+  border:1px solid var(--line);
+  border-top:4px solid var(--teal);
+  border-radius:var(--radius);
+  background:#fff;
+  box-shadow:0 14px 30px rgba(15,23,42,.05);
 }
-.supervisor:last-child{border-right:0}
 .supervisor-top{
   display:flex;
   align-items:flex-start;
   justify-content:space-between;
   gap:16px;
+  min-height:206px;
   padding-bottom:18px;
   border-bottom:1px solid var(--line);
+}
+.supervisor-top .chips{
+  min-height:74px;
+  align-content:flex-start;
 }
 .supervisor h4{
   margin:6px 0 0;
@@ -604,8 +676,14 @@ h1,h2,h3,p,dl,dd{margin:0}
   font-weight:900;
 }
 .supervisor p{margin-top:18px;color:var(--muted);font-size:14px}
+.supervisor > p{min-height:148px}
+.supervisor > .chips{
+  min-height:78px;
+  align-content:flex-start;
+}
 .proof-block{
   margin-top:18px;
+  min-height:144px;
   padding-top:16px;
   border-top:1px solid var(--line);
 }
@@ -748,16 +826,27 @@ h1,h2,h3,p,dl,dd{margin:0}
   .nav-links a{justify-content:flex-start;border:1px solid var(--line);border-radius:var(--radius);margin-bottom:6px}
   .nav-toggle{display:block}
   .hero-grid,.split,.profile,.qulio-intro{grid-template-columns:1fr}
+  .profile-main{grid-template-columns:1fr}
+  .profile-main .role-label,
+  .profile-main .person-name,
+  .profile-main .person-title,
+  .profile-main p,
+  .profile-main > .chips{grid-column:1}
   .card-grid,.card-grid.three,.industry-grid,.qulio-results{grid-template-columns:repeat(2,minmax(0,1fr))}
   .supervisor-grid{grid-template-columns:1fr}
-  .supervisor{border-right:0;border-bottom:1px solid var(--line)}
-  .supervisor:last-child{border-bottom:0}
+  .supervisor{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .supervisor:last-child{border-bottom:1px solid var(--line)}
+  .supervisor-top,
+  .supervisor-top .chips,
+  .supervisor > p,
+  .supervisor > .chips,
+  .proof-block{min-height:0}
 }
 @media(max-width:640px){
   .brand{min-width:0}
   .brand-en{font-size:9px}
   .brand-ja{font-size:14px}
-  .hero-stats,.trust-list,.trust-foot,.card-grid,.card-grid.three,.card-grid.two,.steps,.industry-summary,.industry-grid,.career-grid,.board-metrics,.qulio-results,.summary-strip{grid-template-columns:1fr}
+  .hero-stats,.trust-list,.trust-foot,.card-grid,.card-grid.three,.card-grid.two,.steps,.industry-summary,.industry-grid,.career-grid,.producer-proof-strip,.board-metrics,.qulio-results,.summary-strip{grid-template-columns:1fr}
   .title-xl{font-size:34px}
   .title-lg{font-size:28px}
   .trust-item{border-right:0}
@@ -766,7 +855,8 @@ h1,h2,h3,p,dl,dd{margin:0}
   .trust-foot span:last-child{border-bottom:0}
   .steps{gap:10px}
   .step-mark{min-height:0;font-size:50px}
-  .board-head,.supervisor,.profile-main,.qulio-intro{padding:22px 18px}
+  .board-head,.supervisor,.profile-main,.career-summary,.qulio-intro{padding:22px 18px}
+  .supervisor-grid{padding:12px}
   .mission-title{font-size:28px}
   .mission-panel{padding:22px 18px}
   .supervisor-top{display:grid}
@@ -989,7 +1079,12 @@ h1,h2,h3,p,dl,dd{margin:0}
           <p>医薬品・化粧品・食品・医療機器・自動車部品など複数の製造業で品質管理・品質保証業務に従事。品質管理体制構築、ISO9001導入、GMP対応、業務改善、マニュアル作成、教育体系構築などを経験。現在は製造業向けに品質管理体制構築・業務改善・教育体系構築のコンサルティングを実施。</p>
           <div class="chips"><span class="chip teal">化粧品・医薬部外品</span><span class="chip teal">包装資材</span><span class="chip teal">自動車部品</span><span class="chip teal">医療機器</span></div>
         </div>
-        <div>
+        <div class="producer-proof-strip" aria-label="制作責任者の実務経験">
+          <div><strong>4業界+</strong><span>品質管理・品質保証の実務経験</span></div>
+          <div><strong>ISO/GMP</strong><span>体制構築・規格対応の経験</span></div>
+          <div><strong>教育設計</strong><span>現場知見を教材へ変換</span></div>
+        </div>
+        <div class="career-summary">
           <div class="eyebrow">Career Background</div>
           <h3 class="title-lg">複数業界の品質管理・品質保証経験を、教材設計へ集約</h3>
           <p class="lead">品質検査、品質管理体制構築、ISO9001導入、顧客品質、サプライチェーン管理まで、業界をまたいだ実務経験を1つの教育設計にまとめています。</p>
