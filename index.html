@@ -1659,7 +1659,7 @@ const countObserver=new IntersectionObserver(entries=>{
     requestAnimationFrame(tick);countObserver.unobserve(el);
   }});
 },{threshold:0.3});
-document.querySelectorAll('.count-up').forEach(el=>countObserver.observe(el));
+window.addEventListener('load',()=>{document.querySelectorAll('.count-up').forEach(el=>countObserver.observe(el));});
 
 document.querySelectorAll('.qulio-tab').forEach(tab=>{
   tab.addEventListener('click',()=>{
