@@ -310,7 +310,7 @@ h1,h2,h3,p,dl,dd{margin:0}
   max-width:1080px;
   font-size:clamp(30px,2.45vw,42px);
 }
-.mission-title .no-break{
+.no-break{
   white-space:nowrap;
 }
 .mission-panel{
@@ -509,8 +509,11 @@ h1,h2,h3,p,dl,dd{margin:0}
   background:linear-gradient(135deg,#ffffff 0%,#f7fbfa 100%);
 }
 .career-summary .title-lg{
-  max-width:980px;
-  font-size:clamp(30px,3vw,42px);
+  max-width:none;
+  font-size:clamp(26px,2.25vw,36px);
+  line-height:1.38;
+  word-break:keep-all;
+  overflow-wrap:normal;
 }
 .career-summary .lead{
   max-width:1020px;
@@ -1314,7 +1317,7 @@ body{
         </div>
         <div class="career-summary">
           <div class="eyebrow">Career Background</div>
-          <h3 class="title-lg">複数業界の品質管理・品質保証経験を、教材設計へ集約</h3>
+          <h3 class="title-lg">複数業界の品質管理・品質保証経験を、<span class="no-break">教材設計へ集約</span></h3>
           <p class="lead">品質検査、品質管理体制構築、ISO9001導入、顧客品質、サプライチェーン管理まで、業界をまたいだ実務経験を1つの教育設計にまとめています。</p>
         </div>
       </div>
