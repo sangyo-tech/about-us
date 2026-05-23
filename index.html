@@ -366,23 +366,21 @@ h1,h2,h3,p,dl,dd{margin:0}
 .card p{margin-top:10px;color:var(--muted);font-size:14px}
 .steps{
   display:grid;
-  grid-template-columns:110px minmax(0,1fr);
-  gap:16px 24px;
+  grid-template-columns:88px minmax(0,1fr);
+  gap:18px 24px;
   margin-top:34px;
   max-width:980px;
 }
 .step-mark{
   display:flex;
-  align-items:center;
-  justify-content:center;
-  height:70px;
-  border:1px solid #9ee6de;
-  border-radius:var(--radius);
-  background:var(--navy);
-  color:#7dd3fc;
+  align-items:flex-start;
+  justify-content:flex-start;
+  min-height:70px;
+  color:var(--teal);
   font-family:"Cormorant Garamond",serif;
-  font-size:26px;
+  font-size:58px;
   font-weight:700;
+  line-height:1;
 }
 .step-body{
   min-height:70px;
@@ -767,7 +765,7 @@ h1,h2,h3,p,dl,dd{margin:0}
   .trust-foot span{border-right:0;border-bottom:1px solid var(--line)}
   .trust-foot span:last-child{border-bottom:0}
   .steps{gap:10px}
-  .step-mark{height:56px}
+  .step-mark{min-height:0;font-size:50px}
   .board-head,.supervisor,.profile-main,.qulio-intro{padding:22px 18px}
   .mission-title{font-size:28px}
   .mission-panel{padding:22px 18px}
