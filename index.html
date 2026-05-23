@@ -95,6 +95,30 @@ main:focus{outline:none}
 .hero-center-num{font-family:'Cormorant Garamond',serif;font-size:clamp(68px,14vw,92px);font-weight:600;color:#fff;line-height:1;text-shadow:0 0 40px rgba(201,169,97,0.5),0 0 20px rgba(201,169,97,0.3)}
 .hero-center-text{font-size:14px;color:rgba(255,255,255,0.9);margin-top:8px;letter-spacing:0.08em}
 
+.hero-visual.hero-visual-map{aspect-ratio:auto;max-width:540px;padding:0}
+.industry-map{
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(78,205,196,.32);
+  border-radius:12px;
+  background:linear-gradient(145deg,rgba(8,18,34,.86),rgba(15,30,61,.78));
+  box-shadow:0 24px 70px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.06);
+}
+.industry-map::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(78,205,196,.12),transparent 34%,rgba(228,201,135,.08));pointer-events:none}
+.industry-map-head{position:relative;padding:24px 24px 20px;border-bottom:1px solid rgba(78,205,196,.18)}
+.industry-map-kicker{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:12px;letter-spacing:.28em;text-transform:uppercase;margin-bottom:8px}
+.industry-map-title{color:#f8fafc;font-size:clamp(28px,4vw,42px);font-weight:900;line-height:1.15;margin-bottom:8px}
+.industry-map-copy{color:#d7e1eb;font-size:13px;line-height:1.8;max-width:420px}
+.industry-map-grid{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.industry-map-item{display:grid;grid-template-columns:minmax(86px,.76fr) minmax(0,1fr);gap:12px;align-items:center;min-height:72px;padding:14px 18px;border-right:1px solid rgba(78,205,196,.14);border-bottom:1px solid rgba(78,205,196,.14);background:rgba(255,255,255,.025)}
+.industry-map-item:nth-child(2n){border-right:0}
+.industry-map-item:nth-last-child(-n+2){border-bottom:0}
+.industry-map-name{color:#f8fafc;font-size:14px;font-weight:900;line-height:1.35}
+.industry-map-note{color:#b9c9da;font-size:12px;line-height:1.55}
+.industry-map-foot{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid rgba(228,201,135,.22);background:rgba(7,17,31,.42)}
+.industry-map-foot span{display:flex;align-items:center;justify-content:center;min-height:44px;color:#f3df9f;font-size:12px;font-weight:900;border-right:1px solid rgba(228,201,135,.16);text-align:center}
+.industry-map-foot span:last-child{border-right:0}
+
 /* Badge placement: direct top/right/bottom/left — reliable, no CSS var transforms */
 .hero-industry{
   position:absolute;
@@ -374,6 +398,14 @@ section{padding:var(--sp-section) var(--sp-container);position:relative}
   .hero-stats{padding:14px 0;gap:10px}
   .hero-stat-label{font-size:9px}
   .hero-visual{max-width:360px;padding:30px}
+  .hero-visual.hero-visual-map{max-width:100%;padding:0}
+  .industry-map-head{padding:20px 18px 18px}
+  .industry-map-grid{grid-template-columns:1fr}
+  .industry-map-item{grid-template-columns:minmax(84px,.7fr) minmax(0,1fr);min-height:62px;padding:12px 14px;border-right:0}
+  .industry-map-item:nth-last-child(2){border-bottom:1px solid rgba(78,205,196,.14)}
+  .industry-map-foot{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .industry-map-foot span:nth-child(2n){border-right:0}
+  .industry-map-foot span:nth-child(-n+2){border-bottom:1px solid rgba(228,201,135,.16)}
   .hero-ring-wrap{inset:30px}
   .hero-center{inset:30px}
   .hero-industry{font-size:12px;padding:9px 12px}
@@ -434,6 +466,11 @@ section{padding:var(--sp-section) var(--sp-container);position:relative}
   .hero-stats > div:last-child{grid-column:1/-1}
   .industry-count-num{font-size:56px}
   .industry-grid{grid-template-columns:1fr}
+  .hero-visual.hero-visual-map{max-width:100%;padding:0}
+  .industry-map-title{font-size:27px}
+  .industry-map-copy{font-size:12.5px}
+  .industry-map-name{font-size:13px}
+  .industry-map-note{font-size:11.5px}
   .qulio-summary{padding:14px}
   .career{padding:12px}
   .career-company{font-size:13.5px}
@@ -1266,23 +1303,24 @@ body.sangyo-polish .career-industry{
         <div><div class="hero-stat-num"><span class="count-up" data-target="6">0</span>+</div><div class="hero-stat-label">CATEGORIES</div></div>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="hero-ring-wrap">
-        <div class="hero-ring"></div>
-        <div class="hero-ring"></div>
-        <div class="hero-ring"></div>
-      </div>
-      <div class="hero-center-glow"></div>
-      <div class="hero-industry b1"><span class="emoji">💄</span>化粧品</div>
-      <div class="hero-industry b2"><span class="emoji">🏥</span>医療機器</div>
-      <div class="hero-industry b3"><span class="emoji">🚗</span>自動車部品</div>
-      <div class="hero-industry b4"><span class="emoji">🍱</span>食品</div>
-      <div class="hero-industry b5"><span class="emoji">📦</span>包装資材</div>
-      <div class="hero-industry b6"><span class="emoji">⛽</span>石油</div>
-      <div class="hero-center">
-        <div class="hero-center-label">CROSS-INDUSTRY</div>
-        <div class="hero-center-num"><span class="count-up" data-target="6">0</span></div>
-        <div class="hero-center-text">業界横断の実務知見</div>
+    <div class="hero-visual hero-visual-map" aria-label="6業界の実務知見">
+      <div class="industry-map">
+        <div class="industry-map-head">
+          <div class="industry-map-kicker">Cross-Industry Knowledge</div>
+          <div class="industry-map-title">6業界の実務知見</div>
+          <p class="industry-map-copy">製造・品質・教育の観点を、業界横断で教材へ反映します。</p>
+        </div>
+        <div class="industry-map-grid">
+          <div class="industry-map-item"><div class="industry-map-name">化粧品</div><div class="industry-map-note">衛生・GMP・充填</div></div>
+          <div class="industry-map-item"><div class="industry-map-name">医療機器</div><div class="industry-map-note">QMS・GMP・文書</div></div>
+          <div class="industry-map-item"><div class="industry-map-name">自動車部品</div><div class="industry-map-note">監査・工程・IATF</div></div>
+          <div class="industry-map-item"><div class="industry-map-name">包装資材</div><div class="industry-map-note">不良解析・標準化</div></div>
+          <div class="industry-map-item"><div class="industry-map-name">食品</div><div class="industry-map-note">安全・衛生・教育</div></div>
+          <div class="industry-map-item"><div class="industry-map-name">石油</div><div class="industry-map-note">保安・QC・改善</div></div>
+        </div>
+        <div class="industry-map-foot" aria-label="教材へ反映する主な観点">
+          <span>品質管理</span><span>品質保証</span><span>QMS</span><span>教育設計</span>
+        </div>
       </div>
     </div>
   </div>
