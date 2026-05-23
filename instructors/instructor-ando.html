@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>安藤 隆 | 講師・監修紹介 | 産業技術アカデミー</title>
+<meta name="description" content="安藤隆 講師プロフィール。自動車外装部品メーカー及び外資系シートメーカーで31年間品質保証業務に従事。IATF16949・VDA6.3監査員。">
+<style>
+:root{
+  --navy-1:#0b1f3a;--navy-2:#0d2847;--navy-3:#060d1a;
+  --gold-1:#c8a84e;--gold-2:#e8d77a;
+  --text-light:#e8ecf3;--text-mute:#9fb0c8;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:var(--navy-3);color:var(--text-light);line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:880px;margin:0 auto;padding:0 24px;}
+
+.topbar{
+  border-bottom:1px solid rgba(200,168,78,0.2);
+  padding:18px 0;font-size:13px;
+}
+.topbar a{color:var(--text-mute);letter-spacing:0.06em;}
+.topbar a:hover{color:var(--gold-1);}
+
+/* ヒーロー */
+.hero{
+  background:linear-gradient(160deg,var(--navy-2) 0%,var(--navy-3) 100%);
+  border-bottom:1px solid rgba(200,168,78,0.25);
+  padding:56px 0 48px;
+}
+.hero-inner{display:flex;align-items:center;gap:34px;}
+.hero-avatar{
+  flex-shrink:0;
+  width:120px;height:120px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 35% 30%,var(--navy-1),var(--navy-3));
+  border:2px solid var(--gold-1);
+}
+.hero-avatar svg{ width:66px;height:66px; }
+.hero-avatar svg .sil{ fill:var(--gold-2); }
+.hero-text .eyebrow{
+  font-size:12px;letter-spacing:0.26em;color:var(--gold-1);font-weight:500;
+}
+.hero-text h1{
+  font-family:"Noto Serif JP",serif;font-size:34px;font-weight:600;
+  letter-spacing:0.06em;margin:8px 0 10px;
+}
+.hero-text .role{
+  font-size:14px;color:var(--gold-2);letter-spacing:0.08em;
+}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.hero-tags .tag{
+  font-size:11px;padding:4px 11px;
+  border:1px solid rgba(200,168,78,0.4);border-radius:20px;
+  color:var(--gold-2);
+}
+
+/* 本文 */
+.content{padding:54px 0 72px;}
+.section{margin-bottom:46px;}
+.section-title{
+  font-family:"Noto Serif JP",serif;font-size:20px;font-weight:600;
+  letter-spacing:0.05em;color:var(--gold-2);
+  display:flex;align-items:center;gap:12px;margin-bottom:20px;
+}
+.section-title::before{
+  content:"";width:4px;height:20px;
+  background:linear-gradient(180deg,var(--gold-1),var(--gold-2));
+  border-radius:2px;
+}
+.lead{
+  background:linear-gradient(165deg,var(--navy-1),var(--navy-3));
+  border:1px solid rgba(200,168,78,0.2);
+  border-left:3px solid var(--gold-1);
+  border-radius:8px;padding:24px 26px;
+  font-size:15px;color:var(--text-light);
+}
+ol.styled,ul.styled{list-style:none;}
+ol.styled li,ul.styled li{
+  position:relative;padding-left:26px;margin-bottom:12px;
+  font-size:14px;color:var(--text-light);
+}
+ol.styled{counter-reset:item;}
+ol.styled li::before{
+  counter-increment:item;content:counter(item);
+  position:absolute;left:0;top:2px;
+  width:18px;height:18px;border-radius:50%;
+  background:rgba(200,168,78,0.15);border:1px solid var(--gold-1);
+  color:var(--gold-2);font-size:10px;font-weight:600;
+  display:flex;align-items:center;justify-content:center;
+}
+ul.styled li::before{
+  content:"";position:absolute;left:4px;top:11px;
+  width:7px;height:7px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold-1),var(--gold-2));
+}
+
+/* 経歴テーブル */
+.timeline{border-left:2px solid rgba(200,168,78,0.3);margin-left:8px;}
+.timeline-item{position:relative;padding:0 0 24px 28px;}
+.timeline-item::before{
+  content:"";position:absolute;left:-7px;top:4px;
+  width:12px;height:12px;border-radius:50%;
+  background:var(--navy-3);border:2px solid var(--gold-1);
+}
+.timeline-item:last-child{padding-bottom:0;}
+.timeline-period{font-size:12px;color:var(--gold-1);letter-spacing:0.06em;}
+.timeline-org{font-size:15px;font-weight:600;margin:3px 0 4px;}
+.timeline-desc{font-size:13px;color:var(--text-mute);}
+
+/* 実縞カード */
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.fact-card{
+  background:linear-gradient(165deg,var(--navy-1),var(--navy-3));
+  border:1px solid rgba(200,168,78,0.2);
+  border-radius:8px;padding:20px 22px;
+}
+.fact-card h3{
+  font-size:14px;color:var(--gold-2);margin-bottom:8px;font-weight:600;
+}
+.fact-card p{font-size:13px;color:var(--text-mute);}
+.metric{
+  font-family:"Noto Serif JP",serif;font-size:15px;color:var(--gold-2);
+}
+
+/* 資格 */
+.cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.cert{
+  background:rgba(13,40,71,0.6);border:1px solid rgba(200,168,78,0.18);
+  border-radius:6px;padding:12px 16px;font-size:13px;
+}
+.cert .yr{color:var(--gold-1);font-size:11px;display:block;margin-bottom:2px;}
+
+/* メッセージ */
+.message{
+  background:linear-gradient(165deg,var(--navy-2),var(--navy-3));
+  border:1px solid rgba(200,168,78,0.25);border-radius:8px;
+  padding:30px 32px;position:relative;
+}
+.message::before{
+  content:"\201C";font-family:"Noto Serif JP",serif;
+  font-size:64px;color:rgba(200,168,78,0.3);
+  position:absolute;top:6px;left:18px;line-height:1;
+}
+.message p{font-size:14.5px;padding-top:14px;}
+
+/* 戻る */
+.back{text-align:center;padding-bottom:60px;}
+.back a{
+  display:inline-block;padding:11px 28px;
+  border:1px solid var(--gold-1);border-radius:6px;
+  color:var(--gold-2);font-size:13px;letter-spacing:0.1em;
+  transition:background .2s,color .2s;
+}
+.back a:hover{
+  background:linear-gradient(90deg,var(--gold-1),var(--gold-2));
+  color:var(--navy-3);font-weight:600;
+}
+.page-footer{
+  border-top:1px solid rgba(200,168,78,0.2);
+  padding:30px 0;text-align:center;font-size:12px;color:var(--text-mute);
+}
+.page-footer .brand{
+  color:var(--gold-1);font-family:"Noto Serif JP",serif;
+  font-size:15px;letter-spacing:0.08em;margin-bottom:6px;
+}
+@media(max-width:680px){
+  .hero-inner{flex-direction:column;text-align:center;gap:20px;}
+  .hero-tags{justify-content:center;}
+  .cards,.cert-grid{grid-template-columns:1fr;}
+  .hero-text h1{font-size:28px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="wrap"><a href="index.html">‹ 講師一覧へ戻る</a></div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-avatar"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path class="sil" d="M32 33c7.18 0 13-6.27 13-14S39.18 5 32 5 19 11.27 19 19s5.82 14 13 14zm0 5c-9.94 0-23 5.13-23 15.3V59h46v-5.7C55 43.13 41.94 38 32 38z"/></svg></div>
+      <div class="hero-text">
+        <span class="eyebrow">SUPERVISOR</span>
+        <h1>安藤 隆</h1>
+        <div class="role">品質保証・サプライヤー監査 ／ コンテンツ監修</div>
+        <div class="hero-tags">
+          <span class="tag">IATF16949</span>
+          <span class="tag">VDA6.3監査員</span>
+          <span class="tag">コアツール</span>
+          <span class="tag">サプライヤ・品質管理</span>
+          <span class="tag">新車立ち上げ</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="content">
+  <div class="wrap">
+
+    <section class="section">
+      <div class="section-title">プロフィール</div>
+      <div class="lead">
+        自動車外装部品メーカー及び外資系シートメーカーで31年間、品質保証業務に従事してきました。本社部門での新車開発、工場部門での量産品質工程管理の双方を経験し、IATF16949やVDA6.3といった第三者監査対応、グローバルなサプライヤー品質管理を専門としています。国内外150社規模のサプライヤー管理や、中国・韓国・台湾・米国での監査・改善指導の実務経験を有しています。
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">専門領域・指導テーマ</div>
+      <ul class="styled">
+        <li>IATF16949 内部監査・第三者監査対応の実務（サードパーティ監査事務局経験）</li>
+        <li>コアツール（APQP・PPAP・FMEA・SPC・MSA）の活用と品質基準作成</li>
+        <li>VDA6.3 によるプロセス監査の進め方</li>
+        <li>サプライヤー品質マネジメント（新規取引先選定監査・定期監査・改善指導）</li>
+        <li>市場クレーム・ラインクレームの要因解析と再発防止（なぜなぜ分析・FTA・FMEA）</li>
+        <li>新車プロジェクトの量産移行・出荷判断、検査治具仕様の立案</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-title">主な実績</div>
+      <div class="cards">
+        <div class="fact-card">
+          <h3>購入品不良率の大幅改善</h3>
+          <p>サプライヤー改善活動を通じ、購入品不良率を <span class="metric">12ppm → 3ppm</span> へ低減（FY22→FY23）。</p>
+        </div>
+        <div class="fact-card">
+          <h3>得意先ワーストメーカー脱却</h3>
+          <p>検査道場の導入と品質改善活動により、得意先のワースト部品メーカーから脱却を実現。</p>
+        </div>
+        <div class="fact-card">
+          <h3>米国新車立ち上げ</h3>
+          <p>米国工場にて3車種の新車モデルを立ち上げ。得意先工場に常駐し、不良返却品を <span class="metric">数十本/日 → 0本</span> に改善。</p>
+        </div>
+        <div class="fact-card">
+          <h3>海外サプライヤー監査</h3>
+          <p>中国・韓国・台湾の電子部品・樹䄆・アルミ部品サプライヤーへの選定監査・改善指導を多数実施。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">職務経歴</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-period">2024年9月 ～ 現在</div>
+          <div class="timeline-org">ミネベアミツミ株式会社　品質保証本部</div>
+          <div class="timeline-desc">チーフ（主任）として、社内各事業部への内部監査（VDA6.3・IATF16949）、品質教育資料の作成・実施、全社品質月間イベントの立案・展開を担当。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-period">2018年2月 ～ 2024年8月</div>
+          <div class="timeline-org">アディエント合同会社　品質保証部</div>
+          <div class="timeline-desc">マネージャー（課長）としてサプライヤークオリティマネジメントを担当。日産・SUBARU・Hondaの顧客監査対応、APAC月次サプライヤー品質レビューに日本代表として出席。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-period">1992年4月 ～ 2018年1月</div>
+          <div class="timeline-org">株式会社ファルテック（自動車外装部品）</div>
+          <div class="timeline-desc">新車立ち上げ時の品質保証、米国子会社での新車立ち上げ業務、九州工場での量産品質工筭组織（課長／課員12名）などを歴任。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">保有資格・監査員資格</div>
+      <div class="cert-grid">
+        <div class="cert"><span class="yr">2026年3月</span>中産連 VDA6.3 監査員資格認定</div>
+        <div class="cert"><span class="yr">2018年</span>日科技連 IATF16949 内部監査員コース／コアツール 外部講習受講</div>
+        <div class="cert"><span class="yr">1991年3月</span>国家二級ガソリン自動車整備士</div>
+        <div class="cert"><span class="yr">語学</span>英語（メール・日常会話、APAC品質会議への出席）</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">監修で見る領域</div>
+      <div class="lead">
+        自動車外装部品の品質保証で31年にわたり培った、IATF16949やコアツール、サプライヤー監査の実務知見をもとに、教材内容の正確性と現場適合性を確認します。
+      </div>
+      <ul class="styled" style="margin-top:18px;">
+        <li>品質保証・監査領域で伝えるべき基礎と手順の妥当性確認</li>
+        <li>コアツール・FMEA等の説明が実務に即しているかの確認</li>
+        <li>現場で理解されるサプライヤー品質管理の表現確認</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-title">監修者からのメッセージ</div>
+      <div class="message">
+        <p>品質の仕事は、適切な判断が求められる場面と　社内外をつなぐ潤滑油としての役割の両面があります。これまでの新車開発と量産工筭綄織の経験を通じて感じてきたのは、仕事はやはり人と人とのつながりが土台になるということです。日本の美場力は今も強い。その強みを活かしながら、皆さまの品質管理の仕組みづくりと、次世代の人材育成に貢献できればと考えています。</p>
+      </div>
+    </section>
+
+    <div class="back">
+      <a href="index.html">‹ 講師一覧へ戻る</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="page-footer">
+  <div class="wrap">
+    <div class="brand">産業技術アカデミー</div>
+    <div>Qulio合同会社　|　製造業向け eラーニングサービス</div>
+  </div>
+</footer>
+
+</body>
+</html>

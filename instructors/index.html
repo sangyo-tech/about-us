@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>講師一覧 | 産業技術アカデミー</title>
+<meta name="description" content="産業技術アカデミーの講師陣をご紹介します。品質保証・ISO監査・製造業DXの第一線で活躍する実務経験豊富な専門家が、現場で活きる研修を提供します。">
+<style>
+:root{
+  --navy-1:#0b1f3a;
+  --navy-2:#0d2847;
+  --navy-3:#060d1a;
+  --gold-1:#c8a84e;
+  --gold-2:#e8d77a;
+  --text-light:#e8ecf3;
+  --text-mute:#9fb0c8;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:var(--navy-3);
+  color:var(--text-light);
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+/* ヘッダー */
+.page-header{
+  background:linear-gradient(160deg,var(--navy-2) 0%,var(--navy-3) 100%);
+  border-bottom:1px solid rgba(200,168,78,0.25);
+  padding:72px 0 64px;
+  text-align:center;
+}
+.eyebrow{
+  display:inline-block;
+  font-size:13px;
+  letter-spacing:0.28em;
+  color:var(--gold-1);
+  font-weight:500;
+  margin-bottom:18px;
+}
+.page-header h1{
+  font-family:"Noto Serif JP",serif;
+  font-size:38px;
+  font-weight:600;
+  letter-spacing:0.06em;
+  margin-bottom:18px;
+}
+.page-header h1 .en{
+  display:block;
+  font-family:"Noto Sans JP",sans-serif;
+  font-size:14px;
+  letter-spacing:0.3em;
+  color:var(--text-mute);
+  font-weight:400;
+  margin-top:10px;
+}
+.page-header p{
+  max-width:680px;
+  margin:0 auto;
+  color:var(--text-mute);
+  font-size:15px;
+}
+.gold-line{
+  width:64px;height:2px;
+  background:linear-gradient(90deg,var(--gold-1),var(--gold-2));
+  margin:26px auto 0;
+}
+
+/* 講師グリッド */
+.instructors{padding:64px 0 80px;}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
+.card{
+  background:linear-gradient(165deg,var(--navy-1) 0%,var(--navy-3) 100%);
+  border:1px solid rgba(200,168,78,0.2);
+  border-radius:10px;
+  padding:34px 28px 30px;
+  display:flex;
+  flex-direction:column;
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(200,168,78,0.55);
+  box-shadow:0 14px 36px rgba(0,0,0,0.5);
+}
+.avatar{
+  width:84px;height:84px;
+  border-radius:50%;
+  margin:0 auto 20px;
+  display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 35% 30%,var(--navy-2),var(--navy-3));
+  border:2px solid var(--gold-1);
+}
+.avatar svg{
+  width:46px;height:46px;
+}
+.avatar svg .sil{ fill:var(--gold-2); }
+.card .name{
+  text-align:center;
+  font-family:"Noto Serif JP",serif;
+  font-size:22px;
+  font-weight:600;
+  letter-spacing:0.05em;
+}
+.card .role{
+  text-align:center;
+  font-size:13px;
+  color:var(--gold-1);
+  letter-spacing:0.08em;
+  margin-top:6px;
+  margin-bottom:16px;
+}
+.divider{
+  height:1px;
+  background:rgba(200,168,78,0.22);
+  margin:0 0 16px;
+}
+.card .field{
+  font-size:13px;
+  color:var(--text-mute);
+  margin-bottom:14px;
+}
+.card .field strong{
+  color:var(--text-light);
+  font-weight:500;
+}
+.tags{
+  display:flex;flex-wrap:wrap;gap:7px;
+  margin-bottom:20px;
+}
+.tag{
+  font-size:11px;
+  padding:4px 10px;
+  border:1px solid rgba(200,168,78,0.35);
+  border-radius:20px;
+  color:var(--gold-2);
+  letter-spacing:0.04em;
+}
+.card .summary{
+  font-size:13px;
+  color:var(--text-mute);
+  flex-grow:1;
+  margin-bottom:22px;
+}
+.btn{
+  display:block;
+  text-align:center;
+  padding:11px 0;
+  border:1px solid var(--gold-1);
+  border-radius:6px;
+  color:var(--gold-2);
+  font-size:13px;
+  letter-spacing:0.1em;
+  transition:background .2s ease,color .2s ease;
+}
+.btn:hover{
+  background:linear-gradient(90deg,var(--gold-1),var(--gold-2));
+  color:var(--navy-3);
+  font-weight:600;
+}
+
+/* フッター */
+.page-footer{
+  border-top:1px solid rgba(200,168,78,0.2);
+  padding:34px 0;
+  text-align:center;
+  font-size:12px;
+  color:var(--text-mute);
+}
+.page-footer .brand{
+  color:var(--gold-1);
+  font-family:"Noto Serif JP",serif;
+  font-size:15px;
+  letter-spacing:0.08em;
+  margin-bottom:6px;
+}
+
+@media(max-width:1000px) and (min-width:881px){
+  .grid{grid-template-columns:repeat(2,1fr);max-width:760px;margin:0 auto;}
+}
+@media(max-width:880px){
+  .grid{grid-template-columns:1fr;max-width:420px;margin:0 auto;}
+  .page-header h1{font-size:30px;}
+}
+
+.role-badge{
+  display:block;width:fit-content;
+  margin:0 auto 10px;
+  font-size:11px;letter-spacing:0.12em;
+  padding:3px 12px;border-radius:20px;
+  font-weight:600;
+}
+.role-badge.lecturer{
+  background:linear-gradient(135deg,var(--gold-1),var(--gold-2));
+  color:var(--navy-3);
+}
+.role-badge.supervisor{
+  background:transparent;
+  border:1px solid var(--gold-1);
+  color:var(--gold-2);
+}
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <div class="wrap">
+    <span class="eyebrow">INSTRUCTORS</span>
+    <h1>講師紹介
+      <span class="en">産業技術アカデミー 講師・監修陣</span>
+    </h1>
+    <p>品質保証・ISO／IATF監査・品質管理教育・製造業DXの第一線で長年実務を重ねてきた専門家が、現場で本当に活きる知識と手法を、わかりやすくお伝えします。</p>
+    <div class="gold-line"></div>
+  </div>
+</header>
+
+<main class="instructors">
+  <div class="wrap">
+    <div class="grid">
+
+      <!-- 安藤 隆 -->
+      <article class="card">
+        <div class="avatar"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path class="sil" d="M32 33c7.18 0 13-6.27 13-14S39.18 5 32 5 19 11.27 19 19s5.82 14 13 14zm0 5c-9.94 0-23 5.13-23 15.3V59h46v-5.7C55 43.13 41.94 38 32 38z"/></svg></div>
+        <div class="role-badge supervisor">監修</div>
+        <div class="name">安藤 隆</div>
+        <div class="role">品質保証・サプライヤー監査</div>
+        <div class="divider"></div>
+        <div class="field"><strong>専門領域</strong>　自動車外装部品の品質保証／IATF16949・VDA6.3監査／サプライヤー品質管理</div>
+        <div class="tags">
+          <span class="tag">IATF16949</span>
+          <span class="tag">VDA6.3</span>
+          <span class="tag">コアツール</span>
+          <span class="tag">サプライヤー監査</span>
+        </div>
+        <p class="summary">自動車外装部品メーカー及び外資系シートメーカーで31年間、品質保証業務に従事。新車立ち上げから量産品質管理、グローバルなサプライヤー監査まで幅広く経験。</p>
+        <a class="btn" href="instructor-ando.html">プロフィールを見る ›</a>
+      </article>
+
+      <!-- 松田 正則 -->
+      <article class="card">
+        <div class="avatar"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path class="sil" d="M32 33c7.18 0 13-6.27 13-14S39.18 5 32 5 19 11.27 19 19s5.82 14 13 14zm0 5c-9.94 0-23 5.13-23 15.3V59h46v-5.7C55 43.13 41.94 38 32 38z"/></svg></div>
+        <div class="role-badge lecturer">講師</div>
+        <div class="name">松田 正則</div>
+        <div class="role">ISO9001・品質マネジメント</div>
+        <div class="divider"></div>
+        <div class="field"><strong>専門領域</strong>　ISO9001内部監査・外部審査対応／工程・取引先監査／QMS継続的改善</div>
+        <div class="tags">
+          <span class="tag">ISO9001</span>
+          <span class="tag">QMS</span>
+          <span class="tag">QC検定2級</span>
+          <span class="tag">工程監査</span>
+        </div>
+        <p class="summary">製造業で約40年、うち設計17年・品質管理24年に従事。光学・半導体機器の開発設計から、ゴム・樹脂・金属加工品の品質保証まで幅広い分野を経験。</p>
+        <a class="btn" href="instructor-matsuda.html">プロフィールを見る ›</a>
+      </article>
+
+      <!-- 古澤 和俊 -->
+      <article class="card">
+        <div class="avatar"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path class="sil" d="M32 33c7.18 0 13-6.27 13-14S39.18 5 32 5 19 11.27 19 19s5.82 14 13 14zm0 5c-9.94 0-23 5.13-23 15.3V59h46v-5.7C55 43.13 41.94 38 32 38z"/></svg></div>
+        <div class="role-badge lecturer">講師</div>
+        <div class="name">古澤 和俊</div>
+        <div class="role">品質マネジメント構築・健康食品GMP</div>
+        <div class="divider"></div>
+        <div class="field"><strong>専門領域</strong>　品質部門の立ち上げ／ISO9001導入・運用／健康食品GMP・HACCP構築／業務改善</div>
+        <div class="tags">
+          <span class="tag">ISO9001審査員補</span>
+          <span class="tag">品質部門立ち上げ</span>
+          <span class="tag">健康食品GMP／HACCP</span>
+          <span class="tag">業務改善・DX</span>
+        </div>
+        <p class="summary">品質一筋のキャリアで品質部門のゼロからの立ち上げ・ISO9001導入を多数経験。現在はQulio合同会社代表として製造業のコンサルティングと産業技術アカデミーを運営。</p>
+        <a class="btn" href="instructor-furusawa.html">プロフィールを見る ›</a>
+      </article>
+
+      <!-- 松本 恵和 -->
+      <article class="card">
+        <div class="avatar"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path class="sil" d="M32 33c7.18 0 13-6.27 13-14S39.18 5 32 5 19 11.27 19 19s5.82 14 13 14zm0 5c-9.94 0-23 5.13-23 15.3V59h46v-5.7C55 43.13 41.94 38 32 38z"/></svg></div>
+        <div class="role-badge lecturer">講師</div>
+        <div class="name">松本 恵和</div>
+        <div class="role">製造業DX・生成AI活用</div>
+        <div class="divider"></div>
+        <div class="field"><strong>専門領域</strong>　生産管理・SCM／生成AI・AIエージェント活用／中小企業向けDX伴走支援</div>
+        <div class="tags">
+          <span class="tag">生成AI活用</span>
+          <span class="tag">SCM／生産管理</span>
+          <span class="tag">業務改善</span>
+          <span class="tag">DX研修</span>
+        </div>
+        <p class="summary">製造業の生産管理・SCMで20年以上の現場経験を経て。業務改善コンサル会社の共同代表に。生成AIを軸にした中小企業向けDX伴走支援と研修登壇を展開中。</p>
+        <a class="btn" href="instructor-ym.html">プロフィールを見る ›</a>
+      </article>
+
+      <!-- 古澤 俊宏 -->
+      <article class="card">
+        <div class="avatar"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path class="sil" d="M32 33c7.18 0 13-6.27 13-14S39.18 5 32 5 19 11.27 19 19s5.82 14 13 14zm0 5c-9.94 0-23 5.13-23 15.3V59h46v-5.7C55 43.13 41.94 38 32 38z"/></svg></div>
+        <div class="role-badge supervisor">監修</div>
+        <div class="name">古澤 俊宏</div>
+        <div class="role">品質管理教育・コンテンツ監修</div>
+        <div class="divider"></div>
+        <div class="field"><strong>専門領域</strong>　研究所・製造部門向け品質管理教育／保安力評価推進／教材内容の監修</div>
+        <div class="tags">
+          <span class="tag">日科技連QCセミナー修了</span>
+          <span class="tag">保安力評価推進員</span>
+          <span class="tag">QC教育</span>
+        </div>
+        <p class="summary">出光興産株式会社にて研究所を対象とした品質管理手法教育を担当。保安力評価推進員として製造部門の自己評価・改善活動を推進。本アカデミーの教材を監修。</p>
+        <a class="btn" href="instructor-furusawa-t.html">プロフィールを見る ›</a>
+      </article>
+
+    </div>
+  </div>
+</main>
+
+<footer class="page-footer">
+  <div class="wrap">
+    <div class="brand">産業技術アカデミー</div>
+    <div>Qulio合同会社　|　製造業向け eラーニングサービス</div>
+  </div>
+</footer>
+
+</body>
+</html>
