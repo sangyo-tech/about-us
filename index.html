@@ -1819,9 +1819,9 @@ body.sangyo-polish .cta p{
         <a class="hero-action secondary" href="https://apply.sangyo-tech.jp/">相談する</a>
       </div>
       <div class="hero-stats">
-        <div><div class="hero-stat-num"><span class="count-up" data-target="6">0</span></div><div class="hero-stat-label">INDUSTRIES</div></div>
+        <div><div class="hero-stat-num"><span class="count-up" data-target="6">6</span></div><div class="hero-stat-label">INDUSTRIES</div></div>
         <div><div class="hero-stat-num">ALL</div><div class="hero-stat-label">LEVELS</div></div>
-        <div><div class="hero-stat-num"><span class="count-up" data-target="6">0</span>+</div><div class="hero-stat-label">CATEGORIES</div></div>
+        <div><div class="hero-stat-num"><span class="count-up" data-target="6">6</span>+</div><div class="hero-stat-label">CATEGORIES</div></div>
       </div>
     </div>
     <div class="hero-visual hero-visual-map" aria-label="6業界の実務知見">
@@ -1917,7 +1917,7 @@ body.sangyo-polish .cta p{
     <div class="section-label">Cross-Industry Experience</div>
     <h2 class="section-title">異業種の経験が、<br>教材の厚みになる</h2>
     <div class="industry-count-display">
-      <div class="industry-count-num"><span class="count-up" data-target="6">0</span></div>
+      <div class="industry-count-num"><span class="count-up" data-target="6">6</span></div>
       <div class="industry-count-label">INDUSTRIES<strong>6つの製造業における実務経験</strong></div>
     </div>
     <p class="section-lead">化粧品・包装資材・自動車部品・医療機器・食品・石油という6つの異なる製造業における品質管理実務の経験が教材に反映されています。業界ごとの規格対応や品質課題に触れてきたからこそ、共通する本質と業界固有のポイントの両方を伝えられます。</p>
@@ -2150,8 +2150,8 @@ body.sangyo-polish .cta p{
     </div>
 
     <div class="qulio-summary">
-      <div class="qulio-summary-item"><div class="qulio-summary-num"><span class="count-up" data-target="20">0</span>+</div><div class="qulio-summary-label">業務マニュアル作成<br>支援企業数</div></div>
-      <div class="qulio-summary-item"><div class="qulio-summary-num"><span class="count-up" data-target="8">0</span></div><div class="qulio-summary-label">多様な支援領域<br>(製造・医療・サービス等)</div></div>
+      <div class="qulio-summary-item"><div class="qulio-summary-num"><span class="count-up" data-target="20">20</span>+</div><div class="qulio-summary-label">業務マニュアル作成<br>支援企業数</div></div>
+      <div class="qulio-summary-item"><div class="qulio-summary-num"><span class="count-up" data-target="8">8</span></div><div class="qulio-summary-label">多様な支援領域<br>(製造・医療・サービス等)</div></div>
       <div class="qulio-summary-item"><div class="qulio-summary-num">ALL</div><div class="qulio-summary-label">立ち上げから改善、<br>内製化まで伴走</div></div>
     </div>
   </div>
@@ -2226,6 +2226,7 @@ document.querySelectorAll('.timeline').forEach(el=>timelineObserver.observe(el))
 const countObserver=new IntersectionObserver(entries=>{
   entries.forEach(entry=>{if(entry.isIntersecting){
     const el=entry.target;const target=parseInt(el.dataset.target);const duration=1400;const start=performance.now();
+    if(el.textContent.trim()===String(target)){countObserver.unobserve(el);return;}
     if(window.innerWidth<640||window.matchMedia('(prefers-reduced-motion: reduce)').matches){
       el.textContent=target;countObserver.unobserve(el);return;
     }
