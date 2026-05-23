@@ -1667,6 +1667,9 @@ document.querySelectorAll('.timeline').forEach(el=>timelineObserver.observe(el))
 const countObserver=new IntersectionObserver(entries=>{
   entries.forEach(entry=>{if(entry.isIntersecting){
     const el=entry.target;const target=parseInt(el.dataset.target);const duration=1400;const start=performance.now();
+    if(window.innerWidth<640||window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      el.textContent=target;countObserver.unobserve(el);return;
+    }
     function tick(now){
       const progress=Math.min((now-start)/duration,1);
       const eased=1-Math.pow(1-progress,3);
