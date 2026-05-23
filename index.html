@@ -855,10 +855,203 @@ h1,h2,h3,p,dl,dd{margin:0}
   box-shadow:var(--shadow);
 }
 .back-to-top.visible{display:block}
+
+/* Dark readability refresh */
+body{
+  color:#f8fafc;
+  background:linear-gradient(180deg,#08111f 0%,#0b1626 48%,#07111f 100%);
+}
+.nav{
+  background:rgba(8,17,31,.94);
+  border-bottom-color:rgba(148,163,184,.22);
+  box-shadow:0 14px 34px rgba(0,0,0,.22);
+}
+.brand-en{color:#9fb3c8}
+.brand-ja{color:#f8fafc}
+.nav-toggle{color:#7dd3fc}
+.nav-links{
+  background:rgba(15,28,48,.94);
+  border-color:rgba(148,163,184,.24);
+}
+.nav-links a{
+  color:#e5edf8;
+  border-right-color:rgba(148,163,184,.2);
+}
+.nav-links a:hover,
+.nav-links a.current{
+  background:rgba(45,212,191,.14);
+  color:#99f6e4;
+}
+.hero{
+  background:
+    linear-gradient(135deg,rgba(8,17,31,.98) 0%,rgba(15,31,55,.98) 55%,rgba(9,38,48,.98) 100%);
+  color:#f8fafc;
+}
+.band-white{
+  background:linear-gradient(180deg,#0b1626 0%,#08111f 100%);
+}
+.band-soft{
+  background:linear-gradient(180deg,#0e1b2e 0%,#0a1424 100%);
+}
+.section,
+.title-xl,
+.title-lg,
+.mission-main,
+.card h3,
+.industry-card h3,
+.profile-main,
+.person-name,
+.career-summary .title-lg,
+.career-card h3,
+.supervisor h4,
+.qulio-intro .title-lg,
+.result-card h3,
+.faq-q{
+  color:#f8fafc;
+}
+.lead,
+.mission-sub,
+.card p,
+.step-body p,
+.industry-summary .lead,
+.profile-main p,
+.career-summary .lead,
+.career-card p,
+.board-head p,
+.supervisor p,
+.qulio-intro .lead,
+.result-card p,
+.faq-a{
+  color:#d6e1ef;
+}
+.eyebrow{
+  color:#7dd3fc;
+}
+.eyebrow::before{
+  background:#7dd3fc;
+}
+.title-xl .accent,
+.big-number strong,
+.stat strong,
+.card-num,
+.role-label,
+.producer-proof-strip strong,
+.consulting-proof strong,
+.summary-item strong,
+.result-card .category{
+  color:#5eead4;
+}
+.big-number span,
+.trust-item span,
+.producer-proof-strip span,
+.consulting-proof span,
+.summary-item span,
+.supervisor-title{
+  color:#cbd8e8;
+}
+.trust-panel,
+.stat,
+.mission-panel,
+.quote,
+.card,
+.step-body,
+.industry-card,
+.profile-main,
+.career-summary,
+.producer-proof-strip div,
+.career-card,
+.supervisor-board,
+.supervisor,
+.qulio-intro,
+.consulting-proof div,
+.result-card,
+.summary-item,
+.faq-item{
+  border-color:rgba(148,163,184,.24);
+  background:rgba(15,28,48,.92);
+  box-shadow:0 18px 42px rgba(0,0,0,.22);
+}
+.trust-head,
+.board-head,
+.cta{
+  background:linear-gradient(135deg,#07111f 0%,#10203a 100%);
+  color:#f8fafc;
+}
+.trust-head p,
+.cta .lead{
+  color:#dbeafe;
+}
+.trust-list,
+.trust-foot,
+.supervisor-grid{
+  background:rgba(8,17,31,.72);
+}
+.trust-item,
+.trust-foot span,
+.proof-block,
+.supervisor-top{
+  border-color:rgba(148,163,184,.22);
+}
+.trust-item b,
+.trust-foot span,
+.proof-block b{
+  color:#99f6e4;
+}
+.card-num{
+  border:0;
+  background:rgba(45,212,191,.12);
+  box-shadow:inset 0 0 0 1px rgba(94,234,212,.28);
+}
+.chip{
+  border-color:rgba(245,208,111,.42);
+  background:rgba(245,208,111,.13);
+  color:#ffe8a3;
+}
+.chip.teal{
+  border-color:rgba(94,234,212,.42);
+  background:rgba(45,212,191,.13);
+  color:#b5fff3;
+}
+.badge{
+  border-color:rgba(94,234,212,.32);
+  background:rgba(8,17,31,.74);
+  color:#7dd3fc;
+  box-shadow:inset 0 0 0 1px rgba(125,211,252,.08);
+}
+.badge span{
+  color:#99f6e4;
+}
+.metric{
+  background:rgba(8,17,31,.58);
+}
+.point-list li{
+  border-color:rgba(148,163,184,.24);
+  background:rgba(8,17,31,.55);
+  color:#e5edf8;
+}
+.btn{
+  border-color:rgba(148,163,184,.32);
+  background:rgba(15,28,48,.92);
+  color:#f8fafc;
+}
+.btn.primary{
+  border-color:#5eead4;
+  background:#5eead4;
+  color:#06111d;
+  box-shadow:0 16px 30px rgba(20,184,166,.2);
+}
+.faq-q{
+  background:rgba(15,28,48,.92);
+}
+.back-to-top{
+  border-color:rgba(94,234,212,.35);
+  background:#0b1626;
+  color:#99f6e4;
+}
 @media(max-width:1100px){
   .nav-links{display:none;position:absolute;top:64px;left:0;right:0;grid-template-columns:1fr;padding:12px 16px;border-left:0;border-right:0;border-radius:0;box-shadow:var(--shadow)}
   .nav-links.open{display:grid}
-  .nav-links a{justify-content:flex-start;border:1px solid var(--line);border-radius:var(--radius);margin-bottom:6px}
+  .nav-links a{justify-content:flex-start;border:1px solid rgba(148,163,184,.24);border-radius:var(--radius);margin-bottom:6px}
   .nav-toggle{display:block}
   .hero-grid,.split,.profile{grid-template-columns:1fr}
   .profile-main{grid-template-columns:1fr}
@@ -869,8 +1062,8 @@ h1,h2,h3,p,dl,dd{margin:0}
   .profile-main > .chips{grid-column:1}
   .card-grid,.card-grid.three,.industry-grid,.qulio-results{grid-template-columns:repeat(2,minmax(0,1fr))}
   .supervisor-grid{grid-template-columns:1fr}
-  .supervisor{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .supervisor:last-child{border-bottom:1px solid var(--line)}
+  .supervisor{border-right:1px solid rgba(148,163,184,.24);border-bottom:1px solid rgba(148,163,184,.24)}
+  .supervisor:last-child{border-bottom:1px solid rgba(148,163,184,.24)}
   .supervisor-top,
   .supervisor-top .chips,
   .supervisor > p,
@@ -885,8 +1078,8 @@ h1,h2,h3,p,dl,dd{margin:0}
   .title-xl{font-size:34px}
   .title-lg{font-size:28px}
   .trust-item{border-right:0}
-  .trust-item:nth-last-child(2){border-bottom:1px solid var(--line)}
-  .trust-foot span{border-right:0;border-bottom:1px solid var(--line)}
+  .trust-item:nth-last-child(2){border-bottom:1px solid rgba(148,163,184,.22)}
+  .trust-foot span{border-right:0;border-bottom:1px solid rgba(148,163,184,.22)}
   .trust-foot span:last-child{border-bottom:0}
   .steps{gap:10px}
   .step-mark{min-height:0;font-size:50px}
