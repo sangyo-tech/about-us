@@ -157,6 +157,7 @@ h1,h2,h3,p,dl,dd{margin:0}
   font-size:clamp(38px,5.3vw,68px);
   line-height:1.12;
   letter-spacing:0;
+  text-wrap:balance;
 }
 .title-xl .accent{color:var(--teal)}
 .title-lg{
@@ -164,6 +165,7 @@ h1,h2,h3,p,dl,dd{margin:0}
   font-size:clamp(28px,3.4vw,46px);
   line-height:1.25;
   letter-spacing:0;
+  text-wrap:balance;
 }
 .lead{
   margin-top:22px;
@@ -364,6 +366,105 @@ h1,h2,h3,p,dl,dd{margin:0}
 }
 .card h3{font-size:18px;line-height:1.45}
 .card p{margin-top:10px;color:var(--muted);font-size:14px}
+.audience-mosaic{
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  align-items:stretch;
+}
+.audience-mosaic .card{
+  min-height:190px;
+}
+.audience-mosaic .card:nth-child(1),
+.audience-mosaic .card:nth-child(4){
+  grid-column:span 5;
+}
+.audience-mosaic .card:nth-child(2),
+.audience-mosaic .card:nth-child(3){
+  grid-column:span 7;
+}
+.curriculum-lanes{
+  grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);
+  align-items:stretch;
+}
+.curriculum-lanes .card:first-child{
+  grid-row:span 2;
+  padding:30px;
+}
+.curriculum-lanes .card:first-child .card-num{
+  min-width:0;
+  height:auto;
+  margin-bottom:22px;
+  border:0;
+  background:transparent;
+  box-shadow:none;
+  font-size:44px;
+}
+.curriculum-lanes .card:first-child h3{
+  font-size:24px;
+}
+.feature-board{
+  grid-template-columns:minmax(300px,.9fr) minmax(0,1.1fr);
+  gap:0;
+  border:1px solid var(--mood-border,rgba(148,163,184,.24));
+  border-radius:var(--radius);
+  overflow:hidden;
+  background:rgba(8,17,31,.36);
+}
+.feature-board .card{
+  display:grid;
+  grid-template-columns:62px minmax(0,1fr);
+  gap:0 18px;
+  align-items:start;
+  border:0;
+  border-left:1px solid var(--mood-border,rgba(148,163,184,.24));
+  border-bottom:1px solid var(--mood-border,rgba(148,163,184,.24));
+  border-radius:0;
+  box-shadow:none;
+  background:transparent;
+}
+.feature-board .card:first-child{
+  grid-row:span 3;
+  display:block;
+  border-left:0;
+}
+.feature-board .card:nth-child(4){
+  border-bottom:0;
+}
+.feature-board .card:not(:first-child) .card-num,
+.insight-strip .card .card-num{
+  grid-row:1 / span 2;
+}
+.feature-board .card:not(:first-child) p,
+.insight-strip .card p{
+  grid-column:2;
+}
+.feature-board .card-num{
+  margin-bottom:0;
+}
+.insight-strip{
+  grid-template-columns:1fr;
+  gap:0;
+  border:1px solid var(--mood-border,rgba(148,163,184,.24));
+  border-radius:var(--radius);
+  overflow:hidden;
+  background:rgba(8,17,31,.28);
+}
+.insight-strip .card{
+  display:grid;
+  grid-template-columns:86px minmax(0,1fr);
+  gap:0 22px;
+  align-items:start;
+  border:0;
+  border-bottom:1px solid var(--mood-border,rgba(148,163,184,.24));
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+}
+.insight-strip .card:last-child{
+  border-bottom:0;
+}
+.insight-strip .card-num{
+  margin-bottom:0;
+}
 .steps{
   display:grid;
   grid-template-columns:88px minmax(0,1fr);
@@ -1231,6 +1332,15 @@ body{
   .profile-main p,
   .profile-main > .chips{grid-column:1}
   .card-grid,.card-grid.three,.industry-grid,.qulio-results{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .audience-mosaic,.curriculum-lanes,.feature-board{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .audience-mosaic .card,
+  .curriculum-lanes .card,
+  .feature-board .card{grid-column:auto;grid-row:auto}
+  .feature-board .card:first-child{grid-row:auto}
+  .feature-board .card:nth-child(3){border-bottom:1px solid var(--mood-border,rgba(148,163,184,.24))}
+  .feature-board .card:not(:first-child) p,
+  .insight-strip .card p{grid-column:2}
+  .insight-strip{grid-template-columns:1fr}
   .supervisor-grid{grid-template-columns:1fr}
   .supervisor{border-right:1px solid rgba(148,163,184,.24);border-bottom:1px solid rgba(148,163,184,.24)}
   .supervisor:last-child{border-bottom:1px solid rgba(148,163,184,.24)}
@@ -1245,8 +1355,16 @@ body{
   .brand-en{font-size:9px}
   .brand-ja{font-size:14px}
   .hero-stats,.trust-list,.trust-foot,.card-grid,.card-grid.three,.card-grid.two,.steps,.industry-summary,.industry-grid,.career-grid,.producer-proof-strip,.board-metrics,.qulio-results,.consulting-proof,.summary-strip{grid-template-columns:1fr}
+  .audience-mosaic,.curriculum-lanes,.feature-board,.insight-strip{grid-template-columns:1fr}
+  .feature-board .card,
+  .insight-strip .card{display:block}
+  .feature-board .card{border-left:0}
+  .feature-board .card:nth-child(4){border-bottom:0}
+  .feature-board .card:not(:first-child) p,
+  .insight-strip .card p{grid-column:auto}
+  .curriculum-lanes .card:first-child .card-num{font-size:36px}
   .title-xl{font-size:34px}
-  .title-lg{font-size:28px}
+  .title-lg{font-size:clamp(24px,6.8vw,28px)}
   .trust-item{border-right:0}
   .trust-item:nth-last-child(2){border-bottom:1px solid rgba(148,163,184,.22)}
   .trust-foot span{border-right:0;border-bottom:1px solid rgba(148,163,184,.22)}
@@ -1390,7 +1508,7 @@ body{
     <div class="container">
       <div class="eyebrow">Who is it for</div>
       <h2 class="title-lg">このような方におすすめです</h2>
-      <div class="card-grid">
+      <div class="card-grid audience-mosaic">
         <article class="card"><div class="card-num">01</div><h3>新人・若手社員</h3><p>製造業の基本、品質の考え方、現場で必要な基礎知識を体系的に学びたい方に適しています。</p></article>
         <article class="card"><div class="card-num">02</div><h3>現場担当者・品質担当者</h3><p>品質管理、トラブル防止、改善活動、再発防止、標準化など、実務に直結する内容を学べます。</p></article>
         <article class="card"><div class="card-num">03</div><h3>リーダー・管理職</h3><p>部下育成、教育体系づくり、現場改善、品質文化の醸成など、管理視点の学習にも対応しています。</p></article>
@@ -1404,7 +1522,7 @@ body{
       <div class="eyebrow">Curriculum</div>
       <h2 class="title-lg">学べる主な内容</h2>
       <p class="lead">基礎から実務、マネジメントまで。製造業の現場で求められる知識を網羅的にカバーしています。</p>
-      <div class="card-grid three">
+      <div class="card-grid curriculum-lanes">
         <article class="card"><div class="card-num">01</div><h3>品質管理の基礎</h3><p>品質とは何か、QCD、ばらつき、異常、標準化、再発防止など、品質の「考え方」を体系的に学べます。</p></article>
         <article class="card"><div class="card-num">02</div><h3>改善活動・現場力向上</h3><p>三現主義、問題発見、原因分析、改善の考え方、現場での実践。</p></article>
         <article class="card"><div class="card-num">03</div><h3>製造業の基本教育</h3><p>新人向け基礎知識、仕事の進め方、製造業の責任と役割。</p></article>
@@ -1418,7 +1536,7 @@ body{
     <div class="container">
       <div class="eyebrow">Features</div>
       <h2 class="title-lg">産業技術アカデミーの特長</h2>
-      <div class="card-grid">
+      <div class="card-grid feature-board">
         <article class="card"><div class="card-num">01</div><h3>製造業に特化</h3><p>一般的なビジネス研修ではなく、製造業の現場・品質・改善・教育に焦点を当てた内容です。</p></article>
         <article class="card"><div class="card-num">02</div><h3>新人から管理職まで</h3><p>レベル別・役割別に学べるため、単発学習ではなく教育体系づくりにも活用しやすい構成です。</p></article>
         <article class="card"><div class="card-num">03</div><h3>オンラインで柔軟に</h3><p>必要な内容を必要なタイミングで視聴でき、社内教育の効率化と標準化に役立ちます。</p></article>
@@ -1457,7 +1575,7 @@ body{
         <article class="industry-card"><h3>食品</h3><div class="chips"><span class="chip">HACCP</span><span class="chip">ISO22000</span><span class="chip">衛生管理</span></div></article>
         <article class="industry-card"><h3>石油</h3><div class="chips"><span class="chip">保安</span><span class="chip">QC教育</span><span class="chip">リスク管理</span></div></article>
       </div>
-      <div class="card-grid three">
+      <div class="card-grid insight-strip">
         <article class="card"><div class="card-num">01</div><h3>業界を横断する視点</h3><p>異なる業界の品質管理を経験したことで、品質の本質と業界固有の注意点を区別して伝えられます。</p></article>
         <article class="card"><div class="card-num">02</div><h3>規格対応の実務経験</h3><p>ISO9001、GMP、QMS、IATF16949、HACCP、ISO22000などの実務対応経験を教材設計に反映しています。</p></article>
         <article class="card"><div class="card-num">03</div><h3>現場と管理の両方を理解</h3><p>品質検査の現場から品質保証本部、サプライチェーン管理まで幅広い職務経験を教材に反映しています。</p></article>
