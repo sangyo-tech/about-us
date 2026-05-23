@@ -10,7 +10,7 @@
 <!-- OGP -->
 <meta property="og:title" content="私たちについて | 産業技術アカデミー">
 <meta property="og:description" content="産業技術アカデミーは化粧品・医療機器・食品・自動車部品・包装資材・石油化学の6業界で品質管理実務経験を持つ専門家が運営する製造業向けeラーニング。">
-<meta property="og:image" content="https://sangyo-tech.jp/ogp.png">
+<meta property="og:image" content="https://about-us.sangyo-tech.jp/ogp.png">
 <meta property="og:url" content="https://about-us.sangyo-tech.jp/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="産業技術アカデミー">
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="私たちについて | 産業技術アカデミー">
 <meta name="twitter:description" content="6業界の品質管理経験を持つ専門家が運営する製造業向けeラーニング。">
-<meta name="twitter:image" content="https://sangyo-tech.jp/ogp.png">
+<meta name="twitter:image" content="https://about-us.sangyo-tech.jp/ogp.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
@@ -44,6 +44,9 @@
 html{scroll-behavior:smooth}
 body{font-family:'Noto Sans JP',sans-serif;color:var(--text);line-height:1.75;background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
+main:focus{outline:none}
+.skip-link{position:fixed;left:12px;top:8px;z-index:10000;transform:translateY(-140%);background:#4ecdc4;color:#07111f;border-radius:8px;padding:10px 14px;font-weight:900;text-decoration:none;box-shadow:0 12px 30px rgba(0,0,0,.28);transition:transform .2s}
+.skip-link:focus{transform:translateY(0)}
 
 .progress-bar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-light));z-index:200;width:0%;transition:width .1s linear;box-shadow:0 0 10px rgba(201,169,97,0.5)}
 
@@ -64,6 +67,11 @@ img{max-width:100%;height:auto;display:block}
 @keyframes shimmer{to{background-position:200% center}}
 @keyframes slideIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 .hero-sub{font-size:15px;line-height:1.8;color:rgba(255,255,255,0.85);margin-bottom:24px;max-width:560px;opacity:0;animation:slideIn 1s .6s forwards}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px;opacity:0;animation:slideIn 1s .75s forwards}
+.hero-action{display:inline-flex;align-items:center;justify-content:center;min-height:42px;border-radius:8px;padding:10px 16px;font-size:13px;font-weight:900;line-height:1.35;text-decoration:none;letter-spacing:.03em;transition:transform .25s,box-shadow .25s,background .25s}
+.hero-action.primary{background:#4ecdc4;color:#07111f;border:1px solid #4ecdc4}
+.hero-action.secondary{background:rgba(255,255,255,.06);color:#e8eef6;border:1px solid rgba(78,205,196,.32)}
+.hero-action:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(0,0,0,.24)}
 .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:18px 0;border-top:1px solid rgba(201,169,97,0.2);border-bottom:1px solid rgba(201,169,97,0.2);max-width:560px;opacity:0;animation:slideIn 1s .8s forwards}
 .hero-stat-num{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,5vw,38px);font-weight:600;color:var(--gold);line-height:1}
 .hero-stat-label{font-size:10px;color:rgba(255,255,255,0.7);letter-spacing:0.08em;margin-top:4px}
@@ -229,7 +237,7 @@ section{padding:var(--sp-section) var(--sp-container);position:relative}
 .creator-label{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:0.28em;color:var(--gold-dark);margin-bottom:8px}
 .creator-name{font-size:24px;font-weight:900;color:var(--navy-950);margin-bottom:4px;letter-spacing:0.02em}
 .creator-title{font-size:13px;color:var(--text-muted);margin-bottom:14px}
-.creator-title a{color:var(--gold-dark);text-decoration:none;border-bottom:1px solid var(--gold-dark);transition:opacity .3s}
+.creator-title a,.creator-title span{color:var(--gold-dark);text-decoration:none;border-bottom:1px solid var(--gold-dark);transition:opacity .3s}
 .creator-title a:hover{opacity:0.7}
 .creator-bio{font-size:13.5px;line-height:1.85;color:var(--text)}
 .career-list{display:grid;gap:10px;margin-top:16px}
@@ -357,9 +365,12 @@ section{padding:var(--sp-section) var(--sp-container);position:relative}
 /* Mobile: 640px */
 @media (max-width:640px){
   :root{--sp-section:40px;--sp-container:12px;--sp-card:18px;--sp-gap:10px}
-              .hero{padding:70px 12px 40px;min-height:auto}
-  .hero-inner{gap:24px}
+  .hero{padding:28px 12px 36px;min-height:auto;align-items:flex-start}
+  .hero-inner{gap:18px}
+  .hero-label,.hero h1,.hero-sub,.hero-actions,.hero-stats,.hero-visual{opacity:1!important;animation:none!important;transform:none!important}
   .hero-sub{font-size:13.5px;margin-bottom:18px}
+  .hero-actions{margin-bottom:18px}
+  .hero-action{flex:1 1 150px;min-height:42px;padding:10px 12px;font-size:12.5px}
   .hero-stats{padding:14px 0;gap:10px}
   .hero-stat-label{font-size:9px}
   .hero-visual{max-width:360px;padding:30px}
@@ -410,9 +421,10 @@ section{padding:var(--sp-section) var(--sp-container);position:relative}
   :root{--sp-section:32px}
   .hero h1{font-size:24px;line-height:1.25}
   .hero-label{font-size:11px;margin-bottom:10px}
+  .hero-actions{display:grid;grid-template-columns:1fr;gap:8px}
   .section-title{font-size:20px}
   .section-lead{font-size:13px;margin-bottom:20px}
-  .hero-visual{max-width:300px;padding:24px}
+  .hero-visual{max-width:280px;padding:22px}
   .hero-ring-wrap{inset:24px}
   .hero-center{inset:24px}
   .hero-industry{font-size:10.5px;padding:7px 10px}
@@ -1117,6 +1129,13 @@ body.sangyo-polish .career-industry{
 }
 @media (max-width:640px){
   body.sangyo-polish section{padding-left:12px !important;padding-right:12px !important}
+  body.sangyo-polish .hero{padding-top:28px!important;padding-bottom:34px!important}
+  body.sangyo-polish .hero-label,
+  body.sangyo-polish .hero h1,
+  body.sangyo-polish .hero-sub,
+  body.sangyo-polish .hero-actions,
+  body.sangyo-polish .hero-stats,
+  body.sangyo-polish .hero-visual{opacity:1!important;animation:none!important;transform:none!important}
   body.sangyo-polish .section-title{font-size:24px !important}
   body.sangyo-polish .mission-quote{padding:16px !important}
   body.sangyo-polish .target-grid,
@@ -1224,9 +1243,10 @@ body.sangyo-polish .career-industry{
 }
 </script>
 </head>
-<body class="sangyo-polish"><nav class="unav" role="navigation" aria-label="&#12513;&#12452;&#12531;&#12490;&#12499;&#12466;&#12540;&#12471;&#12519;&#12531;"><a href="https://sangyo-tech.jp/" class="unav-brand" aria-label="&#29987;&#26989;&#25216;&#34899;&#12450;&#12459;&#12487;&#12511;&#12540;"><div><div class="unav-brand-en">INDUSTRIAL TECHNOLOGY ACADEMY</div><div class="unav-brand-ja">&#29987;&#26989;&#25216;&#34899;&#12450;&#12459;&#12487;&#12511;&#12540;</div></div></a><button class="unav-toggle" type="button" aria-label="&#12513;&#12491;&#12517;&#12540;" aria-expanded="false" aria-controls="unavLinks">&#9776;</button><div class="unav-links" id="unavLinks"><a href="https://sangyo-tech.jp/">TOP</a><a href="https://course.sangyo-tech.jp/">&#12467;&#12540;&#12473;</a><a href="https://contents.sangyo-tech.jp/">&#12467;&#12531;&#12486;&#12531;&#12484;&#19968;&#35239;</a><a href="https://pricing.sangyo-tech.jp/">&#26009;&#37329;/&#30003;&#36796;</a><a href="https://service.sangyo-tech.jp/">&#25903;&#25588;&#12469;&#12540;&#12499;&#12473;</a><a href="https://sangyo-tech.jp/news/">&#27861;&#35215;&#21046;&#24773;&#22577;</a><a href="https://note.sangyo-tech.jp/">&#32819;&#12424;&#12426;&#24773;&#22577;</a><a href="https://about-us.sangyo-tech.jp/">&#31169;&#12383;&#12385;&#12395;&#12388;&#12356;&#12390;</a><a href="https://sangyo-tech.jp/#education-institutions">&#25945;&#32946;&#27231;&#38306;&#21521;&#12369;</a></div></nav><div class="strip" aria-hidden="true"></div>
+<body class="sangyo-polish"><a class="skip-link" href="#main">本文へスキップ</a><nav class="unav" role="navigation" aria-label="&#12513;&#12452;&#12531;&#12490;&#12499;&#12466;&#12540;&#12471;&#12519;&#12531;"><a href="https://sangyo-tech.jp/" class="unav-brand" aria-label="&#29987;&#26989;&#25216;&#34899;&#12450;&#12459;&#12487;&#12511;&#12540;"><div><div class="unav-brand-en">INDUSTRIAL TECHNOLOGY ACADEMY</div><div class="unav-brand-ja">&#29987;&#26989;&#25216;&#34899;&#12450;&#12459;&#12487;&#12511;&#12540;</div></div></a><button class="unav-toggle" type="button" aria-label="&#12513;&#12491;&#12517;&#12540;" aria-expanded="false" aria-controls="unavLinks">&#9776;</button><div class="unav-links" id="unavLinks"><a href="https://sangyo-tech.jp/">TOP</a><a href="https://course.sangyo-tech.jp/">&#12467;&#12540;&#12473;</a><a href="https://contents.sangyo-tech.jp/">&#12467;&#12531;&#12486;&#12531;&#12484;&#19968;&#35239;</a><a href="https://pricing.sangyo-tech.jp/">&#26009;&#37329;/&#30003;&#36796;</a><a href="https://service.sangyo-tech.jp/">&#25903;&#25588;&#12469;&#12540;&#12499;&#12473;</a><a href="https://sangyo-tech.jp/news/">&#27861;&#35215;&#21046;&#24773;&#22577;</a><a href="https://note.sangyo-tech.jp/">&#32819;&#12424;&#12426;&#24773;&#22577;</a><a href="https://about-us.sangyo-tech.jp/">&#31169;&#12383;&#12385;&#12395;&#12388;&#12356;&#12390;</a><a href="https://sangyo-tech.jp/#education-institutions">&#25945;&#32946;&#27231;&#38306;&#21521;&#12369;</a></div></nav><div class="strip" aria-hidden="true"></div>
 <div class="progress-bar" id="progressBar"></div>
 
+<main id="main" tabindex="-1">
 <section class="hero">
   <div class="hero-grid"></div>
   <div class="particles" id="particles"></div>
@@ -1235,6 +1255,11 @@ body.sangyo-polish .career-industry{
       <div class="hero-label">ABOUT SANGYO-TECH ACADEMY</div>
       <h1>製造業の教育を、<br><span class="accent">体系的に積み上げる</span><br>学習基盤として。</h1>
       <p class="hero-sub">新人教育から管理職教育まで、品質管理・改善活動・現場力・QMSを役割別・レベル別に学べるオンライン研修ポータル。ひとつの業界だけでなく、6つの製造業での実務経験を掛け合わせた教材設計が、私たちの強みです。</p>
+      <div class="hero-actions" aria-label="主要導線">
+        <a class="hero-action primary" href="https://pricing.sangyo-tech.jp/">料金・申込を見る</a>
+        <a class="hero-action secondary" href="https://course.sangyo-tech.jp/">コースを見る</a>
+        <a class="hero-action secondary" href="https://apply.sangyo-tech.jp/">相談する</a>
+      </div>
       <div class="hero-stats">
         <div><div class="hero-stat-num"><span class="count-up" data-target="6">0</span></div><div class="hero-stat-label">INDUSTRIES</div></div>
         <div><div class="hero-stat-num">ALL</div><div class="hero-stat-label">LEVELS</div></div>
@@ -1361,7 +1386,7 @@ body.sangyo-polish .career-industry{
     <div class="creator-hero">
       <div class="creator-label">PRODUCER — 制作者</div>
       <div class="creator-name">古澤 和俊</div>
-      <div class="creator-title"><a href="https://sangyo-tech.github.io/Qulio/">Qulio合同会社 CEO</a></div>
+      <div class="creator-title"><span>Qulio合同会社 CEO</span></div>
       <p class="creator-bio">医薬品・化粧品・食品・医療機器・自動車部品など複数の製造業で品質管理・品質保証業務に従事。品質管理体制構築、ISO9001導入、GMP対応、業務改善、マニュアル作成、教育体系構築などを経験。現在は製造業向けに品質管理体制構築・業務改善・教育体系構築のコンサルティングを実施。</p>
       <div class="career-list">
         <div class="career career-unified">
@@ -1516,7 +1541,7 @@ body.sangyo-polish .career-industry{
   </div>
 </section>
 
-<section class="qulio fade-in">
+<section class="qulio fade-in" id="qulio-track-record">
   <div class="container">
     <div class="section-label">Qulio Track Record</div>
     <h2 class="section-title">Qulio合同会社の<br>支援実績</h2>
@@ -1598,6 +1623,7 @@ body.sangyo-polish .career-industry{
   </div>
 </section>
 
+  </main>
 <footer class="footer">
   <div class="footer-links">
     <a href="https://sangyo-tech.jp/">産業技術アカデミー</a>
