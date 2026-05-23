@@ -457,6 +457,27 @@ h1,h2,h3,p,dl,dd{margin:0}
   gap:18px;
   padding:28px 0 0;
 }
+.producer-card{
+  margin-top:28px;
+  padding:26px;
+  border:1px solid rgba(245,208,111,.34);
+  border-top:4px solid #f5d06f;
+  border-radius:var(--radius);
+  background:
+    radial-gradient(circle at 88% 12%,rgba(245,208,111,.12),transparent 28%),
+    linear-gradient(135deg,rgba(20,25,38,.98) 0%,rgba(12,19,32,.98) 100%);
+  box-shadow:0 24px 70px rgba(0,0,0,.28);
+}
+.producer-card .profile{
+  padding:0;
+}
+.producer-card .profile-main,
+.producer-card .career-summary{
+  box-shadow:none;
+}
+.producer-card .career-grid{
+  margin-top:0;
+}
 .profile-main{
   display:grid;
   grid-template-columns:minmax(240px,.3fr) minmax(0,1fr);
@@ -1169,6 +1190,15 @@ body{
 .mood-authority .supervisor-grid{
   background:linear-gradient(135deg,rgba(20,18,28,.98) 0%,rgba(16,24,38,.98) 100%);
 }
+.mood-authority .producer-card .profile-main,
+.mood-authority .producer-card .career-summary,
+.mood-authority .producer-card .producer-proof-strip div,
+.mood-authority .producer-card .career-card{
+  background:rgba(14,21,34,.92);
+}
+.mood-authority .producer-card .career-card{
+  border-top-color:rgba(245,208,111,.5);
+}
 .mood-authority .metric{
   border-color:rgba(245,208,111,.28);
   background:rgba(245,208,111,.08);
@@ -1219,6 +1249,7 @@ body{
   .trust-foot span:last-child{border-bottom:0}
   .steps{gap:10px}
   .step-mark{min-height:0;font-size:50px}
+  .producer-card{padding:14px}
   .board-head,.supervisor,.profile-main,.career-summary,.qulio-intro{padding:22px 18px}
   .supervisor-grid{padding:12px}
   .mission-title{font-size:28px}
@@ -1435,30 +1466,32 @@ body{
       <div class="eyebrow">Producer & Supervisor</div>
       <h2 class="title-lg">制作・監修について</h2>
       <p class="lead">本教材は、製造業における品質管理・品質保証・業務改善に長年携わってきた実務経験者が制作し、自動車部品、ゴム・樹脂製品、石油・研究所教育など複数領域の技術者が監修しています。</p>
-      <div class="profile">
-        <div class="profile-main">
-          <div class="role-label">Producer</div>
-          <h3 class="person-name">古澤 和俊</h3>
-          <div class="person-title">Qulio合同会社 CEO</div>
-          <p>医薬品・化粧品・食品・医療機器・自動車部品など複数の製造業で品質管理・品質保証業務に従事。品質管理体制構築、ISO9001導入、GMP対応、業務改善、マニュアル作成、教育体系構築などを経験。現在は製造業向けに品質管理体制構築・業務改善・教育体系構築のコンサルティングを実施。</p>
-          <div class="chips"><span class="chip teal">化粧品・医薬部外品</span><span class="chip teal">包装資材</span><span class="chip teal">自動車部品</span><span class="chip teal">医療機器</span></div>
+      <div class="producer-card" aria-label="制作責任者 古澤和俊の経歴">
+        <div class="profile">
+          <div class="profile-main">
+            <div class="role-label">Producer</div>
+            <h3 class="person-name">古澤 和俊</h3>
+            <div class="person-title">Qulio合同会社 CEO</div>
+            <p>医薬品・化粧品・食品・医療機器・自動車部品など複数の製造業で品質管理・品質保証業務に従事。品質管理体制構築、ISO9001導入、GMP対応、業務改善、マニュアル作成、教育体系構築などを経験。現在は製造業向けに品質管理体制構築・業務改善・教育体系構築のコンサルティングを実施。</p>
+            <div class="chips"><span class="chip teal">化粧品・医薬部外品</span><span class="chip teal">包装資材</span><span class="chip teal">自動車部品</span><span class="chip teal">医療機器</span></div>
+          </div>
+          <div class="producer-proof-strip" aria-label="制作責任者の実務経験">
+            <div><strong>4業界+</strong><span>品質管理・品質保証の実務経験</span></div>
+            <div><strong>ISO/GMP</strong><span>体制構築・規格対応の経験</span></div>
+            <div><strong>教育設計</strong><span>現場知見を教材へ変換</span></div>
+          </div>
+          <div class="career-summary">
+            <div class="eyebrow">Career Background</div>
+            <h3 class="title-lg">複数業界の品質管理・品質保証経験を、<span class="no-break">教材設計へ集約</span></h3>
+            <p class="lead">品質検査、品質管理体制構築、ISO9001導入、顧客品質、サプライチェーン管理まで、業界をまたいだ実務経験を1つの教育設計にまとめています。</p>
+          </div>
+          <div class="career-grid">
+            <article class="career-card"><h3>東洋エアゾール工業株式会社</h3><div class="chips"><span class="chip teal">化粧品・医薬部外品・エアゾール</span><span class="chip teal">品質課</span></div><p>従業員数:約500〜1,000名規模。品質検査、工程品質管理、不良解析、品質データ分析、品質改善活動、標準書・手順書作成、品質記録管理など品質管理業務全般に従事。</p></article>
+            <article class="career-card"><h3>押尾産業株式会社</h3><div class="chips"><span class="chip teal">包装資材・品質体制構築</span><span class="chip teal">品質管理部(立ち上げ)</span></div><p>従業員数:中小企業規模。品質管理部門の立ち上げ、ISO9001導入、検査体制構築、不良対応・是正処置、サプライヤー管理、品質文書作成、工程管理、教育資料作成を担当。</p></article>
+            <article class="career-card"><h3>ADIENT合同会社</h3><div class="chips"><span class="chip teal">自動車部品</span><span class="chip teal">品質保証本部</span></div><p>自動車部品世界大手 / 約70,000名。顧客品質対応、サプライヤー品質管理、品質監査、不具合解析、品質改善活動、工程監査、品質報告書作成、海外拠点との品質対応に従事。</p></article>
+            <article class="career-card"><h3>日本ベクトン・ディッキンソン株式会社</h3><div class="chips"><span class="chip teal">医療機器・QMS/GMP</span><span class="chip teal">SCM</span></div><p>医療機器世界大手 / 約70,000名。サプライヤー管理、購買、在庫管理、輸入管理、供給計画、物流管理、医療機器品質関連業務、GMP・QMS関連業務に従事。</p></article>
+          </div>
         </div>
-        <div class="producer-proof-strip" aria-label="制作責任者の実務経験">
-          <div><strong>4業界+</strong><span>品質管理・品質保証の実務経験</span></div>
-          <div><strong>ISO/GMP</strong><span>体制構築・規格対応の経験</span></div>
-          <div><strong>教育設計</strong><span>現場知見を教材へ変換</span></div>
-        </div>
-        <div class="career-summary">
-          <div class="eyebrow">Career Background</div>
-          <h3 class="title-lg">複数業界の品質管理・品質保証経験を、<span class="no-break">教材設計へ集約</span></h3>
-          <p class="lead">品質検査、品質管理体制構築、ISO9001導入、顧客品質、サプライチェーン管理まで、業界をまたいだ実務経験を1つの教育設計にまとめています。</p>
-        </div>
-      </div>
-      <div class="career-grid">
-        <article class="career-card"><h3>東洋エアゾール工業株式会社</h3><div class="chips"><span class="chip teal">化粧品・医薬部外品・エアゾール</span><span class="chip teal">品質課</span></div><p>従業員数:約500〜1,000名規模。品質検査、工程品質管理、不良解析、品質データ分析、品質改善活動、標準書・手順書作成、品質記録管理など品質管理業務全般に従事。</p></article>
-        <article class="career-card"><h3>押尾産業株式会社</h3><div class="chips"><span class="chip teal">包装資材・品質体制構築</span><span class="chip teal">品質管理部(立ち上げ)</span></div><p>従業員数:中小企業規模。品質管理部門の立ち上げ、ISO9001導入、検査体制構築、不良対応・是正処置、サプライヤー管理、品質文書作成、工程管理、教育資料作成を担当。</p></article>
-        <article class="career-card"><h3>ADIENT合同会社</h3><div class="chips"><span class="chip teal">自動車部品</span><span class="chip teal">品質保証本部</span></div><p>自動車部品世界大手 / 約70,000名。顧客品質対応、サプライヤー品質管理、品質監査、不具合解析、品質改善活動、工程監査、品質報告書作成、海外拠点との品質対応に従事。</p></article>
-        <article class="career-card"><h3>日本ベクトン・ディッキンソン株式会社</h3><div class="chips"><span class="chip teal">医療機器・QMS/GMP</span><span class="chip teal">SCM</span></div><p>医療機器世界大手 / 約70,000名。サプライヤー管理、購買、在庫管理、輸入管理、供給計画、物流管理、医療機器品質関連業務、GMP・QMS関連業務に従事。</p></article>
       </div>
 
       <section class="supervisor-board" id="supervisors" aria-label="監修者">
