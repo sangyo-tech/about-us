@@ -891,10 +891,22 @@ body{
   color:#f8fafc;
 }
 .band-white{
-  background:linear-gradient(180deg,#0b1626 0%,#08111f 100%);
+  background:var(--mood-bg,linear-gradient(180deg,#0b1626 0%,#08111f 100%));
 }
 .band-soft{
-  background:linear-gradient(180deg,#0e1b2e 0%,#0a1424 100%);
+  background:var(--mood-bg,linear-gradient(180deg,#0e1b2e 0%,#0a1424 100%));
+}
+.section{
+  position:relative;
+  isolation:isolate;
+}
+.section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:var(--mood-glow,transparent);
+  pointer-events:none;
 }
 .section,
 .title-xl,
@@ -1050,6 +1062,127 @@ body{
   border-color:rgba(94,234,212,.35);
   background:#0b1626;
   color:#99f6e4;
+}
+.mood-mission{
+  --mood-bg:linear-gradient(180deg,#08111f 0%,#0b1b2f 100%);
+  --mood-glow:radial-gradient(circle at 78% 22%,rgba(125,211,252,.16),transparent 34%);
+  --mood-accent:#7dd3fc;
+  --mood-panel:rgba(12,30,52,.94);
+  --mood-border:rgba(125,211,252,.28);
+}
+.mood-audience{
+  --mood-bg:linear-gradient(180deg,#07151b 0%,#0b211c 100%);
+  --mood-glow:radial-gradient(circle at 15% 18%,rgba(45,212,191,.15),transparent 34%);
+  --mood-accent:#5eead4;
+  --mood-panel:rgba(10,31,31,.94);
+  --mood-border:rgba(94,234,212,.25);
+}
+.mood-curriculum,
+.mood-howto{
+  --mood-bg:linear-gradient(180deg,#0b1326 0%,#11172e 100%);
+  --mood-glow:radial-gradient(circle at 85% 26%,rgba(129,140,248,.16),transparent 36%);
+  --mood-accent:#a5b4fc;
+  --mood-panel:rgba(18,25,48,.94);
+  --mood-border:rgba(165,180,252,.25);
+}
+.mood-features{
+  --mood-bg:linear-gradient(180deg,#071722 0%,#0b2031 100%);
+  --mood-glow:radial-gradient(circle at 10% 70%,rgba(56,189,248,.14),transparent 36%);
+  --mood-accent:#67e8f9;
+  --mood-panel:rgba(11,31,49,.94);
+  --mood-border:rgba(103,232,249,.24);
+}
+.mood-industry{
+  --mood-bg:linear-gradient(180deg,#061716 0%,#102013 100%);
+  --mood-glow:radial-gradient(circle at 80% 18%,rgba(245,208,111,.12),transparent 34%);
+  --mood-accent:#f5d06f;
+  --mood-panel:rgba(12,30,27,.94);
+  --mood-border:rgba(245,208,111,.28);
+}
+.mood-authority{
+  --mood-bg:linear-gradient(180deg,#0b111f 0%,#15151f 48%,#0b111f 100%);
+  --mood-glow:radial-gradient(circle at 18% 16%,rgba(245,208,111,.16),transparent 32%),radial-gradient(circle at 84% 46%,rgba(125,211,252,.12),transparent 34%);
+  --mood-accent:#f5d06f;
+  --mood-panel:rgba(20,25,38,.95);
+  --mood-border:rgba(245,208,111,.26);
+}
+.mood-track{
+  --mood-bg:linear-gradient(180deg,#07111f 0%,#0d2026 100%);
+  --mood-glow:radial-gradient(circle at 78% 20%,rgba(94,234,212,.13),transparent 34%);
+  --mood-accent:#5eead4;
+  --mood-panel:rgba(10,29,39,.95);
+  --mood-border:rgba(94,234,212,.24);
+}
+.mood-faq{
+  --mood-bg:linear-gradient(180deg,#08111f 0%,#0d1524 100%);
+  --mood-glow:radial-gradient(circle at 15% 12%,rgba(125,211,252,.1),transparent 30%);
+  --mood-accent:#7dd3fc;
+  --mood-panel:rgba(15,28,48,.94);
+  --mood-border:rgba(125,211,252,.22);
+}
+.section .eyebrow,
+.section .card-num,
+.section .role-label,
+.section .big-number strong,
+.section .producer-proof-strip strong,
+.section .consulting-proof strong,
+.section .summary-item strong,
+.section .result-card .category,
+.section .proof-block b{
+  color:var(--mood-accent,#5eead4);
+}
+.section .eyebrow::before{
+  background:var(--mood-accent,#5eead4);
+}
+.section .card,
+.section .step-body,
+.section .industry-card,
+.section .profile-main,
+.section .career-summary,
+.section .producer-proof-strip div,
+.section .career-card,
+.section .supervisor-board,
+.section .supervisor,
+.section .qulio-intro,
+.section .consulting-proof div,
+.section .result-card,
+.section .summary-item,
+.section .faq-item{
+  border-color:var(--mood-border,rgba(148,163,184,.24));
+  background:var(--mood-panel,rgba(15,28,48,.92));
+}
+.section .card-num{
+  background:color-mix(in srgb,var(--mood-accent,#5eead4) 13%,transparent);
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--mood-accent,#5eead4) 42%,transparent);
+}
+.section .chip.teal{
+  border-color:color-mix(in srgb,var(--mood-accent,#5eead4) 45%,transparent);
+  background:color-mix(in srgb,var(--mood-accent,#5eead4) 13%,transparent);
+  color:#f8fafc;
+}
+.mood-industry .chip{
+  border-color:rgba(245,208,111,.42);
+  background:rgba(245,208,111,.13);
+  color:#ffe8a3;
+}
+.mood-authority .board-head,
+.mood-authority .supervisor-grid{
+  background:linear-gradient(135deg,rgba(20,18,28,.98) 0%,rgba(16,24,38,.98) 100%);
+}
+.mood-authority .metric{
+  border-color:rgba(245,208,111,.28);
+  background:rgba(245,208,111,.08);
+}
+.mood-authority .metric dt,
+.mood-authority .badge{
+  color:#f5d06f;
+}
+.mood-track .summary-item,
+.mood-track .result-card{
+  background:linear-gradient(135deg,rgba(10,29,39,.95) 0%,rgba(13,34,42,.95) 100%);
+}
+.cta{
+  background:linear-gradient(135deg,#06111f 0%,#0b2437 55%,#062c2d 100%);
 }
 @media(max-width:1100px){
   .nav-links{display:none;position:absolute;top:64px;left:0;right:0;grid-template-columns:1fr;padding:12px 16px;border-left:0;border-right:0;border-radius:0;box-shadow:var(--shadow)}
@@ -1207,7 +1340,7 @@ body{
     </div>
   </section>
 
-  <section class="section band-white">
+  <section class="section band-white mood-mission">
     <div class="container mission-layout">
       <div class="eyebrow">Our Mission</div>
       <h2 class="title-lg mission-title">「何から学べばよいか<span class="no-break">分からない</span>」状態から、<br>次の一歩へ。</h2>
@@ -1218,7 +1351,7 @@ body{
     </div>
   </section>
 
-  <section class="section band-soft">
+  <section class="section band-soft mood-audience">
     <div class="container">
       <div class="eyebrow">Who is it for</div>
       <h2 class="title-lg">このような方におすすめです</h2>
@@ -1231,7 +1364,7 @@ body{
     </div>
   </section>
 
-  <section class="section band-white">
+  <section class="section band-white mood-curriculum">
     <div class="container">
       <div class="eyebrow">Curriculum</div>
       <h2 class="title-lg">学べる主な内容</h2>
@@ -1246,7 +1379,7 @@ body{
     </div>
   </section>
 
-  <section class="section band-soft">
+  <section class="section band-soft mood-features">
     <div class="container">
       <div class="eyebrow">Features</div>
       <h2 class="title-lg">産業技術アカデミーの特長</h2>
@@ -1259,7 +1392,7 @@ body{
     </div>
   </section>
 
-  <section class="section band-white">
+  <section class="section band-white mood-howto">
     <div class="container">
       <div class="eyebrow">How to use</div>
       <h2 class="title-lg">おすすめの使い方</h2>
@@ -1273,10 +1406,10 @@ body{
     </div>
   </section>
 
-  <section class="section band-soft">
+  <section class="section band-soft mood-industry">
     <div class="container">
       <div class="eyebrow">Cross-Industry Experience</div>
-      <h2 class="title-lg">異業種の経験が、教材の厚みになる</h2>
+      <h2 class="title-lg">異業種の経験が、<span class="no-break">教材の厚みになる</span></h2>
       <div class="industry-summary">
         <div class="big-number"><strong>6</strong><span>INDUSTRIES<br>6つの製造業における実務経験</span></div>
         <p class="lead">化粧品・包装資材・自動車部品・医療機器・食品・石油という6つの異なる製造業における品質管理実務の経験が教材に反映されています。業界ごとの規格対応や品質課題に触れてきたからこそ、共通する本質と業界固有のポイントの両方を伝えられます。</p>
@@ -1297,7 +1430,7 @@ body{
     </div>
   </section>
 
-  <section class="section band-white" id="creator">
+  <section class="section band-white mood-authority" id="creator">
     <div class="container">
       <div class="eyebrow">Producer & Supervisor</div>
       <h2 class="title-lg">制作・監修について</h2>
@@ -1366,7 +1499,7 @@ body{
     </div>
   </section>
 
-  <section class="section band-soft">
+  <section class="section band-soft mood-track">
     <div class="container">
       <div class="eyebrow">Qulio Track Record</div>
       <h2 class="title-lg">Qulio合同会社の支援実績</h2>
@@ -1403,7 +1536,7 @@ body{
     </div>
   </section>
 
-  <section class="section band-white">
+  <section class="section band-white mood-faq">
     <div class="container">
       <div class="eyebrow">FAQ</div>
       <h2 class="title-lg">よくある質問</h2>
