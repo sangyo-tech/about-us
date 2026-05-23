@@ -14,6 +14,12 @@
   --gold-2:#e8d77a;
   --text-light:#e8ecf3;
   --text-mute:#9fb0c8;
+  /* 講師別アクセントカラー */
+  --accent-ando:#4ea5c8;
+  --accent-matsuda:#6bc84e;
+  --accent-furusawa:#c8774e;
+  --accent-matsumoto:#9b4ec8;
+  --accent-furusawa-t:#c84e6b;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{
@@ -26,11 +32,56 @@ body{
 a{color:inherit;text-decoration:none;}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
 
+/* ナビバー */
+.site-nav{
+  background:var(--navy-1);
+  border-bottom:1px solid rgba(200,168,78,0.15);
+  padding:14px 0;
+}
+.site-nav .wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.site-nav .logo{
+  font-family:"Noto Serif JP",serif;
+  font-size:15px;
+  color:var(--gold-1);
+  letter-spacing:0.08em;
+}
+.site-nav .logo small{
+  font-family:"Noto Sans JP",sans-serif;
+  font-size:11px;
+  color:var(--text-mute);
+  letter-spacing:0.04em;
+  margin-left:10px;
+}
+.nav-links{display:flex;gap:20px;align-items:center;}
+.nav-links a{
+  font-size:13px;
+  color:var(--text-mute);
+  letter-spacing:0.04em;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--gold-2);}
+.nav-links .nav-cta{
+  padding:7px 18px;
+  border:1px solid var(--gold-1);
+  border-radius:5px;
+  color:var(--gold-2);
+  font-weight:500;
+  transition:background .2s,color .2s;
+}
+.nav-links .nav-cta:hover{
+  background:linear-gradient(90deg,var(--gold-1),var(--gold-2));
+  color:var(--navy-3);
+}
+
 /* ヘッダー */
 .page-header{
   background:linear-gradient(160deg,var(--navy-2) 0%,var(--navy-3) 100%);
   border-bottom:1px solid rgba(200,168,78,0.25);
-  padding:72px 0 64px;
+  padding:64px 0 56px;
   text-align:center;
 }
 .eyebrow{
@@ -69,39 +120,119 @@ a{color:inherit;text-decoration:none;}
   margin:26px auto 0;
 }
 
+/* 実績サマリー */
+.stats-bar{
+  display:flex;
+  justify-content:center;
+  gap:48px;
+  padding:28px 0;
+  border-bottom:1px solid rgba(200,168,78,0.15);
+  background:var(--navy-1);
+}
+.stat-item{text-align:center;}
+.stat-num{
+  font-family:"Noto Serif JP",serif;
+  font-size:28px;
+  font-weight:700;
+  color:var(--gold-2);
+  line-height:1.2;
+}
+.stat-label{
+  font-size:12px;
+  color:var(--text-mute);
+  letter-spacing:0.06em;
+  margin-top:2px;
+}
+
 /* 講師グリッド */
-.instructors{padding:64px 0 80px;}
+.instructors{padding:56px 0 80px;}
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:28px;
 }
+/* 下段を中央揃え */
+.grid-bottom{
+  display:flex;
+  justify-content:center;
+  gap:28px;
+  margin-top:28px;
+}
+.grid-bottom .card{
+  width:calc((100% - 28px*2)/3);
+  max-width:340px;
+}
+
 .card{
   background:linear-gradient(165deg,var(--navy-1) 0%,var(--navy-3) 100%);
   border:1px solid rgba(200,168,78,0.2);
   border-radius:10px;
-  padding:34px 28px 30px;
+  padding:0;
   display:flex;
   flex-direction:column;
   transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+  overflow:hidden;
+  position:relative;
+}
+/* カード上部のアクセントライン */
+.card::before{
+  content:'';
+  display:block;
+  height:4px;
+  background:var(--card-accent,var(--gold-1));
+}
+.card-inner{
+  padding:30px 28px 28px;
+  display:flex;
+  flex-direction:column;
+  flex-grow:1;
 }
 .card:hover{
   transform:translateY(-6px);
   border-color:rgba(200,168,78,0.55);
-  box-shadow:0 14px 36px rgba(0,0,0,0.5);
+  box-shadow:0 14px 40px rgba(0,0,0,0.5),0 0 20px color-mix(in srgb, var(--card-accent,var(--gold-1)) 25%, transparent);
 }
+
+/* アクセントカラー割り当て */
+.card[data-accent="ando"]{--card-accent:var(--accent-ando);}
+.card[data-accent="matsuda"]{--card-accent:var(--accent-matsuda);}
+.card[data-accent="furusawa"]{--card-accent:var(--accent-furusawa);}
+.card[data-accent="matsumoto"]{--card-accent:var(--accent-matsumoto);}
+.card[data-accent="furusawa-t"]{--card-accent:var(--accent-furusawa-t);}
+
 .avatar{
   width:84px;height:84px;
   border-radius:50%;
-  margin:0 auto 20px;
+  margin:0 auto 18px;
   display:flex;align-items:center;justify-content:center;
   background:radial-gradient(circle at 35% 30%,var(--navy-2),var(--navy-3));
-  border:2px solid var(--gold-1);
+  border:2.5px solid var(--card-accent,var(--gold-1));
+  transition:border-color .25s,box-shadow .25s;
+}
+.card:hover .avatar{
+  box-shadow:0 0 16px color-mix(in srgb, var(--card-accent,var(--gold-1)) 40%, transparent);
 }
 .avatar svg{
   width:46px;height:46px;
 }
-.avatar svg .sil{ fill:var(--gold-2); }
+.avatar svg .sil{ fill:var(--card-accent,var(--gold-2)); opacity:0.85; }
+
+.role-badge{
+  display:block;width:fit-content;
+  margin:0 auto 10px;
+  font-size:11px;letter-spacing:0.12em;
+  padding:3px 14px;border-radius:20px;
+  font-weight:600;
+}
+.role-badge.lecturer{
+  background:linear-gradient(135deg,var(--gold-1),var(--gold-2));
+  color:var(--navy-3);
+}
+.role-badge.supervisor{
+  background:transparent;
+  border:1.5px solid var(--card-accent,var(--gold-1));
+  color:var(--card-accent,var(--gold-2));
+}
 .card .name{
   text-align:center;
   font-family:"Noto Serif JP",serif;
@@ -112,14 +243,14 @@ a{color:inherit;text-decoration:none;}
 .card .role{
   text-align:center;
   font-size:13px;
-  color:var(--gold-1);
+  color:var(--card-accent,var(--gold-1));
   letter-spacing:0.08em;
   margin-top:6px;
   margin-bottom:16px;
 }
 .divider{
   height:1px;
-  background:rgba(200,168,78,0.22);
+  background:linear-gradient(90deg,transparent,rgba(200,168,78,0.3),transparent);
   margin:0 0 16px;
 }
 .card .field{
@@ -131,18 +262,23 @@ a{color:inherit;text-decoration:none;}
   color:var(--text-light);
   font-weight:500;
 }
+
+/* 得意分野タグ — カラフル版 */
 .tags{
   display:flex;flex-wrap:wrap;gap:7px;
   margin-bottom:20px;
 }
 .tag{
   font-size:11px;
-  padding:4px 10px;
-  border:1px solid rgba(200,168,78,0.35);
+  padding:4px 12px;
   border-radius:20px;
-  color:var(--gold-2);
   letter-spacing:0.04em;
+  font-weight:500;
+  background:color-mix(in srgb, var(--card-accent,var(--gold-1)) 18%, transparent);
+  color:color-mix(in srgb, var(--card-accent,var(--gold-2)) 80%, white);
+  border:1px solid color-mix(in srgb, var(--card-accent,var(--gold-1)) 40%, transparent);
 }
+
 .card .summary{
   font-size:13px;
   color:var(--text-mute);
@@ -153,23 +289,74 @@ a{color:inherit;text-decoration:none;}
   display:block;
   text-align:center;
   padding:11px 0;
-  border:1px solid var(--gold-1);
+  border:1px solid var(--card-accent,var(--gold-1));
   border-radius:6px;
-  color:var(--gold-2);
+  color:color-mix(in srgb, var(--card-accent,var(--gold-2)) 80%, white);
   font-size:13px;
   letter-spacing:0.1em;
   transition:background .2s ease,color .2s ease;
 }
 .btn:hover{
-  background:linear-gradient(90deg,var(--gold-1),var(--gold-2));
+  background:var(--card-accent,var(--gold-1));
   color:var(--navy-3);
   font-weight:600;
+}
+
+/* CTA帯 */
+.cta-band{
+  background:linear-gradient(135deg,var(--navy-2),var(--navy-1));
+  border-top:1px solid rgba(200,168,78,0.2);
+  border-bottom:1px solid rgba(200,168,78,0.2);
+  padding:48px 0;
+  text-align:center;
+}
+.cta-band h2{
+  font-family:"Noto Serif JP",serif;
+  font-size:24px;
+  font-weight:600;
+  margin-bottom:12px;
+  letter-spacing:0.04em;
+}
+.cta-band p{
+  color:var(--text-mute);
+  font-size:14px;
+  margin-bottom:28px;
+}
+.cta-buttons{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+.cta-buttons a{
+  padding:12px 32px;
+  border-radius:6px;
+  font-size:14px;
+  letter-spacing:0.08em;
+  font-weight:500;
+  transition:all .2s;
+}
+.cta-buttons .btn-primary{
+  background:linear-gradient(135deg,var(--gold-1),var(--gold-2));
+  color:var(--navy-3);
+  font-weight:600;
+}
+.cta-buttons .btn-primary:hover{
+  box-shadow:0 6px 24px rgba(200,168,78,0.4);
+  transform:translateY(-2px);
+}
+.cta-buttons .btn-outline{
+  border:1px solid var(--gold-1);
+  color:var(--gold-2);
+}
+.cta-buttons .btn-outline:hover{
+  background:rgba(200,168,78,0.12);
 }
 
 /* フッター */
 .page-footer{
   border-top:1px solid rgba(200,168,78,0.2);
-  padding:34px 0;
+  padding:40px 0 32px;
   text-align:center;
   font-size:12px;
   color:var(--text-mute);
@@ -179,36 +366,51 @@ a{color:inherit;text-decoration:none;}
   font-family:"Noto Serif JP",serif;
   font-size:15px;
   letter-spacing:0.08em;
-  margin-bottom:6px;
+  margin-bottom:10px;
 }
+.footer-links{
+  display:flex;
+  justify-content:center;
+  gap:24px;
+  margin-bottom:14px;
+  flex-wrap:wrap;
+}
+.footer-links a{
+  font-size:12px;
+  color:var(--text-mute);
+  transition:color .2s;
+}
+.footer-links a:hover{color:var(--gold-2);}
 
+/* レスポンシブ */
 @media(max-width:1000px) and (min-width:881px){
   .grid{grid-template-columns:repeat(2,1fr);max-width:760px;margin:0 auto;}
+  .grid-bottom{justify-content:center;}
+  .grid-bottom .card{width:calc((100% - 28px)/2);max-width:380px;}
 }
 @media(max-width:880px){
   .grid{grid-template-columns:1fr;max-width:420px;margin:0 auto;}
+  .grid-bottom{flex-direction:column;align-items:center;}
+  .grid-bottom .card{width:100%;max-width:420px;}
   .page-header h1{font-size:30px;}
-}
-
-.role-badge{
-  display:block;width:fit-content;
-  margin:0 auto 10px;
-  font-size:11px;letter-spacing:0.12em;
-  padding:3px 12px;border-radius:20px;
-  font-weight:600;
-}
-.role-badge.lecturer{
-  background:linear-gradient(135deg,var(--gold-1),var(--gold-2));
-  color:var(--navy-3);
-}
-.role-badge.supervisor{
-  background:transparent;
-  border:1px solid var(--gold-1);
-  color:var(--gold-2);
+  .stats-bar{gap:24px;flex-wrap:wrap;}
+  .stat-num{font-size:22px;}
+  .nav-links a:not(.nav-cta){display:none;}
 }
 </style>
 </head>
 <body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="logo" href="https://about-us.sangyo-tech.jp/">産業技術アカデミー<small>私たちについて</small></a>
+    <div class="nav-links">
+      <a href="https://course.sangyo-tech.jp/">コース一訧</a>
+      <a href="https://contents.sangyo-tech.jp/">コンテンツ</a>
+      <a class="nav-cta" href="https://apply.sangyo-tech.jp/">問い合わせる</a>
+    </div>
+  </div>
+</nav>
 
 <header class="page-header">
   <div class="wrap">
@@ -221,109 +423,35 @@ a{color:inherit;text-decoration:none;}
   </div>
 </header>
 
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num">5</div>
+    <div class="stat-label">講師・監修者</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">120<span style="font-size:18px;">年+</span></div>
+    <div class="stat-label">累計実務経験</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">6</div>
+    <div class="stat-label">対応業界</div>
+  </div>
+</div>
+
 <main class="instructors">
   <div class="wrap">
     <div class="grid">
 
       <!-- 安藤 隆 -->
-      <article class="card">
-        <div class="avatar"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path class="sil" d="M32 33c7.18 0 13-6.27 13-14S39.18 5 32 5 19 11.27 19 19s5.82 14 13 14zm0 5c-9.94 0-23 5.13-23 15.3V59h46v-5.7C55 43.13 41.94 38 32 38z"/></svg></div>
-        <div class="role-badge supervisor">監修</div>
-        <div class="name">安藤 隆</div>
-        <div class="role">品質保証・サプライヤー監査</div>
-        <div class="divider"></div>
-        <div class="field"><strong>専門領域</strong>　自動車外装部品の品質保証／IATF16949・VDA6.3監査／サプライヤー品質管理</div>
-        <div class="tags">
-          <span class="tag">IATF16949</span>
-          <span class="tag">VDA6.3</span>
-          <span class="tag">コアツール</span>
-          <span class="tag">サプライヤー監査</span>
-        </div>
-        <p class="summary">自動車外装部品メーカー及び外資系シートメーカーで31年間、品質保証業務に従事。新車立ち上げから量産品質管理、グローバルなサプライヤー監査まで幅広く経験。</p>
-        <a class="btn" href="instructor-ando.html">プロフィールを見る ›</a>
-      </article>
-
-      <!-- 松田 正則 -->
-      <article class="card">
-        <div class="avatar"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path class="sil" d="M32 33c7.18 0 13-6.27 13-14S39.18 5 32 5 19 11.27 19 19s5.82 14 13 14zm0 5c-9.94 0-23 5.13-23 15.3V59h46v-5.7C55 43.13 41.94 38 32 38z"/></svg></div>
-        <div class="role-badge lecturer">講師</div>
-        <div class="name">松田 正則</div>
-        <div class="role">ISO9001・品質マネジメント</div>
-        <div class="divider"></div>
-        <div class="field"><strong>専門領域</strong>　ISO9001内部監査・外部審査対応／工程・取引先監査／QMS継続的改善</div>
-        <div class="tags">
-          <span class="tag">ISO9001</span>
-          <span class="tag">QMS</span>
-          <span class="tag">QC検定2級</span>
-          <span class="tag">工程監査</span>
-        </div>
-        <p class="summary">製造業で約40年、うち設計17年・品質管理24年に従事。光学・半導体機器の開発設計から、ゴム・樹脂・金属加工品の品質保証まで幅広い分野を経験。</p>
-        <a class="btn" href="instructor-matsuda.html">プロフィールを見る ›</a>
-      </article>
-
-      <!-- 古澤 和俊 -->
-      <article class="card">
-        <div class="avatar"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path class="sil" d="M32 33c7.18 0 13-6.27 13-14S39.18 5 32 5 19 11.27 19 19s5.82 14 13 14zm0 5c-9.94 0-23 5.13-23 15.3V59h46v-5.7C55 43.13 41.94 38 32 38z"/></svg></div>
-        <div class="role-badge lecturer">講師</div>
-        <div class="name">古澤 和俊</div>
-        <div class="role">品質マネジメント構築・健康食品GMP</div>
-        <div class="divider"></div>
-        <div class="field"><strong>専門領域</strong>　品質部門の立ち上げ／ISO9001導入・運用／健康食品GMP・HACCP構築／業務改善</div>
-        <div class="tags">
-          <span class="tag">ISO9001審査員補</span>
-          <span class="tag">品質部門立ち上げ</span>
-          <span class="tag">健康食品GMP／HACCP</span>
-          <span class="tag">業務改善・DX</span>
-        </div>
-        <p class="summary">品質一筋のキャリアで品質部門のゼロからの立ち上げ・ISO9001導入を多数経験。現在はQulio合同会社代表として製造業のコンサルティングと産業技術アカデミーを運営。</p>
-        <a class="btn" href="instructor-furusawa.html">プロフィールを見る ›</a>
-      </article>
-
-      <!-- 松本 恵和 -->
-      <article class="card">
-        <div class="avatar"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path class="sil" d="M32 33c7.18 0 13-6.27 13-14S39.18 5 32 5 19 11.27 19 19s5.82 14 13 14zm0 5c-9.94 0-23 5.13-23 15.3V59h46v-5.7C55 43.13 41.94 38 32 38z"/></svg></div>
-        <div class="role-badge lecturer">講師</div>
-        <div class="name">松本 恵和</div>
-        <div class="role">製造業DX・生成AI活用</div>
-        <div class="divider"></div>
-        <div class="field"><strong>専門領域</strong>　生産管理・SCM／生成AI・AIエージェント活用／中小企業向けDX伴走支援</div>
-        <div class="tags">
-          <span class="tag">生成AI活用</span>
-          <span class="tag">SCM／生産管理</span>
-          <span class="tag">業務改善</span>
-          <span class="tag">DX研修</span>
-        </div>
-        <p class="summary">製造業の生産管理・SCMで20年以上の現場経験を経て。業務改善コンサル会社の共同代表に。生成AIを軸にした中小企業向けDX伴走支援と研修登壇を展開中。</p>
-        <a class="btn" href="instructor-ym.html">プロフィールを見る ›</a>
-      </article>
-
-      <!-- 古澤 俊宏 -->
-      <article class="card">
-        <div class="avatar"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path class="sil" d="M32 33c7.18 0 13-6.27 13-14S39.18 5 32 5 19 11.27 19 19s5.82 14 13 14zm0 5c-9.94 0-23 5.13-23 15.3V59h46v-5.7C55 43.13 41.94 38 32 38z"/></svg></div>
-        <div class="role-badge supervisor">監修</div>
-        <div class="name">古澤 俊宏</div>
-        <div class="role">品質管理教育・コンテンツ監修</div>
-        <div class="divider"></div>
-        <div class="field"><strong>専門領域</strong>　研究所・製造部門向け品質管理教育／保安力評価推進／教材内容の監修</div>
-        <div class="tags">
-          <span class="tag">日科技連QCセミナー修了</span>
-          <span class="tag">保安力評価推進員</span>
-          <span class="tag">QC教育</span>
-        </div>
-        <p class="summary">出光興産株式会社にて研究所を対象とした品質管理手法教育を担当。保安力評価推進員として製造部門の自己評価・改善活動を推進。本アカデミーの教材を監修。</p>
-        <a class="btn" href="instructor-furusawa-t.html">プロフィールを見る ›</a>
-      </article>
-
-    </div>
-  </div>
-</main>
-
-<footer class="page-footer">
-  <div class="wrap">
-    <div class="brand">産業技術アカデミー</div>
-    <div>Qulio合同会社　|　製造業向け eラーニングサービス</div>
-  </div>
-</footer>
-
-</body>
-</html>
+      <article class="card" data-accent="ando">
+        <div class="card-inner">
+          <div class="avatar"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path class="sil" d="M32 33c7.18 0 13-6.27 13-14S39.18 5 32 5 19 11.27 19 19s5.82 14 13 14zm0 5c-9.94 0-23 5.13-23 15.3V59h46v-5.7C55 43.13 41.94 38 32 38z"/></svg></div>
+          <div class="role-badge supervisor">監修</div>
+          <div class="name">安藤 隆</div>
+          <div class="role">品質保証・サプライヤー監査</div>
+          <div class="divider"></div>
+          <div class="field"><strong>専門領域</strong>　自動車外装部品の品質保証／IATF16949・VDA6.3監査／サプライヤー品質管理</div>
+          <div class="tags">
+            <span class="tag">IATF16949</span>
+            <span class="tag">VDA6.3</span>
+       
