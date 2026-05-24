@@ -22,9 +22,9 @@ jobs:
 
       - name: Update instructor-matsuda.html title and role
         run: |
-          sed -i 's|松田 正則 | 講師紹介|松田 正則 | 監修者紹介|g' instructors/instructor-matsuda.html
-          sed -i 's|<div class="role-badge lecturer">講師</div>|<div class="role-badge supervisor">監修者</div>|g' instructors/instructor-matsuda.html
-          sed -i 's|講師紹介 | 産業技術アカデミー|監修者紹介 | 産業技術アカデミー|g' instructors/instructor-matsuda.html
+          sed -i 's#松田 正則 | 講師紹介#松田 正則 | 監修者紹介#g' instructors/instructor-matsuda.html
+          sed -i 's#<div class="role-badge lecturer">講師</div>#<div class="role-badge supervisor">監修者</div>#g' instructors/instructor-matsuda.html
+          sed -i 's#講師紹介 | 産業技術アカデミー#監修者紹介 | 産業技術アカデミー#g' instructors/instructor-matsuda.html
 
       - name: Update matsumoto AI training description
         run: |
