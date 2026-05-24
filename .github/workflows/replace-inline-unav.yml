@@ -1,0 +1,57 @@
+name: Replace inline unav.js with external v39
+on: workflow_dispatch
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove inline unav and add external script
+        run: |
+          pip install beautifulsoup4
+          python3 << 'PYEOF'
+          import os, re
+          from bs4 import BeautifulSoup
+
+          for root, dirs, files in os.walk('.'):
+              for fname in files:
+                  if not fname.endswith('.html'):
+                      continue
+                  fpath = os.path.join(root, fname)
+                  with open(fpath, 'r', encoding='utf-8') as f:
+                      html = f.read()
+
+                  soup = BeautifulSoup(html, 'html.parser')
+                  changed = False
+
+                  # Remove inline script blocks containing unav code
+                  for script in soup.find_all('script'):
+                      if script.string and 'installStyle' in script.string and 'buildNav' in script.string:
+                          print(f"  Removing inline unav from {fpath}")
+                          script.decompose()
+                          changed = True
+
+                  # Check if external unav.js reference already exists
+                  has_external = False
+                  for script in soup.find_all('script', src=True):
+                      if 'unav.js' in script.get('src', ''):
+                          has_external = True
+                          break
+
+                  # Add external script if not present
+                  if not has_external and soup.body:
+                      new_script = soup.new_tag('script', defer=True, src='https://sangyo-tech.jp/unav.js?v=39')
+                      soup.body.append(new_script)
+                      changed = True
+                      print(f"  Added external unav.js to {fpath}")
+
+                  if changed:
+                      with open(fpath, 'w', encoding='utf-8') as f:
+                          f.write(str(soup))
+          PYEOF
+      - name: Commit changes
+        run: |
+          git config user.name "sangyo-tech"
+          git config user.email "noreply@sangyo-tech.jp"
+          git add -A
+          git diff --cached --quiet || git commit -m "fix: replace inline unav.js with external v39"
+          git push
