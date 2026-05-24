@@ -1,0 +1,38 @@
+name: Fix supervisor CSS conflict
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove Codex authority CSS block from instructors/index.html
+        run: |
+          python3 << 'PYEOF'
+          import re
+          f = 'instructors/index.html'
+          with open(f, 'r', encoding='utf-8') as fh:
+              t = fh.read()
+          # Remove the entire Codex authority redesign CSS block
+          # It starts with /* Codex authority redesign and ends before /* Unified Sangyo Tech navigation
+          t = re.sub(
+              r'/\* Codex authority redesign 2026-05-24 \*/.*?(?=/\* Unified Sangyo Tech navigation)',
+              '',
+              t,
+              flags=re.DOTALL
+          )
+          with open(f, 'w', encoding='utf-8') as fh:
+              fh.write(t)
+          print('Done - removed Codex authority CSS block')
+          PYEOF
+      - name: Delete old workflow
+        run: rm -f .github/workflows/remove-120years.yml
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "fix: Codex CSS衝突を修正（監修カード表示復旧）"
+          git push
