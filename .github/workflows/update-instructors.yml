@@ -1,0 +1,39 @@
+name: Update instructor profiles
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update matsuda badge in instructors/index.html
+        run: |
+          sed -i '
+            /<!-- 松田 正則 -->/,/<\/article>/ {
+              s|<div class="role-badge lecturer">講師</div>|<div class="role-badge supervisor">監修者</div>|
+            }
+          ' instructors/index.html
+
+      - name: Update instructor-matsuda.html title and role
+        run: |
+          sed -i 's|松田 正則 | 講師紹介|松田 正則 | 監修者紹介|g' instructors/instructor-matsuda.html
+          sed -i 's|<div class="role-badge lecturer">講師</div>|<div class="role-badge supervisor">監修者</div>|g' instructors/instructor-matsuda.html
+          sed -i 's|講師紹介 | 産業技術アカデミー|監修者紹介 | 産業技術アカデミー|g' instructors/instructor-matsuda.html
+
+      - name: Update matsumoto AI training description
+        run: |
+          sed -i 's|士業事務所向けに4時間×3回（計12時間／受講者10名・経営層含む）の生成AI研修を企画・登壇。資料作成から本登壇まで一貫担当。|士業事務所向けに12時間の生成AI研修に登壇。|g' instructors/instructor-ym.html
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "fix: 松田を監修者へ変更、松本の生成AI研修実績を簡潔化"
+          git push
