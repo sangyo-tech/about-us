@@ -1,0 +1,22 @@
+name: Fix leading h character
+on: workflow_dispatch
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove leading h from index.html
+        run: |
+          sed -i '1s/^h//' index.html
+          head -1 index.html
+      - name: Commit changes
+        run: |
+          git config user.name "sangyo-tech"
+          git config user.email "noreply@sangyo-tech.jp"
+          git add -A
+          git diff --cached --quiet || git commit -m "fix: remove stray h character from start of index.html"
+          git push
