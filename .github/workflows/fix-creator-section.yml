@@ -11,10 +11,15 @@ jobs:
           with open('index.html', 'r', encoding='utf-8') as f:
               t = f.read()
 
-          marker = '<div class="producer-card">'
-          start = t.find(marker)
-          if start == -1:
+          marker = 'class="producer-card"'
+          idx = t.find(marker)
+          if idx == -1:
               print("ERROR: producer-card not found")
+              exit(1)
+
+          start = t.rfind('<div', 0, idx)
+          if start == -1:
+              print("ERROR: div start not found")
               exit(1)
 
           depth = 0
@@ -40,30 +45,30 @@ jobs:
           producer_card = t[start:end]
           print(f"producer-card: {len(producer_card)} chars")
 
-          marker2 = '<section id="supervisors"'
-          if marker2 not in t:
-              marker2 = '<section class="supervisor-board"'
-          start2 = t.find(marker2)
+          marker2 = 'class="supervisor-board"'
+          idx2 = t.find(marker2)
           sup_section = ""
-          if start2 > -1:
-              depth = 0
-              i = start2
-              end2 = -1
-              while i < len(t):
-                  if t[i:i+8] == '<section':
-                      depth += 1
-                      i += 8
-                  elif t[i:i+10] == '</section>':
-                      depth -= 1
-                      if depth == 0:
-                          end2 = i + 10
-                          break
-                      i += 10
-                  else:
-                      i += 1
-              if end2 > -1:
-                  sup_section = t[start2:end2]
-                  print(f"supervisor-board: {len(sup_section)} chars")
+          if idx2 > -1:
+              start2 = t.rfind('<section', 0, idx2)
+              if start2 > -1:
+                  depth = 0
+                  i = start2
+                  end2 = -1
+                  while i < len(t):
+                      if t[i:i+8] == '<section':
+                          depth += 1
+                          i += 8
+                      elif t[i:i+10] == '</section>':
+                          depth -= 1
+                          if depth == 0:
+                              end2 = i + 10
+                              break
+                          i += 10
+                      else:
+                          i += 1
+                  if end2 > -1:
+                      sup_section = t[start2:end2]
+                      print(f"supervisor-board: {len(sup_section)} chars")
 
           link = '      <div style="margin-top: 2rem; text-align: center;">\n'
           link += '        <a href="/instructors/" class="btn primary" style="display: inline-flex; align-items: center; gap: 0.5rem;">\n'
