@@ -1,6 +1,9 @@
 name: Bump unav.js version to v40
 on: workflow_dispatch
 
+permissions:
+  contents: write
+
 jobs:
   bump:
     runs-on: ubuntu-latest
