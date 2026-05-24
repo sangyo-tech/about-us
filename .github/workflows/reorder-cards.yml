@@ -1,0 +1,68 @@
+name: Reorder cards and remove stats-bar
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reorder cards and remove stats-bar
+        run: |
+          python3 << 'PYEOF'
+          import re
+
+          f = 'instructors/index.html'
+          with open(f, 'r', encoding='utf-8') as fh:
+              t = fh.read()
+
+          # 1. Remove stats-bar (between </header> and <main)
+          t = re.sub(
+              r'(</header>)\n\n<div class="stats-bar">.*?\n\n(<main)',
+              lambda m: m.group(1) + '\n\n' + m.group(2),
+              t, count=1, flags=re.DOTALL
+          )
+
+          # 2. Extract cards by comment markers
+          def get_card(html, name):
+              p = r'<!-- ' + re.escape(name) + r' -->\n<article.*?</article>'
+              m = re.search(p, html, re.DOTALL)
+              assert m, f'Card not found: {name}'
+              return m.group(0)
+
+          furusawa = get_card(t, '古澤 和俊')
+          matsumoto = get_card(t, '松本 恵和')
+          ando = get_card(t, '安藤 隆')
+          matsuda = get_card(t, '松田 正則')
+          furusawa_t = get_card(t, '古澤 俊宏')
+
+          # 3. Build new layout
+          # Top: 講師 (2 cards, flex centered) - grid-bottom first
+          # Bottom: 監修者 (3 cards, 3-col grid) - grid second
+          new_section = '<div class="grid-bottom" style="margin-top:0">\n\n'
+          new_section += furusawa + '\n\n' + matsumoto
+          new_section += '\n\n</div>\n\n<div class="grid" style="margin-top:28px">\n\n'
+          new_section += ando + '\n\n' + matsuda + '\n\n' + furusawa_t
+          new_section += '\n\n</div>\n'
+
+          # 4. Replace grid section (keep wrap close and main close)
+          t = re.sub(
+              r'<div class="grid">.*(?=</div>\s*</main>)',
+              new_section,
+              t, count=1, flags=re.DOTALL
+          )
+
+          with open(f, 'w', encoding='utf-8') as fh:
+              fh.write(t)
+          print('Done - stats-bar removed, cards reordered')
+          PYEOF
+      - name: Self-cleanup
+        run: rm -f .github/workflows/reorder-cards.yml
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "fix: stats-bar削除+講師カード並び順変更"
+          git push
