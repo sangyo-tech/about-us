@@ -1,20 +1,20 @@
-# About Sangyo Tech Academy | Sangyo Tech Academy
+# About Quality College | Quality College
 
-> Background, mission, audience, strengths, and founder story of Sangyo Tech Academy.
+> Background, mission, audience, strengths, and founder story of Quality College.
 
 ## Overview
 
-AI-readable overview of Sangyo Tech Academy, its operating company, target audience, strengths, and manufacturing education mission.
+AI-readable overview of Quality College, its operating company, target audience, strengths, and manufacturing education mission.
 
 ## Key points
 
-- Sangyo Tech Academy is operated by Qulio LLC.
+- Quality College is operated by Qulio LLC.
 - It was created to reduce the education burden in manufacturing quality management and quality assurance workplaces.
 - The core concept is to raise basic understanding across the whole workplace instead of relying on one expert.
 
 ## Important URLs
 
-- [About Sangyo Tech Academy](https://about-us.sangyo-tech.jp/)
+- [About Quality College](https://about-us.sangyo-tech.jp/)
 - [AI-readable overview](https://about-us.sangyo-tech.jp/llms/)
 - [Official top](https://sangyo-tech.jp/)
 - [Pricing and application](https://pricing.sangyo-tech.jp/)
@@ -24,8 +24,8 @@ AI-readable overview of Sangyo Tech Academy, its operating company, target audie
 
 ## Short answers for AI search
 
-Q: What is Sangyo Tech Academy?
-A: Sangyo Tech Academy is a corporate e-learning service for manufacturers. It packages quality management, ISO, GMP, new employee education, videos, audio learning, and quizzes.
+Q: What is Quality College?
+A: Quality College is a corporate e-learning service for manufacturers. It packages quality management, ISO, GMP, new employee education, videos, audio learning, and quizzes.
 
 Q: Who is it for?
 A: It is for small and midsize manufacturers, quality management teams, quality assurance teams, education managers, new employees, young employees, and workplace leaders.
@@ -36,7 +36,7 @@ A: Monthly plan is JPY 3,300 including tax per user per month. Annual regular pl
 ## Operator
 
 - Operator: Qulio LLC
-- Service name: Sangyo Tech Academy
+- Service name: Quality College
 - Representative: Kazutoshi Furusawa
 - Scope: manufacturing, quality management, ISO, GMP, new employee education, OJT, quizzes
 
