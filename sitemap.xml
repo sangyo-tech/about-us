@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://about-us.sangyo-tech.jp/</loc>
-    <lastmod>2026-06-01</lastmod>
-    <priority>1.0</priority>
+    <loc>https://about-us.sangyo-tech.jp/instructors/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
-    <loc>https://about-us.sangyo-tech.jp/llms/</loc>
-    <lastmod>2026-06-01</lastmod>
-    <priority>0.7</priority>
+    <loc>https://about-us.sangyo-tech.jp/instructors/instructor-ando.html</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://about-us.sangyo-tech.jp/instructors/instructor-furusawa-t.html</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://about-us.sangyo-tech.jp/instructors/instructor-furusawa.html</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://about-us.sangyo-tech.jp/instructors/instructor-matsuda.html</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://about-us.sangyo-tech.jp/instructors/instructor-ym.html</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
 </urlset>
