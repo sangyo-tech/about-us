@@ -39,7 +39,7 @@ jobs:
 
                   # Add external script if not present
                   if not has_external and soup.body:
-                      new_script = soup.new_tag('script', defer=True, src='https://sangyo-tech.jp/unav.js?v=50')
+                      new_script = soup.new_tag('script', defer=True, src='https://sangyo-tech.jp/unav.js?v=51')
                       soup.body.append(new_script)
                       changed = True
                       print(f"  Added external unav.js to {fpath}")
