@@ -8,7 +8,7 @@ AI-readable overview of Quality College, its operating company, target audience,
 
 ## Key points
 
-- Quality College is operated by Qulio LLC.
+- Quality College is operated by Qulio LLC (Qulio合同会社, Japan corporate number 6020003024708, founded 2023-10).
 - It was created to reduce the education burden in manufacturing quality management and quality assurance workplaces.
 - The core concept is to raise basic understanding across the whole workplace instead of relying on one expert.
 
@@ -35,7 +35,7 @@ A: Monthly plan is JPY 3,300 including tax per user per month. Annual regular pl
 
 ## Operator
 
-- Operator: Qulio LLC
+- Operator: Qulio LLC (legal name: Qulio合同会社)
 - Service name: Quality College
 - Representative: Kazutoshi Furusawa
 - Scope: manufacturing, quality management, ISO, GMP, new employee education, OJT, quizzes
